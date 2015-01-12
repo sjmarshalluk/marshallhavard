@@ -1,5 +1,5 @@
 class GuidesController < ApplicationController
-
+before_action :require_user
 
 def index
 	@guides = Guide.all

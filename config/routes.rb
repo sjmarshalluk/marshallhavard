@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resource :session
   resources :guides
   resources :questions
   resources :services

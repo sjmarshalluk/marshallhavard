@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-
+before_action :require_user
 
 def index
 	@questions = Question.all

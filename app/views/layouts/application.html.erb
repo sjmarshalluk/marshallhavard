@@ -16,16 +16,26 @@
 				<div id="logo">
 					<%= link_to "Marshall Havard", root_path %>
 				</div>
-		 	  <div id="twitter">
+		 	  	<div id="twitter">
 					<a href="https://twitter.com/marshallroche" target="_blank">Twitter</a>
 				</div>
+				<% if logged_in? %>
 				<nav class="nav-collapse">
-					<ul>
-						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
-						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
-						<li><%= link_to_active_class "Services", "selected", services_path %></li>
-					</ul>
-				</nav>
+						<ul>
+							<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
+							<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
+							<li><%= link_to_active_class "Services", "selected", services_path %></li>
+							<li><%= link_to "Log out", session_path, method: :delete %>
+						</ul>
+					</nav>
+				<% else %>
+					<nav>
+						<ul>
+							<li><%= link_to "Log in", new_session_path %></li>
+						</ul>
+					</nav>
+				<% end %>
+
 				<script>
 		      var navigation = responsiveNav(".nav-collapse");
 		    </script>
