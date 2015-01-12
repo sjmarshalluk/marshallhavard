@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Marshallhavard</title>
+  <title>Marshall Havard | Chartered Accountants</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+<header>
+	<div class="wrapper">
+		<div class="row">
+			<div class="c12">
+				<div id="logo">
+					<%= link_to "Marshall Havard", root_path %>
+				</div>
+		 	  <div id="twitter">
+					<a href="https://twitter.com/marshallroche" target="_blank">Twitter</a>
+				</div>
+				<nav class="nav-collapse">
+					<ul>
+						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
+						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
+						<li><%= link_to_active_class "Services", "selected", services_path %></li>
+					</ul>
+				</nav>
+				<script>
+		      var navigation = responsiveNav(".nav-collapse");
+		    </script>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<div id="content">
+	<div class="wrapper">
+		<% flash.each do |key, value| %>
+			<div class="row">
+				<div class="<%= key %> c12">
+					<p><%= value %></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<%= yield %>
+</div>
+
 
 </body>
 </html>

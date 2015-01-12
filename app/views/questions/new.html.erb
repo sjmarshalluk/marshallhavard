@@ -1,0 +1,24 @@
+<div class="wrapper">
+
+	<div class="row">
+		<div class="c8 s2">
+			<h1>Add a question</h1>
+
+			<%= simple_form_for @question do |f| %>
+				<%= f.input :question %>
+				<%= f.input :answer %>
+				<%= f.input :starting_out %>
+				<%= f.input :self_employed %>
+				<%= f.input :limited_company %>
+				<%= f.input :CIS_subcontractor %>
+				<%= f.input :seafarer %>
+				<%= f.input :renting_or_sold_property %>
+				<%= f.input :self_assesment %>
+				<%= f.input :overseas %>
+				<%= f.input :particular_tax_advice %>
+				<%= f.input :employed %>
+				<%= f.submit %>
+			<% end %>
+		</div>
+	</div>
+</div>

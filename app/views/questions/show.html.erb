@@ -1,0 +1,10 @@
+<div class="wrapper">
+	
+	<div class="row hero">
+		<div class="c8 s2">
+			<h1><%= @question.question %></h1>
+			<p><%= @question.answer %></p>
+			<%= link_to "Edit", edit_question_path(@question) %>
+		</div>
+	</div>
+</div>

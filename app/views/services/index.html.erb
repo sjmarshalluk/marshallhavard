@@ -1,0 +1,13 @@
+<div class="wrapper">
+
+	<div class="row">
+		<div class="c8 s2">
+			<h2>Services</h2>
+			<%= link_to "Add a service", new_service_path %>
+			<% @services.each do |service| %>
+				<h1><%= link_to "#{service.name}", service_path(service) %></h1>
+				<p><%= service.description %></p>
+			<% end %>
+		</div>
+	</div>
+</div>

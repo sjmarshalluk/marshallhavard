@@ -1,0 +1,24 @@
+<div class="wrapper">
+
+	<div class="row">
+		<div class="c8 s2">
+			<h1>Edit this help sheet</h1>
+
+			<%= simple_form_for @guide do |f| %>
+				<%= f.input :title %>
+				<%= f.input :body %>
+				<%= f.input :starting_out %>
+				<%= f.input :self_employed %>
+				<%= f.input :limited_company %>
+				<%= f.input :CIS_subcontractor %>
+				<%= f.input :seafarer %>
+				<%= f.input :renting_or_sold_property %>
+				<%= f.input :self_assesment %>
+				<%= f.input :overseas %>
+				<%= f.input :particular_tax_advice %>
+				<%= f.input :employed %>
+				<%= f.submit %>
+			<% end %>
+		</div>
+	</div>
+</div>
