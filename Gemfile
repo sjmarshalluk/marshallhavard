@@ -52,3 +52,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'tinymce-rails'
+
+
+ruby '2.1.2'
