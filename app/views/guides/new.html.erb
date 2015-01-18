@@ -4,7 +4,7 @@
 		<div class="c8 s2">
 			<h1>Add a help sheet</h1>
 
-			<%= simple_form_for @guide do |f| %>
+			<%= simple_form_for(@guide, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :title %>
 				<%= f.input :body %>
 				<%= f.input :starting_out %>
@@ -22,3 +22,5 @@
 		</div>
 	</div>
 </div>
+
+<%= tinymce %>

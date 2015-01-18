@@ -4,7 +4,7 @@
 		<div class="c8 s2">
 			<h1>Edit this service</h1>
 
-			<%= simple_form_for @service do |f| %>
+			<%= simple_form_for(@service, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :name %>
 				<%= f.input :description %>
 				<%= f.input :starting_out %>
@@ -22,3 +22,5 @@
 		</div>
 	</div>
 </div>
+
+<%= tinymce %>

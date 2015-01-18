@@ -21,13 +21,14 @@
 				</div>
 				<% if logged_in? %>
 				<nav class="nav-collapse">
-						<ul>
-							<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
-							<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
-							<li><%= link_to_active_class "Services", "selected", services_path %></li>
-							<li><%= link_to "Log out", session_path, method: :delete %>
-						</ul>
-					</nav>
+					<ul>
+						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
+						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
+						<li><%= link_to_active_class "Services", "selected", services_path %></li>
+						<li><%= link_to "Add a user", new_user_path %>
+						<li><%= link_to "Log out", session_path, method: :delete %>
+					</ul>
+				</nav>
 				<% else %>
 					<nav>
 						<ul>

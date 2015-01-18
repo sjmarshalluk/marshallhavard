@@ -15,7 +15,7 @@ def create
 	@service = Service.new(service_params)
 	if @service.save
 		flash[:success] = "That saved"
-		redirect_to root_path
+		redirect_to services_path
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -34,7 +34,7 @@ def show
     @service = Service.find(params[:id])
     if @service.update(service_params)
       flash[:success] = "Changes saved"
-      redirect_to root_path
+      redirect_to services_path
     else
       flash[:error] = "Nope"
       render :new

@@ -4,7 +4,7 @@
 		<div class="c8 s2">
 			<h1>Edit this question</h1>
 
-			<%= simple_form_for @question do |f| %>
+			<%= simple_form_for(@question, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :question %>
 				<%= f.input :answer %>
 				<%= f.input :starting_out %>
@@ -22,3 +22,5 @@
 		</div>
 	</div>
 </div>
+
+<%= tinymce %>

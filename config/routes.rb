@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :services
   resources :users
 
-  root "guides#index"
+  root "pages#index"
 end

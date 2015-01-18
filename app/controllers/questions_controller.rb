@@ -14,7 +14,7 @@ def create
 	@question = Question.new(question_params)
 	if @question.save
 		flash[:success] = "That saved"
-		redirect_to root_path
+		redirect_to questions_path
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -33,7 +33,7 @@ def show
     @question = Question.find(params[:id])
     if @question.update(question_params)
       flash[:success] = "Changes saved"
-      redirect_to root_path
+      redirect_to questions_path
     else
       flash[:error] = "Nope"
       render :new
