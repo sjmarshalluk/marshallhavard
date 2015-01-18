@@ -76,5 +76,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.assets.precompile += %w[tinymce/tinymce.min.js tinymce/langs/en.js tinymce/themes/advanced/editor_template.js]
+  config.assets.precompile += %w[tinymce/tinymce.min.js]
 end
