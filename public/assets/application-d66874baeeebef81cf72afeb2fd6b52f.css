@@ -1,0 +1,522 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+body {
+  line-height: 1;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/reset.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 2, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+body {
+  font-family: "museo sans", sans-serif;
+  color: #324044;
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  height: 100%;
+}
+
+/* line 11, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* line 18, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+h2 {
+  font-size: 1.4em;
+  margin: 2em 0 2em;
+}
+
+/* line 23, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* line 30, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+/* line 36, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #44b2ce;
+}
+
+/* line 46, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+em {
+  font-style: italic;
+}
+
+/* line 50, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+strong {
+  font-weight: 900;
+}
+
+/* line 54, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+a:hover {
+  color: #324044;
+}
+
+/* line 58, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.button {
+  background-color: #fff;
+  border: 2px solid #44b2ce;
+  padding: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: 900;
+  margin: 30px 0;
+  display: inline-block;
+}
+
+/* line 70, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.button:hover {
+  background-color: #44b2ce;
+  color: #fff;
+}
+
+/* line 77, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.wrapper {
+  max-width: 1300px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+/* line 85, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header {
+  padding: 40px 0;
+  background-color: #fff;
+  color: #324044;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* line 93, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header nav {
+  float: left;
+}
+
+/* line 97, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header nav li {
+  margin-left: 30px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* line 104, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header a {
+  color: #324044;
+}
+
+/* line 109, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header a:hover,
+header a.selected {
+  color: #44b2ce;
+}
+
+/* line 113, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #logo {
+  text-transform: uppercase;
+  float: left;
+  font-weight: 900;
+}
+
+/* line 119, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #twitter {
+  float: right;
+  margin-left: 20px;
+}
+
+/* line 124, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #twitter a {
+  background-image: url("../assets/twitter.png");
+  background-size: 20px 15px;
+  width: 20px;
+  height: 15px;
+  display: block;
+}
+
+/* line 132, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+header .row {
+  margin-bottom: 0;
+}
+
+/* line 138, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.success {
+  background-color: #44b2ce;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 147, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.row {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* line 154, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.row:before,
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 160, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c1 {
+  width: 8.33333%;
+}
+
+/* line 164, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c2 {
+  width: 16.66667%;
+}
+
+/* line 168, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c3 {
+  width: 25%;
+}
+
+/* line 172, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c4 {
+  width: 33.33333%;
+}
+
+/* line 176, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c5 {
+  width: 41.66667%;
+}
+
+/* line 180, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c6 {
+  width: 50%;
+}
+
+/* line 184, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c7 {
+  width: 58.33333%;
+}
+
+/* line 188, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c8 {
+  width: 66.66667%;
+}
+
+/* line 192, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c9 {
+  width: 75%;
+}
+
+/* line 196, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c10 {
+  width: 83.33333%;
+}
+
+/* line 200, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c11 {
+  width: 91.66667%;
+}
+
+/* line 204, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c12 {
+  width: 100%;
+}
+
+/* line 220, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.c6,
+.c7,
+.c8,
+.c9,
+.c10,
+.c11,
+.c12 {
+  position: relative;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 1px;
+}
+
+/* line 228, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s1 {
+  margin-left: 8.33333%;
+}
+
+/* line 232, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s2 {
+  margin-left: 16.66667%;
+}
+
+/* line 236, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s3 {
+  margin-left: 25%;
+}
+
+/* line 240, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s4 {
+  margin-left: 33.33333%;
+}
+
+/* line 244, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s5 {
+  margin-left: 41.66667%;
+}
+
+/* line 248, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s6 {
+  margin-left: 50%;
+}
+
+/* line 252, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s7 {
+  margin-left: 58.33333%;
+}
+
+/* line 256, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s8 {
+  margin-left: 66.66667%;
+}
+
+/* line 260, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s9 {
+  margin-left: 75%;
+}
+
+/* line 264, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s10 {
+  margin-left: 83.33333%;
+}
+
+/* line 268, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s11 {
+  margin-left: 91.66667%;
+}
+
+/* line 272, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.s12 {
+  margin-left: 100%;
+}
+
+/* line 276, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+.push-top {
+  margin-top: 5em;
+}
+
+/* line 284, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+form {
+  width: 100%;
+}
+
+/* line 288, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+form h2 {
+  padding-left: 15px;
+}
+
+/* line 292, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+form p {
+  width: 100%;
+  font-size: 14px;
+  color: #aaa;
+  margin: 30px 0 10px;
+  padding: 0 15px;
+}
+
+/* line 300, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+form section {
+  margin-bottom: 50px;
+}
+
+/* line 304, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+label {
+  padding: 17px 0 10px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 314, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+input,
+textarea,
+select {
+  font-family: "museo sans", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+/* line 327, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+select,
+input {
+  height: 50px;
+}
+
+/* line 331, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+input.boolean {
+  width: 30px;
+  height: auto;
+}
+
+/* line 336, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+textarea {
+  height: 300px;
+}
+
+/* line 341, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+input:focus,
+textarea:focus {
+  outline: none;
+  background-color: #e6f5f8;
+  border: 1px solid #44b2ce;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 351, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  /* line 354, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  /* line 357, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  /* line 365, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  /* line 369, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav {
+    width: 100%;
+  }
+
+  /* line 373, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav ul {
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  /* line 382, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav ul li {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* line 389, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 30px;
+  }
+
+  /* line 397, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  /* line 406, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-collapse.opened {
+    max-height: 9999px;
+  }
+
+  /* line 410, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .disable-pointer-events {
+    pointer-events: none !important;
+  }
+
+  /* line 414, /Users/sjmarshalluk/Desktop/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    float: right;
+    color: #fff;
+  }
+}
