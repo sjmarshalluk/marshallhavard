@@ -63,7 +63,8 @@ def question_params
 		:self_assesment,
 		:overseas,
 		:particular_tax_advice,
-		:employed
+		:employed,
+		:client_ids => []
 	)
 end
 

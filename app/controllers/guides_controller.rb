@@ -56,6 +56,7 @@ def guide_params
 	params.require(:guide).permit(
 		:title,
 		:body,
+		:summary,
 		:starting_out,
 		:self_employed,
 		:limited_company,

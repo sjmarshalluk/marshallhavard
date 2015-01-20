@@ -2,22 +2,16 @@
 <div class="wrapper">
 
 	<div class="row">
-		<div class="c8 s2">
+		<div class="c8">
 			<h1>Add a service</h1>
 
 			<%= simple_form_for(@service, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :name %>
 				<%= f.input :description %>
-				<%= f.input :starting_out %>
-				<%= f.input :self_employed %>
-				<%= f.input :limited_company %>
-				<%= f.input :CIS_subcontractor %>
-				<%= f.input :seafarer %>
-				<%= f.input :renting_or_sold_property %>
-				<%= f.input :self_assesment %>
-				<%= f.input :overseas %>
-				<%= f.input :particular_tax_advice %>
-				<%= f.input :employed %>
+				<% Client.all.each do |client| %>
+				  <%= check_box_tag "service[client_ids][]", client.id, @service.client_ids.include?(client.id), id: dom_id(client) %>
+				  <%= label_tag dom_id(client), client.title %><br>
+				<% end %>
 				<%= f.submit %>
 			<% end %>
 		</div>

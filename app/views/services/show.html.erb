@@ -4,6 +4,16 @@
 		<div class="c8 s2">
 			<h1><%= @service.name %></h1>
 			<p><%= @service.description.html_safe %></p>
+
+			<p>Relevant to:</p>
+			<ul>
+				<li>
+					<% @service.clients.each do |client|%>
+					    <%= link_to client.title, client %>
+					<% end %>
+				</li>
+			</ul>
+
 			<%= link_to "Edit", edit_service_path(@service) %>
 			<%= link_to "Delete", service_path(@service), method: :delete %>
 		</div>

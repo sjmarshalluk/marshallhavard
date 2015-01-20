@@ -7,16 +7,7 @@
 			<%= simple_form_for(@guide, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :title %>
 				<%= f.input :body %>
-				<%= f.input :starting_out %>
-				<%= f.input :self_employed %>
-				<%= f.input :limited_company %>
-				<%= f.input :CIS_subcontractor %>
-				<%= f.input :seafarer %>
-				<%= f.input :renting_or_sold_property %>
-				<%= f.input :self_assesment %>
-				<%= f.input :overseas %>
-				<%= f.input :particular_tax_advice %>
-				<%= f.input :employed %>
+				<%= f.input :summary %>
 				<% Client.all.each do |client| %>
 				  <%= check_box_tag "guide[client_ids][]", client.id, @guide.client_ids.include?(client.id), id: dom_id(client) %>
 				  <%= label_tag dom_id(client), client.title %><br>

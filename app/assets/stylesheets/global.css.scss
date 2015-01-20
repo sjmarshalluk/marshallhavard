@@ -147,7 +147,17 @@ header .row {
 	margin-bottom: 0;
 }
 
+footer {
+	background-color: $dark;
+	color: #ffffff;
+	padding: 2em 0;
+}
 
+footer a {
+	color: #ffffff;
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
 
 
 

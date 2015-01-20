@@ -1,11 +1,21 @@
 <div class="wrapper">
 	
-	<div class="row hero">
-		<div class="c8 s2">
+	<div class="row push-top">
+		<div class="c8">
 			<h1><%= @question.question %></h1>
 			<p><%= @question.answer.html_safe %></p>
-			<%= link_to "Edit", edit_question_path(@question) %>
-			<%= link_to "Delete", question_path(@question), method: :delete %>
+
+			<p>Relevant to:</p>
+			<ul>
+				<li>
+					<% @question.clients.each do |client|%>
+					    <%= link_to client.title, client %>
+					<% end %>
+				</li>
+			</ul>
+
+			<%= link_to "Edit", edit_question_path(@question), class: "button" %>
+			<%= link_to "Delete", question_path(@question), method: :delete, class: "button" %>
 		</div>
 	</div>
 </div>

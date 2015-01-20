@@ -1,8 +1,7 @@
 <div class="wrapper">
 
-	<div class="row">
-		<div class="c8 s2">
-			<h2>Common questions</h2>
+	<div class="row push-top">
+		<div class="c8">
 
 			<% @questions.each do |question| %>
 				<h1><%= link_to "#{question.question}", question_path(question) %></h1>

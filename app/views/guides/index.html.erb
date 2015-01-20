@@ -1,15 +1,17 @@
 <div class="wrapper">
 
-	<div class="row">
-		<div class="c8 s2">
-			<h2>Help sheets</h2>
-			
-			<% @guides.each do |guide| %>
-				<h1><%= link_to "#{guide.title}", guide_path(guide) %></h1>
-				<p><%= guide.body.html_safe %></p>
-			<% end %>
+	<div class="row push-top">	
+		<% @guides.each do |guide| %>
+			<div class="c3">
+				<h2><%= link_to "#{guide.title}", guide_path(guide) %></h2>
+				<p><%= raw guide.summary %></p>
+			</div>
+		<% end %>
+	</div>
 
+	<div class="row">
+		<div class="c12">
 			<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
-		</div>
+		</div>		
 	</div>
 </div>
