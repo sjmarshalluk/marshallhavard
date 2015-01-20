@@ -24,7 +24,6 @@ end
 def show
 	@clients = Client.select("DISTINCT name, id")
   @guide = Guide.find(params[:id])
- 	@guides = Guide.starting_out
 end
 
 def edit
