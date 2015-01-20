@@ -5,10 +5,15 @@
 			<h1><%= @guide.title %></h1>
 			<p><%= @guide.body.html_safe %></p>
 			<%= link_to "Edit", edit_guide_path(@guide) %>
+			<%= link_to "Delete", guide_path(@guide), method: :delete %>
 
-			<% @guide.clients.each do |client|%>
-			    Posted in: <strong><%= link_to client.title, client %></strong>
-			<% end %>
+			<ul>
+				<li>
+					<% @guide.clients.each do |client|%>
+					    <%= link_to client.title, client %>
+					<% end %>
+				</li>
+			</ul>
 		</div>
 
 		<div class="c4">

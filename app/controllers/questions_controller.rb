@@ -22,23 +22,30 @@ def create
 end
 
 def show
-  	@question = Question.find(params[:id])
-  end
+  @question = Question.find(params[:id])
+end
 
-  def edit
-    @question = Question.find(params[:id])
-  end
+def edit
+  @question = Question.find(params[:id])
+end
 
-  def update
-    @question = Question.find(params[:id])
-    if @question.update(question_params)
-      flash[:success] = "Changes saved"
-      redirect_to questions_path
-    else
-      flash[:error] = "Nope"
-      render :new
-    end
+def update
+  @question = Question.find(params[:id])
+  if @question.update(question_params)
+    flash[:success] = "Changes saved"
+    redirect_to questions_path
+  else
+    flash[:error] = "Nope"
+    render :new
   end
+end
+
+def destroy
+  @question = Question.find(params[:id])
+  @question.delete
+  flash[:success] = "Deleted"
+  redirect_to questions_path
+end
 
 
 private

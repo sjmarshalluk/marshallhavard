@@ -23,24 +23,31 @@ def create
 end
 
 def show
-  	@service = Service.find(params[:id])
-  end
+  @service = Service.find(params[:id])
+end
 
-  def edit
-    @service = Service.find(params[:id])
-  end
+def edit
+  @service = Service.find(params[:id])
+end
 
-  def update
-    @service = Service.find(params[:id])
-    if @service.update(service_params)
-      flash[:success] = "Changes saved"
-      redirect_to services_path
-    else
-      flash[:error] = "Nope"
-      render :new
-    end
-  end
+def update
+	@service = Service.find(params[:id])
+	if @service.update(service_params)
+		flash[:success] = "Changes saved"
+		redirect_to services_path
+	else
+		flash[:error] = "Nope"
+		render :new
+	end
+end
 
+
+def destroy
+  @service = Service.find(params[:id])
+  @service.delete
+  flash[:success] = "Deleted"
+  redirect_to services_path
+end
 
 
 private
