@@ -23,24 +23,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="c2">
-				<p>Service</p>
-			</div>
-			<div class="c2">
-				<p>Service</p>
-			</div>
-			<div class="c2">
-				<p>Service</p>
-			</div>
-			<div class="c2">
-				<p>Service</p>
-			</div>
-			<div class="c2">
-				<p>Service</p>
-			</div>
-			<div class="c2">
-				<p>Service</p>
-			</div>
+			<ul>
+				<li class="c2">
+					<% @client.services.each do |service|%>
+					    <%= link_to service.name, service %>
+					<% end %>
+				</li>
+			</ul>
 		</div>
 	</div>
 </section>
@@ -51,10 +40,22 @@
 			<div class="c6 s6">
 				<h2>Expert advice &amp; information</h2>
 				<p><%= @client.advice_intro %></p>
-
-				<% @client.guides.each do |guide|%>
-				    <%= link_to guide.title, guide %>
-				<% end %>
+				<h3>Help sheets</h3>
+				<ul>
+					<li>
+						<% @client.guides.each do |guide|%>
+						    <%= link_to guide.title, guide %>
+						<% end %>
+					</li>
+				</ul>
+				<h3>Common questions</h3>
+				<ul>
+					<li>
+						<% @client.questions.each do |question|%>
+						    <%= link_to question.question, question %>
+						<% end %>
+					</li>
+				</ul>
 				
 			</div>
 		</div>
@@ -64,7 +65,7 @@
 <section id="why">
 	<div class="wrapper">
 		<div class="row">
-			<div class="c6 s6">
+			<div class="c6">
 				<h2>Why Marshall Havard</h2>
 				<p><%= @client.advice_intro %></p>
 			</div>

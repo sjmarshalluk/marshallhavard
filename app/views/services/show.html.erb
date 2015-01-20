@@ -1,7 +1,7 @@
 <div class="wrapper">
 	
-	<div class="row hero">
-		<div class="c8 s2">
+	<div class="row push-top">
+		<div class="c8">
 			<h1><%= @service.name %></h1>
 			<p><%= @service.description.html_safe %></p>
 
@@ -14,8 +14,8 @@
 				</li>
 			</ul>
 
-			<%= link_to "Edit", edit_service_path(@service) %>
-			<%= link_to "Delete", service_path(@service), method: :delete %>
+			<%= link_to "Edit", edit_service_path(@service), class: "button" %>
+			<%= link_to "Delete", service_path(@service), method: :delete, class: "button" %>
 		</div>
 	</div>
 </div>
