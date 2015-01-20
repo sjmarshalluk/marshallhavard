@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :questions
   resources :services
   resources :users
+  resources :clients
 
   root "pages#index"
 end

@@ -1,0 +1,17 @@
+<div class="wrapper">
+
+	<div class="row">
+		<div class="c8 s2">
+			<h1>Edit this client</h1>
+
+			<%= simple_form_for @client do |f| %>
+				<%= f.input :title %>
+				<%= f.input :headline %>
+				<%= f.input :intro %>
+				<%= f.input :help_intro %>
+				<%= f.input :advice_intro %>
+				<%= f.submit %>
+			<% end %>
+		</div>
+	</div>
+</div>

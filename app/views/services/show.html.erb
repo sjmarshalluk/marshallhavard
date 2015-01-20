@@ -3,7 +3,7 @@
 	<div class="row hero">
 		<div class="c8 s2">
 			<h1><%= @service.name %></h1>
-			<p><%= simple_format(@service.description, {}, :sanitize => false) %></p>
+			<p><%= @service.description.html_safe %></p>
 			<%= link_to "Edit", edit_service_path(@service) %>
 		</div>
 	</div>

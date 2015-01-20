@@ -1,13 +1,12 @@
 <div class="wrapper">
 
 	<div class="row">
-		<div class="c8 s2">
-			<h1>Log in</h1>
+		<div class="c4 s4">
 
 			<%= simple_form_for :session, url: session_path, method: :post do |f| %>
 
-				<%= f.input :email %>
-				<%= f.input :password %>
+				<%= f.input :email, label: "Email address" %>
+				<%= f.input :password, label: "Password" %>
 
 				<%= f.button :submit, "Log in" %>
 

@@ -17,6 +17,10 @@
 				<%= f.input :overseas %>
 				<%= f.input :particular_tax_advice %>
 				<%= f.input :employed %>
+				<% Client.all.each do |client| %>
+				  <%= check_box_tag "guide[client_ids][]", client.id, @guide.client_ids.include?(client.id), id: dom_id(client) %>
+				  <%= label_tag dom_id(client), client.title %><br>
+				<% end %>
 				<%= f.submit %>
 			<% end %>
 		</div>

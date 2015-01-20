@@ -1,0 +1,73 @@
+
+
+<div id="hero" class="padded">
+	<div class="wrapper">
+		<h1><%= @client.headline %></h1>
+		<p><%= @client.intro %></p>
+		<nav>
+			<ul>
+				<li><a href="#help">How we can help you</a></li>
+				<li><a href="#advice">Expert advice</a></li>
+				<li><a href="#why">Why Marshall Havard</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<section id="help" class="padded">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c8">
+				<h2>How we can help</h2>
+				<p><%= @client.help_intro %></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="c2">
+				<p>Service</p>
+			</div>
+			<div class="c2">
+				<p>Service</p>
+			</div>
+			<div class="c2">
+				<p>Service</p>
+			</div>
+			<div class="c2">
+				<p>Service</p>
+			</div>
+			<div class="c2">
+				<p>Service</p>
+			</div>
+			<div class="c2">
+				<p>Service</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="advice" class="dark padded">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c6 s6">
+				<h2>Expert advice &amp; information</h2>
+				<p><%= @client.advice_intro %></p>
+
+				<% @client.guides.each do |guide|%>
+				    <%= link_to guide.title, guide %>
+				<% end %>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="why">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c6 s6">
+				<h2>Why Marshall Havard</h2>
+				<p><%= @client.advice_intro %></p>
+			</div>
+		</div>
+	</div>
+</section>

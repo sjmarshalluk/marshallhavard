@@ -1,0 +1,72 @@
+
+
+
+form {
+	width: 100%;
+	color: $dark;
+}
+
+form h2 {
+	padding-left: 15px;
+}
+
+form p {
+	width: 100%;
+	font-size: 14px;
+	margin: 30px 0 10px;
+	padding: 0 15px;
+}
+
+form section {
+	margin-bottom: 50px;
+}
+
+label {
+	padding: 25px 0 10px;
+	display: inline-block;
+	font-weight: 500;
+}
+
+input,
+textarea,
+select {
+	font-family: "museo-sans", sans-serif;
+	font-size: 16px;
+	color: $dark;
+	width: 100%;
+	padding: 10px;
+	border: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+select,
+input {
+	height: 60px;
+}
+
+input.button {
+	width: auto;
+	border: none;
+	height: auto;
+}
+
+textarea {
+	height: 300px;
+}
+
+input:focus,
+textarea:focus { 
+	outline: none;
+    background-color: lighten($main, 40% );
+    border: 1px solid $main;
+}
+
+input.boolean {
+	width: 30px;
+	height: auto;
+}
+

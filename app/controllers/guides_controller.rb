@@ -3,6 +3,7 @@ before_action :require_user
 
 def index
 	@guides = Guide.all
+	@clients = Client.select("DISTINCT name, id")
 end
 
 def new
@@ -21,7 +22,9 @@ def create
 end
 
 def show
+	@clients = Client.select("DISTINCT name, id")
   	@guide = Guide.find(params[:id])
+  	@guides = Guide.starting_out
   end
 
   def edit
@@ -56,7 +59,8 @@ def guide_params
 		:self_assesment,
 		:overseas,
 		:particular_tax_advice,
-		:employed
+		:employed,
+		:client_ids => []
 	)
 end
 
