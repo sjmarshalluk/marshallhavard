@@ -1,12 +1,46 @@
 <div class="wrapper">
 
 	<div class="row push-top">
-		<div class="c8">
-			<% @services.each do |service| %>
-				<h1><%= link_to "#{service.name}", service_path(service) %></h1>
-				<p><%= service.description.html_safe %></p>
-			<% end %>
+		<% @services.each do |service| %>
+			<div class="c2 service-box">
+				<p><%= link_to "#{service.name}", service_path(service), class: "popup" %></p>
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<div class="c12">
 			<%= link_to "Add a service", new_service_path, class: "button" %>
 		</div>
 	</div>
 </div>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.popup').magnificPopup({
+      type: 'ajax',
+      alignTop: true,
+      overflowY: 'hidden', // as we know that popup content is tall we set scroll overflow by default to avoid jump,
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      removalDelay: 300,
+      mainClass: 'mfp-fade',
+      modal: true
+    });
+
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+
+    $('.simple-ajax-popup').magnificPopup({
+      type: 'ajax'
+    });
+  });
+</script>
+

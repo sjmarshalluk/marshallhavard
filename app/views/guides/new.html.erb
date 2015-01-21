@@ -1,7 +1,7 @@
 <div class="wrapper">
 
-	<div class="row">
-		<div class="c8 s2">
+	<div class="row push-top">
+		<div class="c8">
 			<h1>Add a help sheet</h1>
 
 			<%= simple_form_for(@guide, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
@@ -9,10 +9,10 @@
 				<%= f.input :body %>
 				<%= f.input :summary %>
 				<% Client.all.each do |client| %>
-				  <%= check_box_tag "guide[client_ids][]", client.id, @guide.client_ids.include?(client.id), id: dom_id(client) %>
+				  <%= check_box_tag "guide[client_ids][]", client.id, @guide.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
 				  <%= label_tag dom_id(client), client.title %><br>
 				<% end %>
-				<%= f.submit %>
+				<%= f.button :submit %>
 			<% end %>
 		</div>
 	</div>

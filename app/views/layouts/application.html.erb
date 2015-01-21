@@ -10,6 +10,9 @@
 </head>
 <body>
 
+
+<% if logged_in? %>
+
 <% flash.each do |key, value| %>
 	<div class="<%= key %>">
 		<div class="wrapper">
@@ -25,7 +28,7 @@
 				<div id="logo">
 					<%= link_to "Marshall Havard", root_path %>
 				</div>
-		 	  	<div id="twitter">
+		 	  	<div id="twitter" class="right">
 					<a href="https://twitter.com/marshallroche" target="_blank">Twitter</a>
 				</div>
 				<nav class="nav-collapse">
@@ -59,19 +62,22 @@
 						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
 						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
-						<% if logged_in? %>
-							<li><%= link_to "Add a user", new_user_path %></li>
-							<li><%= link_to "Log out", session_path, method: :delete %></li>
-						<% else %>
-							<li><%= link_to "Log in", new_session_path %></li>
-						<% end %>
+						<li><%= link_to "Add a user", new_user_path %></li>
+						<li><%= link_to "Log out", session_path, method: :delete %></li>
 					</ul>
 				</nav>
 
 			</div>
 		</div>
 	</div>
-</header>
+</footer>
+
+<% else %>
+
+<%= yield %>
+
+<% end %>
+
 
 </body>
 </html>

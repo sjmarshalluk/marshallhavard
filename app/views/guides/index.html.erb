@@ -3,10 +3,11 @@
 	<div class="row push-top">	
 		<% @guides.each do |guide| %>
 			<div class="c3">
-				<h2><%= link_to "#{guide.title}", guide_path(guide) %></h2>
+				<h2><%= link_to "#{guide.title}", guide_url(guide) %></h2>
 				<p><%= raw guide.summary %></p>
 			</div>
 		<% end %>
+
 	</div>
 
 	<div class="row">

@@ -23,13 +23,11 @@
 			</div>
 		</div>
 		<div class="row">
-			<ul>
-				<li class="c2">
-					<% @client.services.each do |service|%>
-					    <%= link_to service.name, service %>
-					<% end %>
-				</li>
-			</ul>
+			<% @client.services.each do |service|%>
+				<div class="c2 service-box">
+					<%= link_to service.name, service, class: "popup" %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </section>
@@ -44,16 +42,19 @@
 				<ul>
 					<li>
 						<% @client.guides.each do |guide|%>
-						    <%= link_to guide.title, guide %>
+							<%= link_to guide.title, client_guide_path(@client, guide) %>
 						<% end %>
+
+						<%= link_to "Read guides", client_guides_path(@client) %>
 					</li>
 				</ul>
 				<h3>Common questions</h3>
 				<ul>
 					<li>
 						<% @client.questions.each do |question|%>
-						    <%= link_to question.question, question %>
+							<%= link_to question.question, client_question_path(@client, question) %>
 						<% end %>
+						<%#= link_to "Read all questions", client_questions_path(@client) %>
 					</li>
 				</ul>
 				
@@ -72,3 +73,49 @@
 		</div>
 	</div>
 </section>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.popup').magnificPopup({
+      type: 'ajax',
+      alignTop: true,
+      overflowY: 'hidden', // as we know that popup content is tall we set scroll overflow by default to avoid jump,
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      removalDelay: 300,
+      mainClass: 'mfp-fade',
+      modal: true
+    });
+
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+
+    $('.simple-ajax-popup').magnificPopup({
+      type: 'ajax'
+    });
+  });
+
+</script>
+
+<script type="text/javascript">
+	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+</script>

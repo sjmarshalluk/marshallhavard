@@ -1,7 +1,7 @@
 
 <div class="wrapper">
 
-	<div class="row">
+	<div class="row push-top">
 		<div class="c8">
 			<h1>Add a service</h1>
 
@@ -9,10 +9,10 @@
 				<%= f.input :name %>
 				<%= f.input :description %>
 				<% Client.all.each do |client| %>
-				  <%= check_box_tag "service[client_ids][]", client.id, @service.client_ids.include?(client.id), id: dom_id(client) %>
+				  <%= check_box_tag "service[client_ids][]", client.id, @service.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
 				  <%= label_tag dom_id(client), client.title %><br>
 				<% end %>
-				<%= f.submit %>
+				<%= f.button :submit %>
 			<% end %>
 		</div>
 	</div>

@@ -1,16 +1,16 @@
 <div class="wrapper">
 	
 	<div class="row push-top">
-		<div class="c8">
+		<div id="service-content" class="c8 s2">
 			<h1><%= @service.name %></h1>
 			<p><%= @service.description.html_safe %></p>
 
-			<p>Relevant to:</p>
+			
 			<ul>
 				<li>
-					<% @service.clients.each do |client|%>
-					    <%= link_to client.title, client %>
-					<% end %>
+					<%# @service.clients.each do |client|%>
+					    <%#= link_to client.title, client %>
+					<%# end %>
 				</li>
 			</ul>
 

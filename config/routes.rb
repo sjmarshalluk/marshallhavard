@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :users
   resources :clients do
   	resources :guides
+  	resources :questions
+  	resources :services
   end
 
   root "pages#index"
