@@ -9,4 +9,12 @@ def index
 	@services = Service.all
 end
 
+def advice
+  	@clients = Client.all
+end
+
+def big_menu
+  render :layout => 'plain.html.erb'
+end
+	
 end

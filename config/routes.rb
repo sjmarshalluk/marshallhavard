@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get '/advice' => 'pages#advice'
+  get '/big_menu' => 'pages#big_menu'
+
   resource :session
   resources :guides
   resources :questions

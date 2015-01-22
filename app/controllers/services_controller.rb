@@ -24,7 +24,6 @@ end
 
 def show
   @service = Service.find(params[:id])
-  render :layout => 'plain.html.erb'
 end
 
 def edit

@@ -1,17 +1,17 @@
 <div class="wrapper">
 
-	<div class="row">
-		<div class="c8 s2">
-			<h1>Edit this question</h1>
+	<div class="row push-top">
+		<div class="c8">
+			<h1>Edit <em><%= @question.question %></em></h1>
 
 			<%= simple_form_for(@question, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
 				<%= f.input :question %>
 				<%= f.input :answer %>
 				<% Client.all.each do |client| %>
-				  <%= check_box_tag "question[client_ids][]", client.id, @question.client_ids.include?(client.id), id: dom_id(client) %>
+				  <%= check_box_tag "question[client_ids][]", client.id, @question.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
 				  <%= label_tag dom_id(client), client.title %><br>
 				<% end %>
-				<%= f.submit %>
+				<%= f.button :submit %>
 			<% end %>
 		</div>
 	</div>

@@ -3,6 +3,7 @@ before_action :require_user
 
 def index
 	@guides = Guide.all
+  	@client = Client.find(params[:client_id])
 end
 
 def new
@@ -22,7 +23,9 @@ end
 
 def show
   	@guide = Guide.find(params[:id])
-
+  	if @client.present?
+  		@client = Client.find(params[:client_id])
+  	end
 end
 
 def edit

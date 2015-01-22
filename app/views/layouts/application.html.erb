@@ -5,7 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="//use.typekit.net/mkd2fyg.js"></script>
+
+  	<script src="//use.typekit.net/mkd2fyg.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
@@ -34,8 +35,9 @@
 				<nav class="nav-collapse">
 					<ul>
 						<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
-						<li><%= link_to_active_class "Advice & information", "selected", guides_path %></li>
+						<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
+						<li><%= link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %>
 					</ul>
 				</nav>
 				<script>
@@ -81,3 +83,24 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.big-menu').magnificPopup({
+      type: 'ajax',
+      alignTop: true,
+      overflowY: 'hidden', // as we know that popup content is tall we set scroll overflow by default to avoid jump,
+      removalDelay: 300,
+      mainClass: 'mfp-fade'
+    });
+
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+
+    $('.simple-ajax-popup').magnificPopup({
+      type: 'ajax'
+    });
+  });
+</script>

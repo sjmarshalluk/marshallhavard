@@ -1,0 +1,16 @@
+
+
+
+<div class="wrapper">
+	<div class="row push-top">
+		<div class="c12">
+			<h1>Advice &amp; information</h1>
+		</div>
+	</div>
+	<div class="row">
+		<% @clients.each do |client| %>
+			<div class="c3">
+				<%= link_to client.title, client_guides_path(client) %>
+			</div>
+		<% end %>
+	</div>

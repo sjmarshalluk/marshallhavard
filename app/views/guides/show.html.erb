@@ -2,9 +2,14 @@
 	
 	<div class="row push-top">
 		<div class="c8">
+			
+			<% if @client.present? %>
+				<%= link_to @client.title, client_path(@client) %>
+			<% end %>
 			<h1><%= @guide.title %></h1>
 			<p><%= @guide.body.html_safe %></p>
 
+			
 			<p>Relevant to:</p>
 			<ul>
 				<li>
@@ -14,15 +19,44 @@
 				</li>
 			</ul>
 
-			<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
-			<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button" %>
+
+			<% if logged_in? %>
+				<p>Last updated: <%= time_ago_in_words @guide.updated_at %> ago</p>
+				<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
+				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button" %>
+			<% end %>
 
 
 		</div>
-		<div class="c4">
-			<p>Share on twitter / facebook / by email</p>
+		<div class="c3 s1">
+
+			<div class="share">
+				<h4>Share this help sheet</h4>
+				<a class="twitter-share-button" href="https://twitter.com/share"
+				  data-related="twitterdev"
+				  data-size="large"
+				  data-count="none">
+				Tweet
+				</a>
+			</div>
+			
+			<% if @client.present? %>
+				<nav class="related">
+					<ul>
+						<% @client.guides.each do |guide|%>
+							<li><%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %></li>
+						<% end %>
+					</ul>
+				</nav>
+			<% end %>
+
 		</div>
 
 	</div>
 
 </div>
+
+
+<script>
+	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>

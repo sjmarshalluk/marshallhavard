@@ -3,7 +3,7 @@
 	<div class="row push-top">
 		<% @services.each do |service| %>
 			<div class="c2 service-box">
-				<p><%= link_to "#{service.name}", service_path(service), class: "popup" %></p>
+				<p><%= link_to "#{service.name}", service_path(service) %></p>
 			</div>
 		<% end %>
 	</div>
@@ -15,32 +15,4 @@
 </div>
 
 
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.popup').magnificPopup({
-      type: 'ajax',
-      alignTop: true,
-      overflowY: 'hidden', // as we know that popup content is tall we set scroll overflow by default to avoid jump,
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-      },
-      removalDelay: 300,
-      mainClass: 'mfp-fade',
-      modal: true
-    });
-
-    $(document).on('click', '.popup-modal-dismiss', function (e) {
-      e.preventDefault();
-      $.magnificPopup.close();
-    });
-
-    $('.simple-ajax-popup').magnificPopup({
-      type: 'ajax'
-    });
-  });
-</script>
 

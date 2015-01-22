@@ -1,18 +1,39 @@
 <div class="wrapper">
 
-	<div class="row push-top">	
-		<% @guides.each do |guide| %>
-			<div class="c3">
-				<h2><%= link_to "#{guide.title}", guide_url(guide) %></h2>
-				<p><%= raw guide.summary %></p>
-			</div>
-		<% end %>
 
+	<div class="row push-top">	
+		<div class="c8">
+			<h1><%= link_to @client.title, client_path(@client) %></h1>
+			<p>Our fully certified accountants will be able to give you the best guidance on offer. Sometimes its a little tough to know how to get started. So, we have put together these guides on what to consider from a tax point of view.</p>
+		</div>
+	</div>
+	<div class="row">
+		<h3 class="fake-row">Help sheets</h3>
+		<% @client.guides.each do |guide|%>
+			<div class="c3">
+				<div class="border-top small-copy">
+					<h4><%= link_to guide.title, client_guide_path(@client, guide) %></h4>
+					<p><%= raw guide.summary %></p>
+				</div>
+			</div>
+		<% end %>		
 	</div>
 
 	<div class="row">
-		<div class="c12">
-			<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
-		</div>		
+		<h3 class="fake-row">Common questions</h3>
+		<% @client.questions.each do |question|%>
+			<div class="c6">
+				<h4><%= question.question %></h4>
+				<p><%= raw question.answer %></p>
+			</div>
+		<% end %>
 	</div>
+
+	<% if logged_in? %>
+		<div class="row">
+			<div class="c3">
+				<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+			</div>
+		</div>
+	<% end %>
 </div>
