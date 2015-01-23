@@ -398,7 +398,14 @@ nav ul li a {
   -o-user-select: none;
   user-select: none;
   float: right;
-  color: #fff;
+  color: $main;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-toggle:hover {
+	color: $dark;
 }
 
 
