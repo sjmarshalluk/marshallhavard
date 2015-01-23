@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require tinymce
-
 //= require magnific
 //= require responsive-nav
+//= require turbolinks
+
