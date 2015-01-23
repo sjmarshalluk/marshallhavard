@@ -54,4 +54,11 @@
 
   #landing #footer a {
     color: $dark;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+    #landing #footer a:hover {
+    color: #ffffff;
   }
