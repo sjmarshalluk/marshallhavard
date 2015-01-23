@@ -21,7 +21,7 @@
 			<div class="c12 border-top">
 			<p class="no-margin">Last updated: <%= time_ago_in_words @question.updated_at %> ago</p>
 			<%= link_to "Edit", edit_question_path(@question), class: "button" %>
-			<%= link_to "Delete", question_path(@question), method: :delete, class: "button" %>
+			<%= link_to "Delete", question_path(@question), method: :delete, class: "button danger" %>
 		</div>
 	<% end %>
 </div>

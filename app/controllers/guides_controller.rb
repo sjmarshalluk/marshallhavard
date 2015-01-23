@@ -45,7 +45,7 @@ def destroy
   @guide = Guide.find(params[:id])
   @guide.delete
   flash[:success] = "Deleted"
-  redirect_to guides_path
+  redirect_to root_path
 end
 
 

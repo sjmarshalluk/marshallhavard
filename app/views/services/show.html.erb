@@ -22,7 +22,7 @@
 			<div class="c12 border-top">
 				<p class="no-margin">Last updated: <%= time_ago_in_words @service.updated_at %> ago</p>
 				<%= link_to "Edit", edit_service_path(@service), class: "button" %>
-				<%= link_to "Delete", service_path(@service), method: :delete, class: "button" %>
+				<%= link_to "Delete", service_path(@service), method: :delete, class: "button danger" %>
 			</div>
 		</div>
 	<% end %>

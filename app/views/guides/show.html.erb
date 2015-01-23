@@ -52,7 +52,7 @@
 			<% if logged_in? %>
 				<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago</p>
 				<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
-				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button" %>
+				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button danger" %>
 			<% end %>
 		</div>
 	</div>

@@ -236,6 +236,14 @@ footer a:hover {
 }
 
 
+a.danger {
+	background-color: #d1440c;
+}
+
+a.danger:hover {
+	background-color: $dark;
+}
+
 
 .panel {
   padding: 30px;
