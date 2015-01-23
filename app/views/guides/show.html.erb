@@ -10,7 +10,7 @@
 			<p><%= @guide.body.html_safe %></p>
 
 			
-			<p>Relevant to:</p>
+			<h3>Relevant to:</h3>
 			<ul>
 				<li>
 					<% @guide.clients.each do |client|%>
@@ -18,14 +18,6 @@
 					<% end %>
 				</li>
 			</ul>
-
-
-			<% if logged_in? %>
-				<p>Last updated: <%= time_ago_in_words @guide.updated_at %> ago</p>
-				<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
-				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button" %>
-			<% end %>
-
 
 		</div>
 		<div class="c3 s1">
@@ -40,7 +32,7 @@
 				</a>
 			</div>
 			
-			<% if @client.present? %>
+			<%# if client_present? %>
 				<nav class="related">
 					<ul>
 						<% @client.guides.each do |guide|%>
@@ -48,10 +40,20 @@
 						<% end %>
 					</ul>
 				</nav>
-			<% end %>
+			<%# end %>
 
 		</div>
 
+	</div>
+
+	<div class="row">
+		<div class="c12 border-top">
+			<% if logged_in? %>
+				<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago</p>
+				<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
+				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button" %>
+			<% end %>
+		</div>
 	</div>
 
 </div>

@@ -8,6 +8,7 @@ class Service < ActiveRecord::Base
 		"#{id}-#{slug}"
 	end
 
-	has_and_belongs_to_many :clients
+	has_many :client_service
+	has_many :clients, :through => :client_service
 	
 end

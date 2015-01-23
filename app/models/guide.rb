@@ -10,12 +10,10 @@ class Guide < ActiveRecord::Base
 		"#{id}-#{slug}"
 	end
 
-	has_and_belongs_to_many :clients
+	has_many :helpsheet
+	has_many :clients, :through => :helpsheet
 
-	accepts_nested_attributes_for :clients
-
-
-	scope :starting_out, -> { where(starting_out: true) }
+	validates :summary, length: {maximum: 60}
 
 
 end

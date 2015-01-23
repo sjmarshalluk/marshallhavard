@@ -52,6 +52,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'tinymce-rails'
+gem 'jquery-turbolinks'
 
 
 ruby '2.1.2'

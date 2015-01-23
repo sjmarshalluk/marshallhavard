@@ -1,0 +1,23 @@
+<%= simple_form_for @client do |f| %>
+
+	<%= f.input :title %>
+	<p>The name of the client type, e.g. 'Starting Out in Business'.</p>
+
+	<%= f.input :headline %>
+	<p>The heading for the client page, e.g. 'Helping you and your business get started' (max 40 chars)</p>
+
+	<%= f.input :intro %>
+	<p>Intro for the client page</p>
+
+	<%= f.input :help_intro %>
+	<p>Intro for the Services section on the client page</p>
+
+	<%= f.input :advice_intro %>
+	<p>Intro for the Advice &amp; Information section on the client page</p>
+
+	<%= f.input :summary %>
+	<p>Summarise content of advice, e.g. 'Everything you need to know when you’re getting yourself set up' (max 60 chars)</p>
+				
+	<%= f.button :submit %>
+
+<% end %>

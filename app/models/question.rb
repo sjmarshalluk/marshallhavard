@@ -9,6 +9,9 @@ class Question < ActiveRecord::Base
 		"#{id}-#{slug}"
 	end
 
-	has_and_belongs_to_many :clients
+	has_many :query
+	has_many :clients, :through => :query
+
+
 	
 end

@@ -23,9 +23,7 @@ end
 
 def show
   	@guide = Guide.find(params[:id])
-  	if @client.present?
-  		@client = Client.find(params[:client_id])
-  	end
+  	@client = Client.find(params[:client_id])
 end
 
 def edit

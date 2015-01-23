@@ -1,0 +1,14 @@
+<%= simple_form_for(@guide, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
+				
+	<%= f.input :title %>
+	<%= f.input :body %>
+	<%= f.input :summary %>
+	<p>Summary of help sheet content (max 60 chars)</p>
+
+	<% Client.all.each do |client| %>
+		<%= check_box_tag "guide[client_ids][]", client.id, @guide.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
+		<%= label_tag dom_id(client), client.title %><br>
+	<% end %>
+				
+	<%= f.button :submit %>
+<% end %>

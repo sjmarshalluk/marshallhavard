@@ -4,6 +4,7 @@ before_action :require_user
 
 def new
 	@user = User.new
+	@users = User.all
 end
 
 def create

@@ -9,17 +9,24 @@ class Client < ActiveRecord::Base
 		"#{id}-#{slug}"
 	end
 
-	has_and_belongs_to_many :guides
-	has_and_belongs_to_many :questions
-	has_and_belongs_to_many :services
+	
+	has_many :helpsheet
+	has_many :guides, :through => :helpsheet
 
-	accepts_nested_attributes_for :guides
+	has_many :query
+	has_many :questions, :through => :query
+
+	has_many :client_service
+	has_many :services, :through => :client_service
+
+
 
 	validates :title, presence: true
-	validates :headline, presence: true
+	validates :headline, presence: true, length: {maximum: 40}
 	validates :intro, presence: true
 	validates :help_intro, presence: true
 	validates :advice_intro, presence: true
+	validates :summary, presence: true, length: {maximum: 60}
 
 
 end

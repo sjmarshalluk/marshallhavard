@@ -5,7 +5,7 @@
 			<h1><%= @question.question %></h1>
 			<p><%= @question.answer.html_safe %></p>
 
-			<p>Relevant to:</p>
+			<h3>Relevant to:</h3>
 			<ul>
 				<li>
 					<% @question.clients.each do |client|%>
@@ -13,9 +13,15 @@
 					<% end %>
 				</li>
 			</ul>
+		</div>
+	</div>
 
+	<% if logged_in? %>
+		<div class="row">
+			<div class="c12 border-top">
+			<p class="no-margin">Last updated: <%= time_ago_in_words @question.updated_at %> ago</p>
 			<%= link_to "Edit", edit_question_path(@question), class: "button" %>
 			<%= link_to "Delete", question_path(@question), method: :delete, class: "button" %>
 		</div>
-	</div>
+	<% end %>
 </div>

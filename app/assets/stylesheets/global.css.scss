@@ -52,6 +52,10 @@ p {
 	margin-bottom: 2em;
 }
 
+p.no-margin {
+	margin-bottom: 0;
+}
+
 a,
 input.button {
 	text-decoration: none;
@@ -150,14 +154,6 @@ header #logo a {
 header .right {
 	float: right;
 	margin-left: 20px;
-}
-
-header #twitter a {
-	background-image: url('../assets/twitter.png');
-	background-size: 20px 15px;
-	width: 20px;
-	height: 15px;
-	display: block;
 }
 
 header .row {
@@ -281,6 +277,15 @@ nav.related a.selected {
 	text-align: center;
 	font-size: 2em;
 	padding-top: 40px;
+}
+
+.twitter {
+	background-image: url('../assets/twitter.png');
+	width: 31px;
+	height: 25px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin-top: 25px;
 }
 
 

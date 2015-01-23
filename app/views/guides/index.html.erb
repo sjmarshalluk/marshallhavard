@@ -23,8 +23,7 @@
 		<h3 class="fake-row">Common questions</h3>
 		<% @client.questions.each do |question|%>
 			<div class="c6">
-				<h4><%= question.question %></h4>
-				<p><%= raw question.answer %></p>
+				<h4><%= link_to question.question, client_question_path(@client, question) %></h4>
 			</div>
 		<% end %>
 	</div>

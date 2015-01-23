@@ -11,32 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120135106) do
+ActiveRecord::Schema.define(version: 20150123100424) do
+
+  create_table "client_services", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "service_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "client_services", ["client_id"], name: "index_client_services_on_client_id"
+  add_index "client_services", ["service_id"], name: "index_client_services_on_service_id"
+
+  create_table "clientguides", force: true do |t|
+    t.integer "client_id"
+    t.integer "guide_id"
+  end
+
+  add_index "clientguides", ["client_id"], name: "index_clientguides_on_client_id"
+  add_index "clientguides", ["guide_id"], name: "index_clientguides_on_guide_id"
 
   create_table "clients", force: true do |t|
     t.string   "title"
-    t.text     "headline"
+    t.string   "headline"
     t.text     "intro"
     t.text     "help_intro"
     t.text     "advice_intro"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "guide_id"
-  end
-
-  create_table "clients_guides", force: true do |t|
-    t.integer "client_id"
-    t.integer "guide_id"
-  end
-
-  create_table "clients_questions", force: true do |t|
-    t.integer "client_id"
-    t.integer "question_id"
-  end
-
-  create_table "clients_services", force: true do |t|
-    t.integer "client_id"
-    t.integer "service_id"
+    t.string   "summary"
   end
 
   create_table "guides", force: true do |t|
@@ -55,8 +59,28 @@ ActiveRecord::Schema.define(version: 20150120135106) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "client_id"
-    t.text     "summary"
+    t.string   "summary"
   end
+
+  create_table "helpsheets", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "guide_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "helpsheets", ["client_id"], name: "index_helpsheets_on_client_id"
+  add_index "helpsheets", ["guide_id"], name: "index_helpsheets_on_guide_id"
+
+  create_table "queries", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "queries", ["client_id"], name: "index_queries_on_client_id"
+  add_index "queries", ["question_id"], name: "index_queries_on_question_id"
 
   create_table "questions", force: true do |t|
     t.string   "question"

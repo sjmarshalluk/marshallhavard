@@ -5,8 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  	<script src="//use.typekit.net/mkd2fyg.js"></script>
+  <script src="//use.typekit.net/mkd2fyg.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
@@ -28,9 +27,6 @@
 			<div class="c12">
 				<div id="logo">
 					<%= link_to "Marshall Havard", root_path %>
-				</div>
-		 	  	<div id="twitter" class="right">
-					<a href="https://twitter.com/marshallroche" target="_blank">Twitter</a>
 				</div>
 				<nav class="nav-collapse">
 					<ul>
@@ -64,7 +60,7 @@
 						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
 						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
-						<li><%= link_to "Add a user", new_user_path %></li>
+						<li><%= link_to "Users", new_user_path %></li>
 						<li><%= link_to "Log out", session_path, method: :delete %></li>
 					</ul>
 				</nav>
@@ -85,7 +81,7 @@
 </html>
 
 <script type="text/javascript">
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('.big-menu').magnificPopup({
       type: 'ajax',
       alignTop: true,
@@ -97,10 +93,6 @@
     $(document).on('click', '.popup-modal-dismiss', function (e) {
       e.preventDefault();
       $.magnificPopup.close();
-    });
-
-    $('.simple-ajax-popup').magnificPopup({
-      type: 'ajax'
     });
   });
 </script>

@@ -1,20 +1,30 @@
 
 <div class="wrapper">
 
-	<div class="row">
+	<div class="row push-top">
+
 		<div class="c4 s4">
-			<h1>Add a user</h1>
+			<h1>Users</h1>
 
-			<%= simple_form_for @user do |f| %>
-
-				<%= f.input :email %>
-				<%= f.input :password %>
-				<%= f.input :password_confirmation %>
-
-				<%= f.button :submit, "Sign up" %>
-
+			<% @users.each do |user| %>
+				<%= user.email %>
 			<% end %>
 
+			<div class="border-top">
+				<h3>Add another user</h3>
+
+				<%= simple_form_for @user do |f| %>
+
+					<%= f.input :email %>
+					<%= f.input :password %>
+					<%= f.input :password_confirmation %>
+
+					<%= f.button :submit, "Create user" %>
+
+				<% end %>
+			</div>
+
 		</div>
+
 	</div>
 </div>
