@@ -9,4 +9,12 @@
 
 		</div>
 	</div>
+
+	<% if logged_in? %>
+		<div class="row">
+			<div class="c3">
+				<%= link_to "Add a client type", new_client_path, class: "button" %>
+			</div>
+		</div>
+	<% end %>
 </div>

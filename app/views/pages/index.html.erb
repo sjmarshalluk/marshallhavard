@@ -13,8 +13,9 @@
 			<div class="panel">
 				<h3>Help sheets (<%= @guide.count %>)</h3>
 
+				<ul>
 				<% @guides.each do |guide| %>
-					<h4><%= link_to "#{guide.title}", guide_url(guide) %></h4>
+					<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
 				<% end %>
 
 				<%= link_to "Add a help sheet", new_guide_path, class: "button" %>

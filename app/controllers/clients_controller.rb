@@ -49,7 +49,8 @@ def client_params
 		:headline,
 		:intro,
 		:help_intro,
-		:advice_intro
+		:advice_intro,
+		:summary
 	)
 end
 

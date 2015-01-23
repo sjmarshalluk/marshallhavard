@@ -239,7 +239,7 @@ footer a:hover {
 .panel {
   padding: 30px;
   background-color: #eaeef1;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 
@@ -406,6 +406,19 @@ nav ul li a {
 
 
 
+
+}
+
+
+
+
+@media screen and ( max-height: 650px ){
+
+	#big-menu-content {
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 0;
+}
 
 }
 

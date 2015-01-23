@@ -14,7 +14,7 @@ def create
 	@guide = Guide.new(guide_params)
 	if @guide.save
 		flash[:success] = "That saved"
-		redirect_to guides_path
+		redirect_to root_path
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -34,7 +34,7 @@ def update
   @guide = Guide.find(params[:id])
   if @guide.update(guide_params)
   	flash[:success] = "Changes saved"
-    redirect_to guides_path
+    redirect_to root_path
   else
     flash[:error] = "Nope"
     render :new

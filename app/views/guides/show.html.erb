@@ -3,21 +3,22 @@
 	<div class="row push-top">
 		<div class="c8">
 			
-			<% if @client.present? %>
-				<%= link_to @client.title, client_path(@client) %>
-			<% end %>
+			<%# if @client.present? %>
+				<p class="no-margin small-copy"><%= link_to @client.title, client_path(@client) %> / <%= link_to "Advice & Information", client_guides_path %></p>
+			<%# end %>
 			<h1><%= @guide.title %></h1>
 			<p><%= @guide.body.html_safe %></p>
 
-			
-			<h3>Relevant to:</h3>
-			<ul>
-				<li>
-					<% @guide.clients.each do |client|%>
-					    <%= link_to client.title, client %>
-					<% end %>
-				</li>
-			</ul>
+			<%# if @client.present? %>
+				<h3>Relevant to:</h3>
+				<ul>
+					<li>
+						<% @guide.clients.each do |client|%>
+						    <%= link_to client.title, client %>
+						<% end %>
+					</li>
+				</ul>
+			<%# end %>
 
 		</div>
 		<div class="c3 s1">

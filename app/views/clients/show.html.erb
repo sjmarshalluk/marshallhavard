@@ -74,7 +74,17 @@
 	</div>
 </section>
 
-
+<div class="wrapper">
+	<div class="row">
+		<div class="c12 border-top">
+			<% if logged_in? %>
+				<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago</p>
+				<%= link_to "Edit", edit_client_path(@client), class: "button" %>
+				<%= link_to "Delete", client_path(@client), method: :delete, class: "button" %>
+			<% end %>
+		</div>
+	</div>
+</div>
 
 
 <script type="text/javascript">
