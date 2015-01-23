@@ -30,9 +30,10 @@
 	</div>
 
 	<% if logged_in? %>
-		<div class="row">
-			<div class="c3">
+		<div class="row border-top">
+			<div class="c12">
 				<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+				<%= link_to "Add a common question", new_question_path, class: "button" %>
 			</div>
 		</div>
 	<% end %>

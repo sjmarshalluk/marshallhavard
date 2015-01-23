@@ -4,6 +4,8 @@
 		<div class="c8">
 			<h1>Edit <em><%= @guide.title %></em></h1>
 			<%= render "form" %>
+
+			<%= link_to "Delete '#{@guide.title}'", guide_path(@guide), method: :delete, class: "button" %>
 		</div>
 	</div>
 </div>
