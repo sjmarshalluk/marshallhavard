@@ -1,59 +1,60 @@
 
 <% if logged_in? %>
 
-<div class="wrapper">
-	<div class="row push-top">
-		<div class="c12">
-			<h1>Hello. Here's a content summary of the site so far:</h1>
-		</div>
+<div class="summary">
+	<div class="wrapper">
+		<p class="expander">Click here to see site content summary</p>
 	</div>
-	<div class="row">
+	<div class="wrapper">
+		<div class="row content">
 
-		<div class="c4">
-			<div class="panel">
-				<h3>Help sheets (<%= @guide.count %>)</h3>
+			<div class="c4">
+				<div class="panel">
+					<h3>Help sheets (<%= @guide.count %>)</h3>
 
-				<ul>
-				<% @guides.each do |guide| %>
-					<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
-				<% end %>
-				</ul>
+					<ul>
+					<% @guides.each do |guide| %>
+						<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
+					<% end %>
+					</ul>
 
-				<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+					<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+				</div>
 			</div>
-		</div>
 
-		<div class="c4">
-			<div class="panel">
-				<h3>Common questions (<%= @question.count %>)</h3>
+			<div class="c4">
+				<div class="panel">
+					<h3>Common questions (<%= @question.count %>)</h3>
 
-				<% @questions.each do |question| %>
-					<h4><%= link_to "#{question.question}", question_url(question) %></h4>
-				<% end %>
+					<% @questions.each do |question| %>
+						<h4><%= link_to "#{question.question}", question_url(question) %></h4>
+					<% end %>
 
-				<%= link_to "Add a question", new_question_path, class: "button" %>
+					<%= link_to "Add a question", new_question_path, class: "button" %>
+				</div>
 			</div>
-		</div>
 
-		<div class="c4">
-			<div class="panel">
-				<h3>Services (<%= @service.count %>)</h3>
+			<div class="c4">
+				<div class="panel">
+					<h3>Services (<%= @service.count %>)</h3>
 
-				<% @services.each do |service| %>
-					<h4><%= link_to "#{service.name}", service_url(service) %></h4>
-				<% end %>
+					<% @services.each do |service| %>
+						<h4><%= link_to "#{service.name}", service_url(service) %></h4>
+					<% end %>
 
-				<%= link_to "Add a service", new_service_path, class: "button" %>
+					<%= link_to "Add a service", new_service_path, class: "button" %>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="hero" class="home padded">
+<div id="hero" class="home">
 	<div class="wrapper">
 		<div class="fake-row">
 			<h1>Your local accountant</h1>
 			<p>Accountancy services for small businesses, contractors and individuals.</p>
+			<p class="description">Greg and Sarah at the Bluebird Cafe, Lee-on-the-Solent</p>
 		</div>
 	</div>
 </div>
@@ -113,3 +114,7 @@
 </div>
 
 <% end %>
+
+<script type="text/javascript">
+$('.expander').simpleexpand();
+</script>

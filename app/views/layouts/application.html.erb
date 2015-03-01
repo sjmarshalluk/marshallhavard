@@ -8,11 +8,15 @@
   <%= csrf_meta_tags %>
   <script src="//use.typekit.net/mkd2fyg.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+	
 </head>
 <body>
 
 
 <% if logged_in? %>
+
+
+
 
 <% flash.each do |key, value| %>
 	<div class="<%= key %>">

@@ -244,7 +244,8 @@ footer .clients a:hover {
 
 
 .success,
-.error {
+.error,
+.summary {
 	font-size: 14px;
 	color: #fff;
 	padding: 10px 5px;
@@ -252,7 +253,8 @@ footer .clients a:hover {
 }
 
 .success p,
-.error p {
+.error p,
+.summary p {
   margin-bottom: 0;
 }
 
@@ -275,6 +277,10 @@ a.danger:hover {
   padding: 30px;
   background-color: #fafafa;
   border-radius: 5px;
+}
+
+.summary .panel {
+	background-color: #000;
 }
 
 
@@ -334,6 +340,11 @@ nav.related a.selected {
 	overflow: hidden;
 }
 
+#hero.home {
+	padding: 230px 0 20px 0;
+	margin-bottom: 150px;
+}
+
 #hero h1 {
 	font-size: 42px;
 	color: #fff;
@@ -342,12 +353,19 @@ nav.related a.selected {
 
 #hero.home h1 {
 	width: 100%;
+	font-size: 64px;
+	margin-bottom: 0;
 }
 
 #hero p {
 	font-size: 18px;
 	color: lighten($main,40%);
 	width: 70%;
+}
+
+#hero p.description {
+	margin-top: 200px;
+	margin-bottom: 0;
 }
 
 #hero nav li {
@@ -407,6 +425,8 @@ section.dark {
 #advice .client-advice {
 	margin-bottom: 2em;
 }
+
+
 
 
 
