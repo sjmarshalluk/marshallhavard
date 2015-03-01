@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	font-family: "museo-sans", sans-serif;
+	font-family: "museo sans rounded", sans-serif;
 	color: $dark;
 	background-color: #fafafa;
 	-webkit-font-smoothing: antialiased;
@@ -24,6 +24,7 @@ body {
 }
 
 h1 {
+	font-family: "museo-sans-rounded";
 	font-size: 2em;
 	font-weight: 700;
 	margin-bottom: 1em;
@@ -31,9 +32,10 @@ h1 {
 }
 
 h2 {
+	font-family: "museo-sans-rounded";
 	font-size: 1.333em;
 	font-weight: 700;
-	margin: 2em 0 2em;
+	margin: 0 0 1em;
 }
 
 h3 {
@@ -45,6 +47,12 @@ h3 {
 
 h4 {
   font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h4 span {
+  font-weight: 500;
+  color: lighten($dark,40%);
 }
 
 p {
@@ -54,6 +62,10 @@ p {
 
 p.no-margin {
 	margin-bottom: 0;
+}
+
+img {
+	max-width: 100%;
 }
 
 a,
@@ -163,20 +175,29 @@ header .row {
 
 footer {
 	background-color: $dark;
-	color: #ffffff;
 	padding: 2em 0;
 }
 
+footer .row {
+	margin-bottom: 0;
+}
+
 footer a {
-	color: #ffffff;
-	font-size: 0.75em;
+	color: darken($white, 20);
+	font-size: 13px;
 	text-transform: uppercase;
+	display: block;
+	padding: 7px 0;
 }
 
-footer a:hover {
-	color: #bbbbbb;
+footer .clients a {
+	color: darken($white, 40);
 }
 
+footer a:hover,
+footer .clients a:hover {
+	color: $white;
+}
 
 #logo-small {
   display: inline-block;
@@ -236,6 +257,11 @@ footer a:hover {
 }
 
 
+a.small {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
 a.danger {
 	background-color: #d1440c;
 }
@@ -247,7 +273,7 @@ a.danger:hover {
 
 .panel {
   padding: 30px;
-  background-color: #eaeef1;
+  background-color: #fafafa;
   border-radius: 5px;
 }
 
@@ -314,6 +340,10 @@ nav.related a.selected {
 	width: 400px;
 }
 
+#hero.home h1 {
+	width: 100%;
+}
+
 #hero p {
 	font-size: 18px;
 	color: lighten($main,40%);
@@ -329,6 +359,53 @@ nav.related a.selected {
 	color: #ffffff;
 	font-weight: 700;
 	border-bottom: 1px solid #ffffff;
+}
+
+#hero.home {
+	background-image: url('../assets/mh-hero.jpg');
+}
+
+
+
+#features .image {
+	height: 300px;
+}
+
+#features .first .image {
+	background: url('../assets/first-illustration.png') top center no-repeat;
+}
+
+#features .second .image {
+	background: url('../assets/first-illustration.png') top center no-repeat;
+}
+
+#features .third .image {
+	background: url('../assets/first-illustration.png') top center no-repeat;
+}
+
+
+
+section {
+	background-color: #ffffff;
+}
+
+section.dark {
+	background-color: #fafafa;
+}
+
+#advice ul {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+#advice .client-advice ul li {
+	float: left;
+	width: 50%;
+}
+
+#advice .client-advice {
+	margin-bottom: 2em;
 }
 
 

@@ -17,6 +17,7 @@
 				<% @guides.each do |guide| %>
 					<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
 				<% end %>
+				</ul>
 
 				<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
 			</div>
@@ -47,6 +48,49 @@
 		</div>
 	</div>
 </div>
+
+<div id="hero" class="home padded">
+	<div class="wrapper">
+		<div class="fake-row">
+			<h1>Your local accountant</h1>
+			<p>Accountancy services for small businesses, contractors and individuals.</p>
+		</div>
+	</div>
+</div>
+
+<div id="features" class="push-top">
+	<div class="wrapper">
+		<div class="row push-top first">
+			<div class="c5 s1 image">
+			</div>
+			<div class="c5">
+				<h2>Who are Marshall Havard</h2>
+				<p>We have been dealing with company and personal accounts in Hampshire for a quarter of a century. We now help people all over the country with everything from end of year tax returns to business advice.</p>
+				<%= link_to "Find out more about us", '/story' %>
+			</div>
+		</div>
+		<div class="row push-top second">
+			<div class="c5 s1">
+				<h2>Who we can help and how</h2>
+				<p>With over 25 years experience of helping contractors and small businesses, Marshall Havard is your best option. We provide a wide range of services, and are happy to work in a way that suits you.</p>
+				<%= link_to "See how we can help you", clients_path %>
+			</div>
+			<div class="c6 image">
+			</div>
+		</div>
+		<div class="row push-top third">
+			<div class="c5 s1 image">
+			</div>
+			<div class="c5">
+				<h2>Online advice &amp; guidance</h2>
+				<p>We have created an online resource to help you find the answers you're after. Find the information that is relevant to you. If you need any other assistance, we are just a phone call away.</p>
+				<%= link_to "Discover the answers you're after", '/advice' %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 <% else %>
 

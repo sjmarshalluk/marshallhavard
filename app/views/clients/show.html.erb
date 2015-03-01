@@ -2,15 +2,17 @@
 
 <div id="hero" class="padded">
 	<div class="wrapper">
-		<h1><%= @client.headline %></h1>
-		<p><%= @client.intro %></p>
-		<nav>
-			<ul>
-				<li><a href="#help">How we can help you</a></li>
-				<li><a href="#advice">Expert advice</a></li>
-				<li><a href="#why">Why Marshall Havard</a></li>
-			</ul>
-		</nav>
+		<div class="fake-row">
+			<h1><%= @client.headline %></h1>
+			<p><%= @client.intro %></p>
+			<nav>
+				<ul>
+					<li><a href="#help">How we can help you</a></li>
+					<li><a href="#advice">Expert advice</a></li>
+					<li><a href="#why">Why Marshall Havard</a></li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 </div>
 
@@ -38,32 +40,34 @@
 			<div class="c6 s6">
 				<h2>Expert advice &amp; information</h2>
 				<p><%= @client.advice_intro %></p>
-				<h3>Help sheets</h3>
-				<ul>
-					<li>
-						<% @client.guides.each do |guide|%>
-							<%= link_to guide.title, client_guide_path(@client, guide) %>
-						<% end %>
 
-						<%= link_to "Read guides", client_guides_path(@client) %>
-					</li>
-				</ul>
-				<h3>Common questions</h3>
-				<ul>
-					<li>
-						<% @client.questions.each do |question|%>
-							<%= link_to question.question, client_question_path(@client, question) %>
+				<div class="client-advice small-copy border-top">
+					<h4>Help sheets</h4>
+					<p class="no-margin">Our self written guides are meant to be used by anyone looking for a clear, concise resource to find the answer you need.</p>
+					<ul>
+						<% @client.guides.each do |guide|%>
+							<li><%= link_to guide.title, client_guide_path(@client, guide) %></li>
 						<% end %>
-						<%#= link_to "Read all questions", client_questions_path(@client) %>
-					</li>
-				</ul>
+					</ul>
+					<%= link_to "Read all #{@client.title} help sheets", client_guides_path(@client), class: "small" %>
+				</div>
+				<div class="client-questions small-copy border-top">
+					<h4>Common questions</h4>
+					<p class="no-margin">There are some questions we get asked all the time. We’ve collected them all together so you can get the answer too.</p>
+					<ul>
+						<% @client.questions.each do |question|%>
+							<li><%= link_to question.question, client_question_path(@client, question) %></li>
+						<% end %>
+					</ul>
+					<%= link_to "Read all #{@client.title} common questions", client_questions_path(@client), class: "small" %>
+				</div>
 				
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="why">
+<section id="why" class="padded">
 	<div class="wrapper">
 		<div class="row">
 			<div class="c6">

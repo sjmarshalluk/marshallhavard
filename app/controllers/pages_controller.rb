@@ -13,6 +13,14 @@ def advice
   	@clients = Client.all
 end
 
+def team
+
+end
+
+def contact
+
+end
+
 def big_menu
   render :layout => 'plain.html.erb'
 end

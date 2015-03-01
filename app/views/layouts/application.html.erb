@@ -6,8 +6,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="//use.typekit.net/mkd2fyg.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 
@@ -51,21 +49,29 @@
 </div>
 
 
-<footer>
+<footer class="padded">
 	<div class="wrapper">
 		<div class="row">
-			<div class="c12">
-
-				<nav>
-					<ul>
-						<li><%= link_to_active_class "Help Sheets", "selected", guides_path %></li>
-						<li><%= link_to_active_class "Common Questions", "selected", questions_path %></li>
-						<li><%= link_to_active_class "Services", "selected", services_path %></li>
+			<div class="c3">
+				<ul>
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Services", services_path %></li>
+					<li><%= link_to "Advice & information", '/advice' %></li>
+					<li><%= link_to "Our story", '/about' %></li>
+					<li><%= link_to "The team", '/team' %></li>
+					<li><%= link_to "Contact", '/contact' %></li>
+					<% if logged_in? %>
 						<li><%= link_to "Users", new_user_path %></li>
 						<li><%= link_to "Log out", session_path, method: :delete %></li>
-					</ul>
-				</nav>
-
+					<% end %>
+				</ul>
+			</div>
+			<div class="c3">
+				<ul class="clients">
+					<% @clients.each do |client| %>
+						<li><%= link_to client.title, client_path(client) %></li>
+					<% end %>
+				</ul>
 			</div>
 		</div>
 	</div>
