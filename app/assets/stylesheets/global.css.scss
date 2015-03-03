@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-	font-family: "museo-sans-rounded";
+	font-family: "museo-sans-rounded", sans-serif;
 	font-size: 2em;
 	font-weight: 700;
 	margin-bottom: 1em;
@@ -32,17 +32,21 @@ h1 {
 }
 
 h2 {
-	font-family: "museo-sans-rounded";
-	font-size: 1.333em;
+	font-family: "museo-sans-rounded", sans-serif;
+	font-size: 2em;
 	font-weight: 700;
 	margin: 0 0 1em;
 }
 
+.faded {
+	color: lighten($dark,50%);
+}
+
 h3 {
-	text-transform: uppercase;
-	font-weight: 900;
-  font-size: 14px;
-	margin-bottom: 10px;
+	font-family: "museo-sans-rounded", sans-serif;
+	font-weight: 700;
+  	font-size: 1.333em;
+	margin: 0 0 1em;
 }
 
 h4 {
@@ -275,7 +279,7 @@ a.danger:hover {
 
 .panel {
   padding: 30px;
-  background-color: #fafafa;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
@@ -284,22 +288,17 @@ a.danger:hover {
 }
 
 
+.breadcrumbs,
 .share {
-  margin: 20px 0 22px;
-  height: 60px;
+	padding-top: 30px;
+	font-size: 14px;
 }
 
-nav.related {
-  font-size: 16px;
+.share {
+	text-align: right;
 }
 
-nav.related li a {
-  font-size: 16px;
-  padding: 5px 0;
-  display: block;
-}
-
-nav.related a.selected {
+a.selected {
   color: #a2adb0;
 }
 
@@ -412,18 +411,13 @@ section.dark {
 }
 
 #advice ul {
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
 
-#advice .client-advice ul li {
-	float: left;
-	width: 50%;
-}
-
-#advice .client-advice {
-	margin-bottom: 2em;
+#advice ul li {
+	margin-bottom: 20px;
 }
 
 

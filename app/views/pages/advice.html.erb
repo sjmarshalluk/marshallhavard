@@ -1,17 +1,23 @@
 
 
+<div id="hero" class="padded">
+	<div class="wrapper">
+		<div class="fake-row">
+			<h1>Advice &amp; information</h1>
+			<p>To help you get the answers you need, we have put together guides for each of our client types.</p>
+		</div>
+	</div>
+</div>
 
 <div class="wrapper">
 	<div class="row push-top">
-		<div class="c12">
-			<h1>Advice &amp; information</h1>
-		</div>
-	</div>
-	<div class="row">
 		<% @clients.each do |client| %>
-			<div class="c3">
-				<h4><%= link_to client.title, client_guides_path(client) %></h4>
-				<p><%= client.summary %></p>
+			<div class="c4">
+				<div class="panel">
+					<h4><%= link_to client.title, client_path(client, anchor: "advice") %></h4>
+					<p><%= client.summary %></p>
+				</div>
 			</div>
 		<% end %>
 	</div>
+</div>

@@ -1,4 +1,20 @@
 <div class="wrapper">
+
+	<div class="row">
+		<div class="c6 breadcrumbs">
+		<%# if @client.present? %>
+				<p class="no-margin"><%= link_to @client.title, client_path(@client) %> &nbsp;/&nbsp; <%= link_to "Advice & Information", client_guides_path %></p>
+			<%# end %>
+		</div>
+		<div class="c6 share">
+			<a class="twitter-share-button" href="https://twitter.com/share"
+				  data-related="twitterdev"
+				  data-size="large"
+				  data-count="none">
+				Tweet
+				</a>
+		</div>
+	</div>
 	
 	<div class="row push-top">
 		<div class="c8">
@@ -14,7 +30,30 @@
 				</li>
 			</ul>
 		</div>
+
+		<div class="c3 s1">
+			
+			<%# if client_present? %>
+			<nav class="related">
+				<h4>Guides</h4>
+				<ul>
+					<% @client.guides.each do |guide|%>
+						<li><%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %></li>
+					<% end %>
+				</ul>
+				<h4 style="margin-top: 40px;">Common questions</h4>
+				<ul>
+					<% @client.questions.each do |question|%>
+						<li><%= link_to question.question, client_question_path(@client, question) %></li>
+					<% end %>
+				</ul>
+			</nav>
+			<%# end %>
+
+		</div>
 	</div>
+
+
 
 	<% if logged_in? %>
 		<div class="row">

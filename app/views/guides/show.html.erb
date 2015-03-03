@@ -1,11 +1,25 @@
 <div class="wrapper">
+
+	<div class="row">
+		<div class="c6 breadcrumbs">
+		<%# if @client.present? %>
+				<p class="no-margin" style="display: none;"><%= link_to @client.title, client_path(@client) %> &nbsp;/&nbsp; <%= link_to "Advice & Information", client_guides_path %></p>
+			<%# end %>
+				<p class="no-margin"><%= link_to "Back to #{@client.title}", client_path(@client, anchor: "advice") %></p>
+		</div>
+		<div class="c6 share">
+			<a class="twitter-share-button" href="https://twitter.com/share"
+				  data-related="twitterdev"
+				  data-size="large"
+				  data-count="none">
+				Tweet
+				</a>
+		</div>
+	</div>
 	
 	<div class="row push-top">
 		<div class="c8">
 			
-			<%# if @client.present? %>
-				<p class="no-margin small-copy"><%= link_to @client.title, client_path(@client) %> / <%= link_to "Advice & Information", client_guides_path %></p>
-			<%# end %>
 			<h1><%= @guide.title %></h1>
 			<p><%= @guide.body.html_safe %></p>
 
@@ -22,29 +36,35 @@
 
 		</div>
 		<div class="c3 s1">
-
-			<div class="share">
-				<h4>Share this help sheet</h4>
-				<a class="twitter-share-button" href="https://twitter.com/share"
-				  data-related="twitterdev"
-				  data-size="large"
-				  data-count="none">
-				Tweet
-				</a>
-			</div>
 			
-			<%# if client_present? %>
-				<nav class="related">
-					<ul>
-						<% @client.guides.each do |guide|%>
-							<li><%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %></li>
-						<% end %>
-					</ul>
-				</nav>
-			<%# end %>
+			
+			<p>Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="#">email</a>.</p>
+			<p><a href="#advice">More help sheets &amp; common questions</a></p>
 
 		</div>
 
+	</div>
+
+	<div id="advice" class="row border-top padded">
+		<div class="c6">
+			<h3 class="faded">Help sheets</h2>
+			<ul>
+				<% @client.guides.each do |guide|%>
+					<li>
+						<%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %><br />
+						<em class="faded"><%= guide.summary %></em>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="c6">
+			<h3 class="faded">Common questions</h2>				
+			<ul>
+				<% @client.questions.each do |question|%>
+					<li><%= link_to_active_class question.question, "selected", client_question_path(@client, question) %></li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 
 	<div class="row">

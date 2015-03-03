@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get '/advice' => 'pages#advice'
   get '/team' => 'pages#team'
+  get '/about-us' => 'pages#about'
   get '/contact' => 'pages#contact'
   get '/big_menu' => 'pages#big_menu'
 

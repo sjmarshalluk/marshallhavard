@@ -1,9 +1,14 @@
+
 <div class="wrapper">
 
+	<div class="row">
+		<div class="c12 breadcrumbs">
+			<p class="no-margin"><%= link_to @client.title, client_path(@client) %></p>
+		</div>
+	</div>
 
 	<div class="row push-top">	
 		<div class="c8">
-			<p class="no-margin small-copy"><%= link_to @client.title, client_path(@client) %></p>
 			<h1>Advice for <%= @client.title %></h1>
 			<p>Our fully certified accountants will be able to give you the best guidance on offer. Sometimes its a little tough to know how to get started. So, we have put together these guides on what to consider from a tax point of view.</p>
 		</div>
