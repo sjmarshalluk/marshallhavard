@@ -1,18 +1,24 @@
 
 
-<div id="hero" class="padded" style="background-image: url('../assets/mh-hero.jpg');">
+<div id="hero" class="alt-padded" style="background-image: url('../assets/mh-hero.jpg');">
 	<div class="wrapper">
 		<div class="fake-row">
 			<h1><%= @client.headline %></h1>
 			<p><%= @client.intro %></p>
-			<nav>
-				<ul>
-					<li><a href="#help">How we can help you</a></li>
-					<li><a href="#advice">Helpsheets &amp; common questions</a></li>
-					<li><a href="#why">Why Marshall Havard</a></li>
-				</ul>
-			</nav>
 		</div>
+	</div>
+</div>
+
+<div id="sub-nav">
+	<div class="wrapper">
+		<nav class="fake-row">
+			<ul>
+				<li><a href="#help">Our services &amp; specialities</a></li>
+				<li><a href="#advice">Helpsheets &amp; common questions</a></li>
+				<li><a href="#why">Why we're right for you</a></li>
+				<li class="top"><a href="#logo">Back to top</a></li>
+			</ul>
+		</nav>
 	</div>
 </div>
 
@@ -108,3 +114,62 @@
     }
 });
 </script>
+
+<script>
+		$(function(){
+			$("#sub-nav").sticky({topSpacing:0});
+		});
+</script>
+
+<script>
+	$(document).ready(function () {
+		$(document).on("scroll", onScroll);
+ 
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+ 
+			$('a').each(function () {
+				$(this).removeClass('active');
+			})
+			$(this).addClass('active');
+ 
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+ 
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('#sub-nav nav a').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('#sub-nav nav ul li a').removeClass("active");
+				currentLink.addClass("active");
+			}
+			else{
+				currentLink.removeClass("active");
+			}
+		});
+	}
+</script>
+
+<script type="text/javascript">
+	
+	$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('.top:hidden').stop(true, true).fadeIn();
+    } else {
+        $('.top').stop(true, true).fadeOut();
+    }
+});
+
+</script>
+

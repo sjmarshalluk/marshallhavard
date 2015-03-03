@@ -4,19 +4,21 @@
 	<div class="wrapper">
 		<div class="fake-row">
 			<h1>Advice &amp; information</h1>
-			<p>To help you get the answers you need, we have put together guides for each of our client types.</p>
+			<p class="no-margin">To help you get the answers you need, we have put together guides for each of our client types.</p>
 		</div>
 	</div>
 </div>
 
 <div class="wrapper">
-	<div class="row push-top">
-		<% @clients.each do |client| %>
+	<div id="advice-index" class="row push-top">
+		<% @clients.each do |client| %> 
 			<div class="c4">
+				<%= link_to client_path(client, anchor: "advice") do %>
 				<div class="panel">
-					<h4><%= link_to client.title, client_path(client, anchor: "advice") %></h4>
-					<p><%= client.summary %></p>
+					<h4><%= client.title %></h4>
+					<p class="no-margin"><em class="faded"><%= client.summary %></em></p>
 				</div>
+				<% end %>
 			</div>
 		<% end %>
 	</div>
