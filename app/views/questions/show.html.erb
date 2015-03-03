@@ -3,8 +3,9 @@
 	<div class="row">
 		<div class="c6 breadcrumbs">
 		<%# if @client.present? %>
-				<p class="no-margin"><%= link_to @client.title, client_path(@client) %> &nbsp;/&nbsp; <%= link_to "Advice & Information", client_guides_path %></p>
+				<p class="no-margin" style="display: none;"><%= link_to @client.title, client_path(@client) %> &nbsp;/&nbsp; <%= link_to "Advice & Information", client_guides_path %></p>
 			<%# end %>
+				<p class="no-margin"><%= link_to "Back to #{@client.title}", client_path(@client, anchor: "advice") %></p>
 		</div>
 		<div class="c6 share">
 			<a class="twitter-share-button" href="https://twitter.com/share"
@@ -32,24 +33,33 @@
 		</div>
 
 		<div class="c3 s1">
-			
-			<%# if client_present? %>
-			<nav class="related">
-				<h4>Guides</h4>
-				<ul>
-					<% @client.guides.each do |guide|%>
-						<li><%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %></li>
-					<% end %>
-				</ul>
-				<h4 style="margin-top: 40px;">Common questions</h4>
-				<ul>
-					<% @client.questions.each do |question|%>
-						<li><%= link_to question.question, client_question_path(@client, question) %></li>
-					<% end %>
-				</ul>
-			</nav>
-			<%# end %>
 
+			<div class="panel">
+				<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="advice" class="row border-top padded">
+		<div class="c6">
+			<h3 class="faded">Help sheets</h2>
+			<ul>
+				<% @client.guides.each do |guide|%>
+					<li>
+						<%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %><br />
+						<em class="faded"><%= guide.summary %></em>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="c6">
+			<h3 class="faded">Common questions</h2>				
+			<ul>
+				<% @client.questions.each do |question|%>
+					<li><%= link_to_active_class question.question, "selected", client_question_path(@client, question) %></li>
+				<% end %>
+			</ul>
 		</div>
 	</div>
 
