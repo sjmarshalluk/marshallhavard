@@ -145,7 +145,11 @@
 }
 
 .alt-padded {
-	padding: 220px 0 60px;
+	padding: 220px 0 0;
+}
+
+.alt-padded p {
+	margin-bottom: 3em;
 }
 
 

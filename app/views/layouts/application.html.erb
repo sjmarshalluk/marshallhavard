@@ -10,7 +10,7 @@
 <script>try{Typekit.load();}catch(e){}</script>
 	
 </head>
-<body>
+<body id="body">
 
 
 <% if logged_in? %>
@@ -26,7 +26,7 @@
 	</div>
 <% end %>
 
-<header id="header">
+<header>
 	<div class="wrapper">
 		<div class="row">
 			<div class="c12">
@@ -38,7 +38,9 @@
 						<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
 						<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
-						<li><%= link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %>
+						<li><%# link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %></li>
+						<li><%= link_to_active_class "About us", "selected", '/about-us' %></li>
+						<li><%= link_to_active_class "Contact", "selected", '/contact', 'data-no-turbolink' => true %></li>
 					</ul>
 				</nav>
 				<script>
