@@ -17,32 +17,35 @@
 		</div>
 	</div>
 	
-	<div class="row push-top">
-		<div class="c8">
-			
-			<h1><%= @guide.title %></h1>
-			<p><%= @guide.body.html_safe %></p>
-
-			<%# if @client.present? %>
-				<h3>Relevant to:</h3>
-				<ul>
-					<li>
-						<% @guide.clients.each do |client|%>
-						    <%= link_to client.title, client %>
-						<% end %>
-					</li>
-				</ul>
-			<%# end %>
-
-		</div>
-		<div class="c3 s1">
-			
-			<div class="panel">
-				<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+	<div class="row panel">
+		<div class="c10 s1 push-top">
+			<div id="helpsheet">
+				<h1><%= @guide.title %></h1>
+				<p><%= @guide.body.html_safe %></p>
 			</div>
 
+			<div class="small-copy faded">
+				<p>
+					<%= mail_to "me@domain.com", "Email this to myself / to a friend", subject: "Marshall Havard - #{@guide.title}", body: "#{strip_tags @guide.body}", class: "button" %>
+					<input type="button" value="Print this help sheet" onclick="PrintElem('#helpsheet')" class="button" />
+				</p>
+				<p>Relevent to: 
+					<% @guide.clients.each do |client|%>
+					    <%= link_to client.title, client %>
+					<% end %>
+				</p>
+			</div>
 		</div>
+	</div>
+	
 
+	<div class="row">
+		<div class="c12 padded">
+			
+			<h4>Need more advice?</h4>
+			<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+
+		</div>
 	</div>
 
 	<div id="advice" class="row border-top padded">
@@ -80,6 +83,3 @@
 </div>
 
 
-<script>
-	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-</script>

@@ -17,26 +17,33 @@
 		</div>
 	</div>
 	
-	<div class="row push-top">
-		<div class="c8">
-			<h1><%= @question.question %></h1>
-			<p><%= @question.answer.html_safe %></p>
+	<div class="row panel">
+		<div class="c10 s1 push-top">
+			<div id="helpsheet">
+				<h1><%= @question.question %></h1>
+				<p><%= @question.answer.html_safe %></p>
+			</div>
 
-			<h3>Relevant to:</h3>
-			<ul>
-				<li>
+			<div class="small-copy faded">
+				<p>
+					<%= mail_to "me@domain.com", "Email this to myself / to a friend", subject: "Marshall Havard - #{@question.question}", body: "#{strip_tags @question.answer}", class: "button" %>
+					<input type="button" value="Print this help sheet" onclick="PrintElem('#helpsheet')" class="button" />
+				</p>
+				<p>Relevent to: 
 					<% @question.clients.each do |client|%>
 					    <%= link_to client.title, client %>
 					<% end %>
-				</li>
-			</ul>
-		</div>
-
-		<div class="c3 s1">
-
-			<div class="panel">
-				<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+				</p>
 			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+
+		<div class="c12">
+
+			<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
 
 		</div>
 	</div>
