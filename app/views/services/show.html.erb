@@ -1,29 +1,48 @@
 <div class="wrapper">
 	
-	<div class="row push-top">
-		<div id="service-content" class="c8 s2">
-			<h1><%= @service.name %></h1>
-			<p><%= @service.description.html_safe %></p>
-
-			<h3>Related to</h3>
-			<ul>
-				<li>
-					<% @service.clients.each do |client|%>
-					    <%= link_to client.title, client %>
-					<% end %>
-				</li>
-			</ul>
-
-		</div>
-	</div>
-
-	<% if logged_in? %>
-		<div class="row">
-			<div class="c12 border-top">
-				<p class="no-margin">Last updated: <%= time_ago_in_words @service.updated_at %> ago</p>
-				<%= link_to "Edit", edit_service_path(@service), class: "button" %>
-				<%= link_to "Delete", service_path(@service), method: :delete, class: "button danger" %>
+	<div class="panel">
+		<div id="actions" class="row">
+			<div class="c6 breadcrumbs">
+				<p><%= link_to "View more services", client_path(@client, anchor: "help") %></p>
+			</div>
+			<div class="c6 share">
+				<a class="twitter-share-button" href="https://twitter.com/share"
+					  data-related="twitterdev"
+					  data-size="large"
+					  data-count="none">
+					Tweet
+					</a>
 			</div>
 		</div>
-	<% end %>
+		<div class="row">
+			<div class="c10 s1 padded">
+				<div id="helpsheet">
+					<h5>Service</h5>
+					<h1><%= @service.name %></h1>
+					<p><%= @service.description.html_safe %></p>
+				</div>
+
+				<div class="more-help small-copy">
+					<h4>Need more advice?</h4>
+					<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+				</div>
+
+
+				<% if logged_in? %>
+					<div class="admin-tools center small-copy push-top faded">
+						<p class="no-margin">Last updated: <%= time_ago_in_words @service.updated_at %> ago 
+						| <%= link_to "Edit", edit_service_path(@service) %> 
+						| <%= link_to "Delete", service_path(@service), method: :delete %></p>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+
 </div>
+
+

@@ -1,28 +1,28 @@
 
 
-<div id="hero" class="padded">
-	<div class="wrapper">
-		<div class="fake-row">
+<div class="wrapper">
+
+	<div class="row push-top">
+		<div class="c8 s2 center">
 			<h1>Our services</h1>
 			<p>There are many ways we can help our clients.</p>
 		</div>
 	</div>
-</div>
-
-<div class="wrapper">
 
 	<div class="row push-top">
 		<% @services.each do |service| %>
-			<div class="c2 service-box">
-				<p><%= link_to "#{service.name}", service_path(service) %></p>
+			<div class="c3 service-box-all">
+				<h3><%= service.name %></h3>
+				<%= service.description.html_safe %>
 			</div>
 		<% end %>
 	</div>
-	<div class="row">
-		<div class="c12">
-			<%= link_to "Add a service", new_service_path, class: "button" %>
-		</div>
+
+	<% if logged_in? %>
+	<div class="admin-tools center small-copy push-top faded">
+		<%= link_to "Add a service", new_service_path %>
 	</div>
+	<% end %>
 </div>
 
 

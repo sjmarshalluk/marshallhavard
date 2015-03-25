@@ -1,0 +1,47 @@
+<div class="summary">
+	<div class="wrapper">
+		<p class="expander">Click here to see site content summary</p>
+	</div>
+	<div class="wrapper">
+		<div class="row content">
+
+			<div class="c4">
+				<div class="panel">
+					<h3>Help sheets (<%= @guide.count %>)</h3>
+
+					<ul>
+					<% @guides.each do |guide| %>
+						<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
+					<% end %>
+					</ul>
+
+					<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+				</div>
+			</div>
+
+			<div class="c4">
+				<div class="panel">
+					<h3>Common questions (<%= @question.count %>)</h3>
+
+					<% @questions.each do |question| %>
+						<h4><%= link_to "#{question.question}", question_url(question) %></h4>
+					<% end %>
+
+					<%= link_to "Add a question", new_question_path, class: "button" %>
+				</div>
+			</div>
+
+			<div class="c4">
+				<div class="panel">
+					<h3>Services (<%= @service.count %>)</h3>
+
+					<% @services.each do |service| %>
+						<h4><%= link_to "#{service.name}", service_url(service) %></h4>
+					<% end %>
+
+					<%= link_to "Add a service", new_service_path, class: "button" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -140,22 +140,24 @@
 	margin-top: 5em;
 }
 
+.half-padded {
+	padding: 80px 0;
+}
+
 .padded {
-	padding: 110px 0;
+	padding: 160px 0;
 }
 
-.alt-padded {
-	padding: 200px 0 0;
-}
-
-.alt-padded p {
-	margin-bottom: 3em;
+.big-padded {
+	padding: 220px 0 20px;
 }
 
 
 
 
-@media only screen and (max-width: 900px) {
+
+
+@media only screen and (max-width: 500px) {
 
 .c1,
 .c2,
@@ -185,6 +187,10 @@
 .s11,
 .s12 {
 	margin-left:0
+}
+
+.padded {
+	padding: 60px 0;
 }
 
 

@@ -1,61 +1,46 @@
 
 <% if logged_in? %>
 
-<div class="summary">
+
+
+
+<div id="hero" class="home">
+	<header id="header" class="home">
+		<div class="wrapper">
+			<div class="row">
+				<div class="c12">
+					<div id="logo">
+						<%= link_to "Marshall Havard", root_path %>
+					</div>
+					<nav class="nav-collapse">
+						<ul>
+							<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
+							<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
+							<li><%= link_to_active_class "Services", "selected", services_path %></li>
+							<li><%# link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %></li>
+							<li><%= link_to_active_class "About us", "selected", '/about-us' %></li>
+							<li><%= link_to_active_class "Contact", "selected", '/contact', 'data-no-turbolink' => true %></li>
+						</ul>
+					</nav>
+					<script>
+			      		var navigation = responsiveNav(".nav-collapse");
+			    	</script>
+				</div>
+			</div>
+		</div>
+	</header>
 	<div class="wrapper">
-		<p class="expander">Click here to see site content summary</p>
-	</div>
-	<div class="wrapper">
-		<div class="row content">
 
-			<div class="c4">
-				<div class="panel">
-					<h3>Help sheets (<%= @guide.count %>)</h3>
-
-					<ul>
-					<% @guides.each do |guide| %>
-						<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
-					<% end %>
-					</ul>
-
-					<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
-				</div>
-			</div>
-
-			<div class="c4">
-				<div class="panel">
-					<h3>Common questions (<%= @question.count %>)</h3>
-
-					<% @questions.each do |question| %>
-						<h4><%= link_to "#{question.question}", question_url(question) %></h4>
-					<% end %>
-
-					<%= link_to "Add a question", new_question_path, class: "button" %>
-				</div>
-			</div>
-
-			<div class="c4">
-				<div class="panel">
-					<h3>Services (<%= @service.count %>)</h3>
-
-					<% @services.each do |service| %>
-						<h4><%= link_to "#{service.name}", service_url(service) %></h4>
-					<% end %>
-
-					<%= link_to "Add a service", new_service_path, class: "button" %>
-				</div>
-			</div>
+		<div class="fake-row">
+			<h1>Your local accountant</h1>
+			<p>Accountancy services for small businesses, contractors and individuals.</p>
+			<p class="caption">Greg and Sarah at the Bluebird Cafe, Lee-on-the-Solent</p>
 		</div>
 	</div>
 </div>
 
-<div id="hero" class="home">
+<div id="client-logos">
 	<div class="wrapper">
-		<div class="fake-row">
-			<h1>Your local accountant</h1>
-			<p>Accountancy services for small businesses, contractors and individuals.</p>
-			<p class="description">Greg and Sarah at the Bluebird Cafe, Lee-on-the-Solent</p>
-		</div>
 	</div>
 </div>
 
@@ -88,6 +73,12 @@
 				<%= link_to "Discover the answers you're after", '/advice' %>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div id="contact-us">
+	<div class="wrapper center">
+		<h3>Talk to one of our experts today. Call us on 01234 567 890</h3>
 	</div>
 </div>
 

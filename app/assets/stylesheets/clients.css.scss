@@ -2,3 +2,205 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#client-list h1 {
+	margin-bottom: 10px;
+}
+
+#client-list li a {
+	padding: 50px 0 40px;
+	border-bottom: 1px solid $border;
+	display: block;
+	background-color: #fafafa;
+}
+
+#client-list li a:hover {
+	background-color: $main;
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+#sub-nav {
+	background-color: #f3f3f3;
+	font-size: 16px;
+	z-index: 100;
+    overflow: hidden;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#sub-nav nav ul {
+	text-align: center; 
+}
+
+#sub-nav nav li {
+	margin-right: 30px;
+	position:relative;
+	display: inline-block;
+}
+
+#sub-nav nav a {
+	color: $dark;
+	font-weight: 700;
+	padding: 30px 10px;
+	display: inline-block;
+}
+
+#sub-nav nav a:hover {
+	color: $main;
+}
+
+
+
+#sub-nav nav a.active {
+	color: $main;
+}
+
+
+
+
+#content.sheet {
+	background-color: $main;
+	padding: 100px 0;
+}
+
+.sheet .panel {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+#actions {
+	background-color: $light;
+  	border-bottom: 1px solid $border;
+  	padding: 0 20px;
+}
+
+.sheet h1 {
+	margin-bottom: 0;
+}
+
+.more-help {
+	text-align: center;
+	padding-top: 60px;
+	margin-top: 60px;
+	border-top: 1px solid $border;
+}
+
+
+.sheet .padded {
+	padding: 60px 0;
+}
+
+
+#sheets .panel {
+	height: 280px;
+}
+
+#sheets .panel a {
+	position: absolute;
+	bottom: 40px;
+}
+
+
+
+
+
+.lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+
+#sub-nav-sticky-wrapper {
+	display: none;
+}
+
+#sheets .panel {
+	height: auto;
+	margin-bottom: 0;
+}
+
+#sheets .panel h5,
+#sheets .panel p {
+	display: none;
+}
+
+#sheets .panel a {
+	display: block;
+	position: relative;
+	bottom: auto;
+}
+
+
+
+#content.sheet {
+	padding: 10px 0;
+}
+
+.sheet .panel {
+	padding: 30px;
+	margin-bottom: 0;
+}
+
+#actions .c6 {
+	width: 50%;
+}
+
+#actions {
+	background-color: $white;
+  	border-bottom: 1px solid $border;
+  	padding: 0;
+}
+
+.sheet h1 {
+	margin-bottom: 0;
+}
+
+.more-help {
+	text-align: center;
+	padding-top: 60px;
+	margin-top: 60px;
+	border-top: 1px solid $border;
+}
+
+
+.sheet .padded {
+	padding: 60px 0;
+}
+
+
+
+#client-list li a {
+	padding: 30px 0 30px;
+	border-bottom: 1px solid $border;
+	display: block;
+	background-color: #fafafa;
+}
+
+#client-list li a h1 {
+	font-size: 32px;
+}
+
+#client-list li a h3 {
+	margin-bottom: 0;
+}
+
+
+}

@@ -1,18 +1,33 @@
 
 div.service-box {
 	margin-bottom: 20px;
+	padding: 5px;
 }
 
 div.service-box a {
-	background-color: #ffffff;
-	height: 100px;
+	color: $dark;
+	font-size: 16px;
+	height: 60px;
 	width: 100%;
 	display: inline-block;
-	padding: 10px;
+	padding: 15px;
+	border-radius: 3px;
+	border-left: 5px solid #d8ad38;
+	background-color: #fafafa;
+}
+
+div.service-box a:hover {
+	color: $main;
+	
 }
 
 div.service-box p {
 	margin-bottom: 0;
+}
+
+
+div.service-box-all p {
+	font-size: 16px;
 }
 
 #service-content {

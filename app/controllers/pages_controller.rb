@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
 def index
+  	render :layout => 'home.html.erb'
 	@guide = Guide.all
 	@guides = Guide.all
 	@question = Question.all

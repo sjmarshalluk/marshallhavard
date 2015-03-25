@@ -1,84 +1,46 @@
 <div class="wrapper">
-
-	<div class="row">
-		<div class="c6 breadcrumbs">
-		<%# if @client.present? %>
-				<p class="no-margin" style="display: none;"><%= link_to @client.title, client_path(@client) %> &nbsp;/&nbsp; <%= link_to "Advice & Information", client_guides_path %></p>
-			<%# end %>
-				<p class="no-margin"><%= link_to "Back to #{@client.title}", client_path(@client, anchor: "advice") %></p>
-		</div>
-		<div class="c6 share">
-			<a class="twitter-share-button" href="https://twitter.com/share"
-				  data-related="twitterdev"
-				  data-size="large"
-				  data-count="none">
-				Tweet
-				</a>
-		</div>
-	</div>
 	
-	<div class="row panel">
-		<div class="c10 s1 push-top">
-			<div id="helpsheet">
-				<h1><%= @guide.title %></h1>
-				<p><%= @guide.body.html_safe %></p>
+	<div class="panel">
+		<div id="actions" class="row">
+			<div class="c6 breadcrumbs">
+				<p><%= link_to "Back to more help sheets", client_path(@client, anchor: "advice") %></p>
 			</div>
-
-			<div class="small-copy faded">
-				<p>
-					<%= mail_to "me@domain.com", "Email this to myself / to a friend", subject: "Marshall Havard - #{@guide.title}", body: "#{strip_tags @guide.body}", class: "button" %>
-					<input type="button" value="Print this help sheet" onclick="PrintElem('#helpsheet')" class="button" />
-				</p>
-				<p>Relevent to: 
-					<% @guide.clients.each do |client|%>
-					    <%= link_to client.title, client %>
-					<% end %>
-				</p>
+			<div class="c6 share">
+				<a class="twitter-share-button" href="https://twitter.com/share"
+					  data-related="twitterdev"
+					  data-size="large"
+					  data-count="none">
+					Tweet
+					</a>
 			</div>
 		</div>
+		<div class="row">
+			<div class="c10 s1 padded">
+				<div id="helpsheet">
+					<h5>Help sheet</h5>
+					<h1><%= @guide.title %></h1>
+					<p><%= @guide.body.html_safe %></p>
+				</div>
+
+				<div class="more-help small-copy">
+					<h4>Need more advice?</h4>
+					<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+				</div>
+
+
+				<% if logged_in? %>
+					<div class="admin-tools center small-copy push-top faded">
+						<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago 
+						| <%= link_to "Edit", edit_guide_path(@guide) %> 
+						| <%= link_to "Delete", guide_path(@guide), method: :delete %></p>
+					</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
+
 	
-
-	<div class="row">
-		<div class="c12 padded">
-			
-			<h4>Need more advice?</h4>
-			<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
-
-		</div>
-	</div>
-
-	<div id="advice" class="row border-top padded">
-		<div class="c6">
-			<h3 class="faded">Help sheets</h2>
-			<ul>
-				<% @client.guides.each do |guide|%>
-					<li>
-						<%= link_to_active_class guide.title, "selected", client_guide_path(@client, guide) %><br />
-						<em class="faded"><%= guide.summary %></em>
-					</li>
-				<% end %>
-			</ul>
-		</div>
-		<div class="c6">
-			<h3 class="faded">Common questions</h2>				
-			<ul>
-				<% @client.questions.each do |question|%>
-					<li><%= link_to_active_class question.question, "selected", client_question_path(@client, question) %></li>
-				<% end %>
-			</ul>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="c12 border-top">
-			<% if logged_in? %>
-				<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago</p>
-				<%= link_to "Edit", edit_guide_path(@guide), class: "button" %>
-				<%= link_to "Delete", guide_path(@guide), method: :delete, class: "button danger" %>
-			<% end %>
-		</div>
-	</div>
+	 
 
 </div>
 

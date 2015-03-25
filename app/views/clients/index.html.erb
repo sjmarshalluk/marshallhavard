@@ -1,20 +1,19 @@
-<div class="wrapper">
 
-	<div class="row push-top">
-		<div class="c8">
-			
+
+		<ul id="client-list" class="center">
 			<% @clients.each do |client| %>
-				<h1><%= link_to "#{client.title}", client_path(client) %></h1>
+				<li>
+					<%= link_to client_path(client) do %>
+						<h1><%= client.title %></h1>
+						<h3 class="faded"><%= client.headline %></h3>
+					<% end %>
+				</li>
 			<% end %>
+		</ul>
 
-		</div>
-	</div>
 
 	<% if logged_in? %>
-		<div class="row">
-			<div class="c3">
-				<%= link_to "Add a client type", new_client_path, class: "button" %>
-			</div>
+		<div class="admin-tools center small-copy push-top faded">
+			<%= link_to "Add a client type", new_client_path %>
 		</div>
 	<% end %>
-</div>
