@@ -27,7 +27,6 @@ def show
   unless Client.where(@client).present?
 	  @client = Client.find(params[:client_id])
   end
-  render :layout => 'sheet.html.erb'
 end
 
 def edit

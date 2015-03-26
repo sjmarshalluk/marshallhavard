@@ -1,85 +1,82 @@
 <div class="wrapper">
-	<div id="actions" class="row">
-		<div class="c6 breadcrumbs">
-			<p>
-				<%= link_to "Home", root_path %> / 
-				<%= link_to "#{@client.title}", client_path(@client) %> /
-				<%= link_to "Helpsheets & Common questions", client_path(@client, anchor: "advice") %>
-			</p>
+	<div class="dark" style="padding-bottom: 20px;">
+		<div id="actions" class="row">
+			<div class="c8 breadcrumbs">
+				<p>
+					<%= link_to "#{@client.title}", client_path(@client) %> /
+					<%= link_to "Helpsheets & Common questions", client_path(@client, anchor: "advice") %> /
+					<%= @guide.title %>
+				</p>
+			</div>
+			<div class="c4 share">
+				<a class="twitter-share-button" href="https://twitter.com/share"
+				  data-related="twitterdev"
+					  data-size="large"
+					  data-count="none">
+					Tweet
+				</a>
+			</div>
 		</div>
-		<div class="c6 share">
-			<a class="twitter-share-button" href="https://twitter.com/share"
-			  data-related="twitterdev"
-				  data-size="large"
-				  data-count="none">
-				Tweet
-			</a>
-		</div>
-	</div>
- 
-	<div class="row">
-		<div class="panel">
+	  
+		<div class="row">
+			<div class="panel">
 
-			<div class="c10 s1 half-padded">
-				<div id="helpsheet">
-					<h5>Help sheet</h5>
-					<h1><%= @guide.title %></h1>
-					<p><%= @guide.body.html_safe %></p>
-				</div>
-
-				<div class="more-help small-copy">
-					<h4>Need more advice?</h4>
-					<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
-				</div>
-
-
-				<% if logged_in? %>
-					<div class="admin-tools center small-copy push-top faded">
-						<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago 
-						| <%= link_to "Edit", edit_guide_path(@guide) %> 
-						| <%= link_to "Delete", guide_path(@guide), method: :delete %></p>
+				<div class="c10 s1 half-padded">
+					<div id="helpsheet">
+						<h5>Help sheet</h5>
+						<h1><%= @guide.title %></h1>
+						<p><%= @guide.body.html_safe %></p>
 					</div>
-				<% end %>
-			</div>
 
-		</div>
-	</div>
+					<div class="more-help small-copy">
+						<h4>Need more advice?</h4>
+						<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+					</div>
 
-	<div class="row">
 
-			<div class="row">
-				<div class="c8">
-					<h2>Expert advice &amp; information</h2>
-					<p><%= @client.advice_intro %></p>
+					<% if logged_in? %>
+						<div class="admin-tools center small-copy push-top faded">
+							<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago 
+							| <%= link_to "Edit", edit_guide_path(@guide) %> 
+							| <%= link_to "Delete", guide_path(@guide), method: :delete %></p>
+						</div>
+					<% end %>
 				</div>
-			</div>
-			<div class="row">
-				<ul id="sheets">
-					<% @client.guides.each do |guide|%>
-						<li class="c3">
-							<%= link_to client_guide_path(@client, guide) do %>
-								<div class="panel">
-									<h5>Help Sheet</h5>
-									<h3><%= guide.title %></h3>
-									<p class="faded small-copy"><%= guide.summary %></p>
-								</div>
-							<% end %>
-						</li>
-					<% end %>
 
-					<% @client.questions.each do |question|%>
-						<li class="c3">
-							<%= link_to client_question_path(@client, question) do %>
-								<div class="panel">
-									<h5>Common question</h5>
-									<h3><%= question.question %></h3>
-								</div>
-							<% end %>
-						</li>
-					<% end %>
-				</ul>
 			</div>
-		
+		</div>
+
+
+
+		<div class="row">
+			<ul id="sheets">
+				<% @client.guides.each do |guide|%>
+					<li class="c3">
+						<%= link_to client_guide_path(@client, guide) do %>
+							<div class="panel">
+								<h5>Help Sheet</h5>
+								<h3><%= guide.title %></h3>
+								<p class="faded small-copy"><%= guide.summary %></p>
+							</div>
+						<% end %>
+					</li>
+				<% end %>
+
+				<% @client.questions.each do |question|%>
+					<li class="c3">
+						<%= link_to client_question_path(@client, question) do %>
+							<div class="panel">
+								<h5>Common question</h5>
+								<h3><%= question.question %></h3>
+							</div>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+			
+
+
 	</div>
 
 

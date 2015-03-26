@@ -75,13 +75,18 @@
 	margin-bottom: 0;
 }
 
+
+
 #actions.row {
 	margin-bottom: 0;
 }
 
-#actions a {
-	color: #ffffff;
+#actions {
 	font-weight: 500;
+	color: $light;
+}
+#actions a {
+	color: $main;
 }
 
 .sheet h1 {
