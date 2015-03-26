@@ -1,18 +1,19 @@
 
-
-<div id="hero" class="padded">
-	<h1 class="narrow"><%= @client.headline %></h1>
-	<p><%= @client.intro %></p>
-</div>
-<div id="sub-nav">
-	<div class="wrapper">
-		<nav>
-			<ul>
-				<li><a href="#help">Our services &amp; specialities</a></li>
-				<li><a href="#advice">Helpsheets &amp; common questions</a></li>
-				<li><a href="#why">Why we're right for you</a></li>
-			</ul>
-		</nav>
+<div class="wrapper">
+	<div id="hero" class="padded">
+		<h1 class="narrow"><%= @client.headline %></h1>
+		<p><%= @client.intro %></p>
+	</div>
+	<div id="sub-nav">
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="#help">Our services &amp; specialities</a></li>
+					<li><a href="#advice">Helpsheets &amp; common questions</a></li>
+					<li><a href="#why">Why we're right for you</a></li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 </div>
 
@@ -21,7 +22,7 @@
 	<section id="help" class="padded">
 		<div class="wrapper">
 			<div class="row">
-				<div class="c8 s2 center">
+				<div class="c8">
 					<h2>How we can help</h2>
 					<p><%= @client.help_intro %></p>
 				</div>
@@ -41,7 +42,7 @@
 	<section id="advice" class="dark padded">
 		<div class="wrapper">
 			<div class="row">
-				<div class="c8 s2 center">
+				<div class="c8">
 					<h2>Expert advice &amp; information</h2>
 					<p><%= @client.advice_intro %></p>
 				</div>
@@ -78,7 +79,7 @@
 <section id="why" class="padded">
 	<div class="wrapper">
 		<div class="row">
-			<div class="c8 s2 center">
+			<div class="c8">
 				<h2>Why Marshall Havard</h2>
 				<p><%= @client.advice_intro %></p>
 			</div>

@@ -14,7 +14,7 @@ html {
 body {
 	font-family: "museo-sans", sans-serif;
 	color: $dark;
-	background-color: #fafafa;
+	background-color: #ffffff;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 	height: 100%;
@@ -140,7 +140,6 @@ header {
 	color: $dark;
 	overflow: hidden;
 	z-index: 300;
-	border-bottom: 1px solid $border;
 }
 
 header nav {
@@ -329,9 +328,8 @@ a.danger:hover {
 
 
 .panel {
-  padding: 20px;
+  padding: 30px;
   background-color: #ffffff;
-  border-radius: 5px;
   margin-bottom: 20px;
 }
 
