@@ -12,8 +12,7 @@
 	<div class="row push-top">
 		<% @services.each do |service| %>
 			<div class="c3 service-box-all">
-				<h3><%= service.name %></h3>
-				<%= service.description.html_safe %>
+				<h3><%= link_to service.name, service %></h3>
 			</div>
 		<% end %>
 	</div>

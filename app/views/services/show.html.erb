@@ -1,9 +1,23 @@
+
 <div class="wrapper">
-	
+	<div class="pagination">
+	<% unless  @service.id == Service.first.id   %>         
+  		<%= link_to 'Previous', Service.get_previous_service(@service)  %>
+ 	<% end %>
+ 
+    <% unless  @service.id == Service.last.id   %> 
+		<%= link_to 'Next', Service.get_next_service(@service) %>
+    <% end %>
+    </div>
 	<div class="panel">
 		<div id="actions" class="row">
 			<div class="c6 breadcrumbs">
-				<p><%= link_to "View more services", client_path(@client, anchor: "help") %></p>
+				<% if @client.present? %>
+					<p><%= link_to "Back to all", services_path %></p>
+				<% else %>
+					<% @client = Client.find(params[:id]) %>
+					<p><%= link_to "View more services", client_path(@client, anchor: "help") %></p>
+				<% end %>
 			</div>
 			<div class="c6 share">
 				<a class="twitter-share-button" href="https://twitter.com/share"
@@ -44,5 +58,7 @@
 	
 
 </div>
+
+
 
 

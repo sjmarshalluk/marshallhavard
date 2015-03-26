@@ -17,7 +17,7 @@
 </div>
 
 
-
+<% if @client.services.present? %>
 <section id="help" class="padded">
 	<div class="wrapper">
 		<div class="row">
@@ -35,6 +35,7 @@
 		</div>
 	</div>
 </section>
+<% end %>
 
 <section id="advice" class="dark padded">
 	<div class="wrapper">

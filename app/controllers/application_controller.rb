@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   	session[:user_id].present?
   end
 
+  def client_there?
+    @client = Client.find(params[:id]).present?
+  end
+
   def require_user
   	unless logged_in?
   		flash[:error] = "You need to be logged in"
@@ -29,5 +33,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   helper_method :logged_in?
+  helper_method :client_there?
   helper_method :footer_clients
 end
