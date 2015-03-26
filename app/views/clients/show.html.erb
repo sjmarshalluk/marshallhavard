@@ -15,35 +15,35 @@
 			</nav>
 		</div>
 	</div>
-</div>
+
 
 
 <% if @client.services.present? %>
-	<section id="help" class="padded">
-		<div class="wrapper">
+	<section id="help">
+
 			<div class="row">
-				<div class="c6 col-pad-right">
+				<div class="c8">
 					<h2>How we can help</h2>
 					<p><%= @client.help_intro %></p>
 				</div>
-				<div class="c6">
-					<% @client.services.each do |service|%>
-						<div class="service-box">
-							<%= link_to service.name, client_service_path(@client, service) %>
-							<div class="service-description">
-								<%= service.description %>
-							</div>
-						</div>
-					<% end %>
-				</div>
 			</div>
-		</div>
+			<div class="row">
+				<% @client.services.each do |service|%>
+					<div class="c3 service-box">
+						<%= link_to service.name, client_service_path(@client, service) %>
+						<div class="service-description">
+							<%= service.description %>
+						</div>
+					</div>
+				<% end %>
+			</div>
+
 	</section>
 <% end %>
 
 <% if @client.guides.present? or @client.questions.present? %>
-	<section id="advice" class="dark padded">
-		<div class="wrapper">
+	<section id="advice" class="dark">
+		
 			<div class="row">
 				<div class="c8">
 					<h2>Expert advice &amp; information</h2>
@@ -54,40 +54,41 @@
 				<ul id="sheets">
 					<% @client.guides.each do |guide|%>
 						<li class="c3">
-							<div class="panel">
-								<h5>Help Sheet</h5>
-								<h3><%= guide.title %></h3>
-								<p class="faded small-copy"><%= guide.summary %></p>
-								<%= link_to "Read help sheet", client_guide_path(@client, guide), class: "small-copy" %>
-								
-							</div>
+							<%= link_to client_guide_path(@client, guide) do %>
+								<div class="panel">
+									<h5>Help Sheet</h5>
+									<h3><%= guide.title %></h3>
+									<p class="faded small-copy"><%= guide.summary %></p>
+								</div>
+							<% end %>
 						</li>
 					<% end %>
 
 					<% @client.questions.each do |question|%>
 						<li class="c3">
-							<div class="panel">
-								<h5>Common question</h5>
-								<h3><%= question.question %></h3>
-								<%= link_to "View the answer", client_question_path(@client, question), class: "small-copy" %>
-							</div>
+							<%= link_to client_question_path(@client, question) do %>
+								<div class="panel">
+									<h5>Common question</h5>
+									<h3><%= question.question %></h3>
+								</div>
+							<% end %>
 						</li>
 					<% end %>
 				</ul>
 			</div>
-		</div>
+		
 	</section>
 <% end %>
 
 <section id="why" class="padded">
-	<div class="wrapper">
+	
 		<div class="row">
 			<div class="c8">
 				<h2>Why Marshall Havard</h2>
 				<p><%= @client.advice_intro %></p>
 			</div>
 		</div>
-	</div>
+	
 
 
 	<% if logged_in? %>
@@ -102,7 +103,7 @@
 </section>
 
 
-
+</div>
 
 
 <script type="text/javascript">

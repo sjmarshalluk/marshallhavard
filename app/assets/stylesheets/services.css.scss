@@ -4,17 +4,15 @@ div.service-box {
 }
 
 div.service-box a {
-	color: $white;
+	color: $dark;
 	font-weight: 300;
-	font-size: 16px;
-	height: 60px;
-	width: 50%;
-	float: left;
+	height: 100px;
+	width: 100%;
 	display: inline-block;
 	padding: 15px;
-	border-right: 1px solid #fafafa;
-	border-bottom: 1px solid #fafafa;
-	background-color: lighten($main, 20%);
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background-color: #fafafa;
   position: relative;
 }
 
@@ -31,7 +29,7 @@ div.service-box p {
 div.service-box div.service-description {
   padding: 0;
   position: absolute;
-  top: 60px;
+  top: 10px;
   left: 0;
   width: 100%;
   opacity: 0;

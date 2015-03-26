@@ -15,12 +15,41 @@
 
 <% if logged_in? %>
 
+<% flash.each do |key, value| %>
+	<div class="<%= key %>">
+		<div class="wrapper">
+			<p><%= value %></p>
+		</div>
+	</div>
+<% end %>
+
+<header id="header">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c12">
+				<div id="logo">
+					<%= link_to "Marshall Havard", root_path %>
+				</div>
+				<nav class="nav-collapse">
+					<ul id="global-nav">
+						<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
+						<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
+						<li><%= link_to_active_class "Services", "selected", services_path %></li>
+						<li><%# link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %></li>
+						<li><%= link_to_active_class "About us", "selected", '/about-us' %></li>
+						<li><%= link_to_active_class "Contact", "selected", '/contact', 'data-no-turbolink' => true %></li>
+					</ul>
+				</nav>
+				<script>
+		      		var navigation = responsiveNav(".nav-collapse");
+		    	</script>
+			</div>
+		</div>
+	</div>
+</header>
 
 
-
-
-
-<div id="content" class="sheet">
+<div id="content" class="dark">
 	<%= yield %>
 </div>
 
@@ -38,6 +67,7 @@
 					<li><%= link_to "Contact", '/contact' %></li>
 					<% if logged_in? %>
 						<li><%= link_to "Users", new_user_path %></li>
+						<li><%= link_to "Summary", '/summary' %></li>
 						<li><%= link_to "Log out", session_path, method: :delete %></li>
 					<% end %>
 				</ul>
@@ -74,6 +104,7 @@
 
 					<!--End mc_embed_signup-->
 				</div>
+			</div>
 		</div>
 	</div>
 </footer>

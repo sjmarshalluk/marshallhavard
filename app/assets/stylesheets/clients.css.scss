@@ -76,10 +76,13 @@
 	margin-bottom: 0;
 }
 
-#actions {
-	background-color: $light;
-  	border-bottom: 1px solid $border;
-  	padding: 0 20px;
+#actions.row {
+	margin-bottom: 0;
+}
+
+#actions a {
+	color: #ffffff;
+	font-weight: 500;
 }
 
 .sheet h1 {
@@ -99,15 +102,27 @@
 }
 
 
-#sheets .panel {
-	height: 280px;
-	border-right: 1px solid #fafafa;
-	border-bottom: 1px solid #fafafa;
+#sheets a {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
 }
 
-#sheets .panel a {
-	position: absolute;
-	bottom: 40px;
+#sheets .panel {
+	height: 280px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+#sheets a:hover .panel {
+	background-color: $main;
 }
 
 

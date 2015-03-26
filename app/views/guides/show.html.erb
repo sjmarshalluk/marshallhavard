@@ -1,21 +1,25 @@
 <div class="wrapper">
-	
-	<div class="panel">
-		<div id="actions" class="row">
-			<div class="c6 breadcrumbs">
-				<p><%= link_to "Back to more help sheets", client_path(@client, anchor: "advice") %></p>
-			</div>
-			<div class="c6 share">
-				<a class="twitter-share-button" href="https://twitter.com/share"
-					  data-related="twitterdev"
-					  data-size="large"
-					  data-count="none">
-					Tweet
-					</a>
-			</div>
+	<div id="actions" class="row">
+		<div class="c6 breadcrumbs">
+			<p>
+				<%= link_to "Home", root_path %> / 
+				<%= link_to "#{@client.title}", client_path(@client) %> /
+				<%= link_to "Helpsheets & Common questions", client_path(@client, anchor: "advice") %>
+			</p>
 		</div>
+		<div class="c6 share">
+			<a class="twitter-share-button" href="https://twitter.com/share"
+			  data-related="twitterdev"
+				  data-size="large"
+				  data-count="none">
+				Tweet
+			</a>
+		</div>
+	</div>
+	<div class="panel">
+		
 		<div class="row">
-			<div class="c10 s1 padded">
+			<div class="c10 s1 half-padded">
 				<div id="helpsheet">
 					<h5>Help sheet</h5>
 					<h1><%= @guide.title %></h1>

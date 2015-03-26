@@ -133,6 +133,10 @@ input.button:hover {
 	margin: 0 auto;
 }
 
+.dark-bg {
+	background-color: $main;
+}
+
 
 
 header {
@@ -222,7 +226,6 @@ footer .clients a:hover {
 #newsletter {
 	background-color: darken($light, 5%);
 	width: 100%;
-	border-radius: 3px;
 	padding: 30px;
 	font-size: 16px;
 	overflow: hidden;
@@ -434,11 +437,12 @@ a.selected {
 
 
 section {
-	background-color: #ffffff;
+	padding: 100px 0 50px;
 }
 
-section.dark {
-	background-color: #fafafa;
+.dark {
+	background-color: $dark;
+	color: $white;
 }
 
 
@@ -447,12 +451,10 @@ section.dark {
 
 #advice ul {
 	margin-top: 30px;
-	margin-bottom: 20px;
 	overflow: hidden;
 }
 
 #advice ul li {
-	margin-bottom: 20px;
 }
 
 
