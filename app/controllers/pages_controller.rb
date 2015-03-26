@@ -26,6 +26,17 @@ def contact
 
 end
 
+def summary
+	
+	@guide = Guide.all
+	@guides = Guide.all
+	@question = Question.all
+	@questions = Question.all
+	@service = Service.all
+	@services = Service.all
+
+end
+
 def big_menu
   render :layout => 'plain.html.erb'
 end

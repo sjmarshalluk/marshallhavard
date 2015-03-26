@@ -14,10 +14,6 @@ class ApplicationController < ActionController::Base
   	session[:user_id].present?
   end
 
-  def client_there?
-    @client = Client.find(params[:id]).present?
-  end
-
   def require_user
   	unless logged_in?
   		flash[:error] = "You need to be logged in"
