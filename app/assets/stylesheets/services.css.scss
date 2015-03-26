@@ -1,5 +1,6 @@
 
 div.service-box {
+	overflow: visible;
 }
 
 div.service-box a {
@@ -7,12 +8,14 @@ div.service-box a {
 	font-weight: 300;
 	font-size: 16px;
 	height: 60px;
-	width: 100%;
+	width: 50%;
+	float: left;
 	display: inline-block;
 	padding: 15px;
 	border-right: 1px solid #fafafa;
 	border-bottom: 1px solid #fafafa;
 	background-color: lighten($main, 20%);
+  position: relative;
 }
 
 div.service-box a:hover {
@@ -25,8 +28,26 @@ div.service-box p {
 }
 
 
-div.service-box-all p {
-	font-size: 16px;
+div.service-box div.service-description {
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+
+div.service-box:hover div.service-description {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
 }
 
 #service-content {

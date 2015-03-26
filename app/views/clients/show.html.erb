@@ -22,17 +22,20 @@
 	<section id="help" class="padded">
 		<div class="wrapper">
 			<div class="row">
-				<div class="c8">
+				<div class="c6 col-pad-right">
 					<h2>How we can help</h2>
 					<p><%= @client.help_intro %></p>
 				</div>
-			</div>
-			<div class="row">
-				<% @client.services.each do |service|%>
-					<div class="c3 service-box">
-						<%= link_to service.name, client_service_path(@client, service) %>
-					</div>
-				<% end %>
+				<div class="c6">
+					<% @client.services.each do |service|%>
+						<div class="service-box">
+							<%= link_to service.name, client_service_path(@client, service) %>
+							<div class="service-description">
+								<%= service.description %>
+							</div>
+						</div>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</section>
