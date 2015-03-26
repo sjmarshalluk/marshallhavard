@@ -334,6 +334,7 @@ a.danger:hover {
   padding: 30px;
   background-color: #ffffff;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .summary .panel {
@@ -350,6 +351,17 @@ a.danger:hover {
 .share {
 	text-align: right;
 }
+
+
+.nav-previous a,
+.nav-next a {
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	background-color: $light;
+}
+
+
 
 a.selected {
   color: #a2adb0;
@@ -392,20 +404,17 @@ a.selected {
 
 #hero h1 {
 	color: #fff;
-	text-align: center;
 }
 
 #hero h1.narrow {
 	width: 600px;
-	margin: 0 auto 1em;
 }
 
 #hero p {
 	font-size: 18px;
 	color: lighten($main,40%);
-	text-align: center;
 	width: 66%;
-	margin: 0 auto;
+	margin-bottom: 0;
 }
 
 
@@ -437,11 +446,13 @@ a.selected {
 
 
 section {
-	padding: 100px 0 50px;
 }
 
 .dark {
 	background-color: $dark;
+}
+
+section.dark {
 	color: $white;
 }
 

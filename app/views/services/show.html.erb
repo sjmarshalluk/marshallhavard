@@ -1,35 +1,36 @@
 
 <div class="wrapper">
-	<div class="pagination">
-	<% unless  @service.id == Service.first.id   %>         
-  		<%= link_to 'Previous', Service.get_previous_service(@service)  %>
- 	<% end %>
- 
-    <% unless  @service.id == Service.last.id   %> 
-		<%= link_to 'Next', Service.get_next_service(@service) %>
-    <% end %>
-    </div>
-	<div class="panel">
-		<div id="actions" class="row">
-			<div class="c6 breadcrumbs">
-				<% if @client.present? %>
-					<p><%= link_to "Back to all", services_path %></p>
-				<% else %>
-					<% @client = Client.find(params[:id]) %>
-					<p><%= link_to "View more services", client_path(@client, anchor: "help") %></p>
-				<% end %>
-			</div>
-			<div class="c6 share">
-				<a class="twitter-share-button" href="https://twitter.com/share"
+
+
+	<div id="actions" class="row">
+		<div class="c6 breadcrumbs">
+			<% if @client.present? %>
+				<p><%= link_to "Back to all", services_path %></p>
+			<% else %>
+				<% @client = Client.find(params[:id]) %>
+				<p><%= link_to "View more services", client_path(@client, anchor: "help") %></p>
+			<% end %>
+		</div>
+		<div class="c6 share">
+			<a class="twitter-share-button" href="https://twitter.com/share"
 					  data-related="twitterdev"
 					  data-size="large"
 					  data-count="none">
-					Tweet
-					</a>
-			</div>
+				Tweet
+				</a>
 		</div>
-		<div class="row">
-			<div class="c10 s1 padded">
+	</div>
+
+	<div class="row">
+		
+		<div class="panel">
+			<div class="c1 nav-previous">
+				<% unless  @service.id == Service.first.id   %>         
+			  		<%= link_to 'Previous', Service.get_previous_service(@service)  %>
+			 	<% end %>
+			</div>
+
+			<div class="c10 padded">
 				<div id="helpsheet">
 					<h5>Service</h5>
 					<h1><%= @service.name %></h1>
@@ -49,6 +50,12 @@
 						| <%= link_to "Delete", service_path(@service), method: :delete %></p>
 					</div>
 				<% end %>
+			</div>
+
+			<div class="c1 nav-next">
+				<% unless  @service.id == Service.last.id   %> 
+					<%= link_to 'Next', Service.get_next_service(@service) %>
+			    <% end %>
 			</div>
 		</div>
 	</div>

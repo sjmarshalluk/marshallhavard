@@ -1,11 +1,13 @@
 
 <div class="wrapper">
 	<div id="hero" class="padded">
-		<h1 class="narrow"><%= @client.headline %></h1>
-		<p><%= @client.intro %></p>
+		<div class="row no-margin">
+			<h1 class="narrow"><%= @client.headline %></h1>
+			<p><%= @client.intro %></p>
+		</div>
 	</div>
 	<div id="sub-nav">
-		<div class="wrapper">
+		<div class="row no-margin">
 			<nav>
 				<ul>
 					<li><a href="#help">Our services &amp; specialities</a></li>
@@ -19,7 +21,7 @@
 
 
 <% if @client.services.present? %>
-	<section id="help">
+	<section id="help" class="padded">
 
 			<div class="row">
 				<div class="c8">
@@ -42,7 +44,7 @@
 <% end %>
 
 <% if @client.guides.present? or @client.questions.present? %>
-	<section id="advice" class="dark">
+	<section id="advice" class="dark padded">
 		
 			<div class="row">
 				<div class="c8">

@@ -16,4 +16,5 @@ class Guide < ActiveRecord::Base
 	validates :summary, length: {maximum: 60}
 
 
+
 end
