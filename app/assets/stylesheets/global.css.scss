@@ -461,14 +461,46 @@ section {
 
 .dark {
 	background-color: $dark;
-}
-
-section.dark {
 	color: $white;
 }
 
+.blue {
+	background-color: $main;
+	color: $white;
+}
+
+.light {
+	background-color: $light;
+}
 
 
+.cta-box {
+	padding: 30px;
+	font-size: 16px;
+}
+
+.cta-box p:last-child {
+	margin-bottom: 0;
+}
+
+.dark .cta-box {
+	background-color: darken($dark, 5%);
+	color: darken($light, 30%);
+}
+
+.blue .cta-box {
+	background-color: darken($main, 5%);
+	color: darken($light, 10%);
+}
+
+.blue .cta-box a {
+	color: $dark;
+}
+
+.blue .cta-box {
+	background-color: darken($light, 5%);
+	color: lighten($dark, 10%);
+}
 
 
 #advice ul {

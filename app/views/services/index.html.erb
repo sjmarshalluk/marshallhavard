@@ -12,7 +12,7 @@
 		<div class="row">
 			<% @services.each do |service| %>
 				<div class="c3 service-box">
-					<%= link_to service.name, service %>
+					<%= link_to service.name, service, remote: true, class: "ajax", rel: "service" %>
 				</div>
 			<% end %>
 		</div>
@@ -27,3 +27,8 @@
 
 
 
+<script>
+	$(document).ready(function(){
+		$(".ajax").colorbox({rel:'service'});
+	});
+</script>

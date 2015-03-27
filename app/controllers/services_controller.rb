@@ -25,7 +25,8 @@ end
 
 def show
   @service = Service.find(params[:id])
-	@client = Client.find(params[:client_id])
+	render :layout => 'plain.html.erb'
+	#@client = Client.find(params[:client_id])
  
 end
 

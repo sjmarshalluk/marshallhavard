@@ -1,42 +1,46 @@
 
 
 <div class="wrapper">
-	<div id="hero" class="padded">
+	<section id="advice" class="blue padded">
 		<div class="row no-margin">
 			<div class="c8">
-				<h1>Small businesses, contractors and individuals</h1>
+				<h1>Businesses and individuals</h1>
 				<p>For 30 years we have been helping clients of all types. Not only can we help you stay inside the laws, but we might also be able to save you money.</p>
+			</div>
+			<div class="c3 s1 cta-box">
+				<p>Talk to one of our experts today to find out how we can help you save money.</p> 
+				<p>Call us on 01234 567 890, or <a href="mailto:hello@marshallhavard.com">drop us an email</a></p>
 			</div>
 		</div>
 
-	<div class="row">
-		<div id="advice-index">
-		<ul>
-			<% @clients.each do |client| %> 
-				<li>
-					
-							
-					<h2><%= link_to client.title, client_path(client) %></h2>
-					<p class="small-copy"><%= client.intro %></p>
+		<div class="row">
+			<div id="advice-index">
+			<ul>
+				<% @clients.each do |client| %> 
+					<li>
 						
+								
+						<h2><%= link_to client.title, client_path(client) %></h2>
+						<p class="small-copy"><%= client.intro %></p>
+							
 
-					<h5>
-							Jump to:
-							<%= link_to "Overview", client_path(client) %> | 
-							<%= link_to "How we can help you", client_path(client, anchor: "help") %> | 
-							<%= link_to "Advice & Information", client_path(client, anchor: "advice") %>
-						</h5>
+						<h5>
+								Jump to:
+								<%= link_to "Overview", client_path(client) %> | 
+								<%= link_to "How we can help you", client_path(client, anchor: "help") %> | 
+								<%= link_to "Advice & Information", client_path(client, anchor: "advice") %>
+							</h5>
 
-											
+												
 
-					
-				</li>
-			<% end %>
-		</ul>
+						
+					</li>
+				<% end %>
+			</ul>
+			</div>
 		</div>
-	</div>
 	
-	</div>
+	</section>
 
 	<% if logged_in? %>
 		<div class="admin-tools center small-copy push-top faded">
