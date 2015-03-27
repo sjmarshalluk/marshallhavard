@@ -1,7 +1,2 @@
-$modal = $('.modal'),
-$modalBody = $('.modal .modal-body'),
-$modalHeading = $('.modal .modal-heading');
-$modalHeading.html("<%= @guide.title %>");
-$modal.modal();
-
-
+$('#client-help-sheet').html("<%= j (render 'guide') %>");
+$('#client-help-sheet').slideDown(350);

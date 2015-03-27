@@ -1,0 +1,32 @@
+
+
+<div class="wrapper">
+	<div class="row push-top">
+		<div class="c8 s2 center">
+			<h1>Advice &amp; information</h1>
+			<p>To help you get the answers you need, we have put together guides for each of our client types.</p>
+		</div>
+	</div>
+
+	<div id="advice-index" class="row">
+		<% @clients.each do |client| %> 
+			<div class="c4">
+				<div class="panel">
+					<h2><%= link_to "#{client.title}", client_path(client, anchor: "advice") %></h2>
+						<p class="no-margin faded"><%= client.summary %></p>
+						<ul>
+							<% client.guides.each do |guide|%>
+								<li><%= link_to "#{guide.title}", client_guide_path(client, guide) %></li>
+							<% end %>
+
+							<% client.questions.each do |question|%>
+								<li><%= link_to "#{question.question}", client_question_path(client, question) %></li>
+							<% end %>
+						</ul>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+

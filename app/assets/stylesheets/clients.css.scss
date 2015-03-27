@@ -9,7 +9,7 @@
 
 #client-list li a {
 	padding: 50px 0 40px;
-	border-bottom: 1px solid $border;
+	margin-bottom: 1px;
 	display: block;
 	background-color: #fafafa;
 }
@@ -115,7 +115,7 @@
 }
 
 #sheets .panel {
-	height: 280px;
+	height: 300px;
 	margin-right: 1px;
 	margin-bottom: 1px;
 	-webkit-transition: all 0.2s ease-out;
@@ -142,6 +142,24 @@
     width:100%;
     background: #000;
     display: none;
+}
+
+
+
+
+
+
+
+#service-detail {
+	display: none; 
+	color: $dark; 
+	position: absolute; 
+	z-index: 1000; 
+	background-color: #fff; 
+	top: 0; 
+	left: 0; 
+	margin: 20px 50px;
+	box-sizing: content-box; 
 }
 
 

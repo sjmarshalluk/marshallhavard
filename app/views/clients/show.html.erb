@@ -4,6 +4,7 @@
 		<div class="row no-margin">
 			<h1 class="narrow"><%= @client.headline %></h1>
 			<p><%= @client.intro %></p>
+
 		</div>
 	</div>
 	<div id="sub-nav">
@@ -29,16 +30,17 @@
 					<p><%= @client.help_intro %></p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="position: relative; overflow: visible">
 				<% @client.services.each do |service|%>
 					<div class="c3 service-box">
-						<%= link_to service.name, client_service_path(@client, service) %>
-						<div class="service-description">
-							<%= service.description %>
-						</div>
+						<%= link_to service.name, client_service_path(@client, service), remote: true, class: "open" %>
 					</div>
 				<% end %>
+				<div id="service-detail">
+				</div>
 			</div>
+
+			
 
 	</section>
 <% end %>
@@ -50,25 +52,28 @@
 				<div class="c8">
 					<h2>Expert advice &amp; information</h2>
 					<p><%= @client.advice_intro %></p>
+
 				</div>
 			</div>
 			<div class="row">
 				<ul id="sheets">
-					<% @client.guides.each do |guide|%>
+					<% @client.guides.each do |guide| %>
+
 						<li class="c3">
-							<%= link_to client_guide_path(@client, guide) do %>
+							<%= link_to client_guide_path(@client, guide), remote: true, class: "ajax", rel: "advice" do %>
 								<div class="panel">
 									<h5>Help Sheet</h5>
 									<h3><%= guide.title %></h3>
 									<p class="faded small-copy"><%= guide.summary %></p>
 								</div>
 							<% end %>
+							
 						</li>
 					<% end %>
 
 					<% @client.questions.each do |question|%>
 						<li class="c3">
-							<%= link_to client_question_path(@client, question) do %>
+							<%= link_to client_question_path(@client, question), remote: true, class: "ajax", rel: "advice" do %>
 								<div class="panel">
 									<h5>Common question</h5>
 									<h3><%= question.question %></h3>
@@ -77,7 +82,10 @@
 						</li>
 					<% end %>
 				</ul>
+				
 			</div>
+
+			
 		
 	</section>
 <% end %>
@@ -108,22 +116,7 @@
 </div>
 
 
-<script type="text/javascript">
-	$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
 
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});
-</script>
 
 <script>
 		$(function(){
@@ -171,21 +164,8 @@
 	}
 </script>
 
-<script type="text/javascript">
-	
-	$(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('.top:hidden').stop(true, true).fadeIn();
-    } else {
-        $('.top').stop(true, true).fadeOut();
-    }
-});
-
+<script>
+	$(document).ready(function(){
+		$(".ajax").colorbox({rel:'advice'});
+	});
 </script>
-
-<script type="text/javascript">
-	$("a[rel*=leanModal]").leanModal();
-</script>
-
-
-

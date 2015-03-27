@@ -10,15 +10,15 @@ div.service-box a {
 	width: 100%;
 	display: inline-block;
 	padding: 15px;
-	border-right: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-	background-color: #fafafa;
+	border-right: 1px solid #fafafa;
+	border-bottom: 1px solid #fafafa;
+	background-color: #ffffff;
   position: relative;
 }
 
 div.service-box a:hover {
-	color: $white;
-	
+	background-color: $main;
+	color: $white;	
 }
 
 div.service-box p {
@@ -26,27 +26,6 @@ div.service-box p {
 }
 
 
-div.service-box div.service-description {
-  padding: 0;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
-}
-
-div.service-box:hover div.service-description {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-}
 
 #service-content {
 	text-align: center;

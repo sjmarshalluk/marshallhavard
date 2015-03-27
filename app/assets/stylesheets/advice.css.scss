@@ -3,18 +3,60 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#advice-index .panel {
-	padding: 40px;
-}
-
-#advice-index ul {
-	border-top: 1px solid $border;
-	margin-top: 40px;
-	padding-top: 30px;
-}
-
 #advice-index ul li {
-	margin-top: 10px;
+	width: 50%; 
+	float: left; 
+	border-bottom: 1px solid #fff;
+	background-color: #fafafa;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	height: 400px; 
+	padding: 60px;
+	display: block;
+}
+
+#advice-index ul li:hover  {
+	background-color: $light;
+}
+
+#advice-index ul li:hover .jump-to {
+	background-color: darken($main, 10%);
+}
+
+
+
+
+#advice-index ul li:hover a.big,
+#advice-index ul li:hover .jump-to a {
+	color: $dark;
+}
+
+#advice-index ul li a.big:hover,
+#advice-index ul li .jump-to a:hover {
+	color: $white;
+}
+
+
+
+#advice-index ul li:nth-child(2n+1) {
+	border-right: 1px solid #fff;
+}
+
+#advice-index ul li .jump-to {
+	padding: 30px 60px;
+	background-color: $light;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+#advice-index ul li .jump-to h5 {
+	margin-bottom: 0;
 }
 
 

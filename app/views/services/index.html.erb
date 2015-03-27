@@ -1,27 +1,28 @@
 
 
 <div class="wrapper">
-
-	<div class="row push-top">
-		<div class="c8 s2 center">
-			<h1>Our services</h1>
-			<p>There are many ways we can help our clients.</p>
-		</div>
-	</div>
-
-	<div class="row push-top">
-		<% @services.each do |service| %>
-			<div class="c3 service-box">
-				<h3><%= link_to service.name, service %></h3>
+	<section  class="padded">
+		<div class="row">
+			<div class="c8">
+				<h1>Our services</h1>
+				<p>There are many ways we can help our clients.</p>
 			</div>
-		<% end %>
-	</div>
+		</div>
 
-	<% if logged_in? %>
-	<div class="admin-tools center small-copy push-top faded">
-		<%= link_to "Add a service", new_service_path %>
-	</div>
-	<% end %>
+		<div class="row">
+			<% @services.each do |service| %>
+				<div class="c3 service-box">
+					<%= link_to service.name, service %>
+				</div>
+			<% end %>
+		</div>
+
+		<% if logged_in? %>
+		<div class="admin-tools center small-copy push-top faded">
+			<%= link_to "Add a service", new_service_path %>
+		</div>
+		<% end %>
+	</section>
 </div>
 
 

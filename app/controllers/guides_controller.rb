@@ -23,7 +23,7 @@ end
 
 def show
   	@guide = Guide.find(params[:id])
-  	@client = Client.find(params[:client_id])
+	render :layout => 'plain.html.erb'
 end
 
 def edit

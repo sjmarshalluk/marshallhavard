@@ -1,24 +1,4 @@
-<div class="wrapper">
-	<div class="dark" style="padding-bottom: 20px;">
-		<div id="actions" class="row">
-			<div class="c8 breadcrumbs">
-				<p>
-					<%= link_to "#{@client.title}", client_path(@client) %> /
-					<%= link_to "Helpsheets & Common questions", client_path(@client, anchor: "advice") %> /
-					<%= @guide.title %>
-				</p>
-			</div>
-			<div class="c4 share">
-				<a class="twitter-share-button" href="https://twitter.com/share"
-				  data-related="twitterdev"
-					  data-size="large"
-					  data-count="none">
-					Tweet
-				</a>
-			</div>
-		</div>
-	  
-		<div class="row">
+
 			<div class="panel">
 
 				<div class="c10 s1 half-padded">
@@ -44,44 +24,6 @@
 				</div>
 
 			</div>
-		</div>
 
-
-
-		<div class="row">
-			<ul id="sheets">
-				<% @client.guides.each do |guide|%>
-					<li class="c3">
-						<%= link_to client_guide_path(@client, guide) do %>
-							<div class="panel">
-								<h5>Help Sheet</h5>
-								<h3><%= guide.title %></h3>
-								<p class="faded small-copy"><%= guide.summary %></p>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-
-				<% @client.questions.each do |question|%>
-					<li class="c3">
-						<%= link_to client_question_path(@client, question) do %>
-							<div class="panel">
-								<h5>Common question</h5>
-								<h3><%= question.question %></h3>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-		</div>
-			
-
-
-	</div>
-
-
-	
-
-</div>
 
 

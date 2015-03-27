@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
 
 before_action :require_user
+respond_to :html, :js
 
  
 def index
@@ -24,9 +25,8 @@ end
 
 def show
   @service = Service.find(params[:id])
-  unless Client.where(@client).present?
-	  @client = Client.find(params[:client_id])
-  end
+	@client = Client.find(params[:client_id])
+ 
 end
 
 def edit

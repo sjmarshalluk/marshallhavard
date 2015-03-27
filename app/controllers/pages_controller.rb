@@ -12,6 +12,8 @@ end
 
 def advice
   	@clients = Client.all
+	@guides = Guide.all
+	@questions = Question.all
 end
 
 def team

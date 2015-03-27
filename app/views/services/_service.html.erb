@@ -1,8 +1,8 @@
 
 <div>
 
-<h2><%= @guide.title %></h2>
-<p><%= @guide.body.html_safe %></p>
+<h2><%= @service.name %></h2>
+<p><%= @service.description.html_safe %></p>
 
 
 <a id="hide">Hide</a>
@@ -12,7 +12,7 @@
 <script>
 $(document).ready(function(){
     $("#hide").click(function(){
-        $("#client-help-sheet").hide();
+        $("#service-detail").hide();
     });
     $("#show").click(function(){
         $("p").show();
