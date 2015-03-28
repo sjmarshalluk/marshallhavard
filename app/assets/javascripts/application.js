@@ -20,6 +20,7 @@
 //= require printscreen
 //= require sticky-nav
 //= require twitter
+//= require turbolinks
 
 
 
