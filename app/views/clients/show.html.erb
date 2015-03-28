@@ -22,8 +22,8 @@
 
 
 <% if @client.services.present? %>
-	<section id="help" class="padded">
-
+	<section id="help">
+		<div class="padded">
 			<div class="row">
 				<div class="c8">
 					<h2>How we can help</h2>
@@ -40,14 +40,13 @@
 				</div>
 			</div>
 
-			
-
+		</div>
 	</section>
 <% end %>
 
 <% if @client.guides.present? or @client.questions.present? %>
-	<section id="advice" class="dark padded">
-		
+	<section id="advice" class="secondary">
+		<div class="padded">
 			<div class="row">
 				<div class="c8">
 					<h2>Expert advice &amp; information</h2>
@@ -86,12 +85,12 @@
 			</div>
 
 			
-		
+		</div>
 	</section>
 <% end %>
 
-<section id="why" class="padded">
-	
+<section id="why">
+	<div class="padded">
 		<div class="row">
 			<div class="c8">
 				<h2>Why Marshall Havard</h2>
@@ -101,14 +100,14 @@
 	
 
 
-	<% if logged_in? %>
-		<div class="admin-tools center small-copy push-top faded">
-			<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
-			| <%= link_to "Edit", edit_client_path(@client) %> 
-			| <%= link_to "Delete", client_path(@client), method: :delete %></p>
-		</div>
-	<% end %>
-
+		<% if logged_in? %>
+			<div class="admin-tools center small-copy push-top faded">
+				<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
+				| <%= link_to "Edit", edit_client_path(@client) %> 
+				| <%= link_to "Delete", client_path(@client), method: :delete %></p>
+			</div>
+		<% end %>
+	</div>
 	
 </section>
 

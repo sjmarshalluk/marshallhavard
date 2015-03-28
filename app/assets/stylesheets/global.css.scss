@@ -44,7 +44,7 @@ h2 {
 
 h3 {
 	font-family: "museo-sans", sans-serif;
-	font-weight: 100;
+	font-weight: 300;
   	font-size: 24px;
   	line-height: 1.2;
 	margin: 0 0 1em;
@@ -208,7 +208,7 @@ header .row {
 
 
 footer {
-	background-color: $light;
+	background-color: $dark;
 	padding: 2em 0;
 }
 
@@ -456,7 +456,8 @@ a.selected {
 
 
 section {
-	background-color: #fafafa;
+	background-color: $light;
+	margin-bottom: 0px;
 }
 
 .dark {
@@ -466,6 +467,16 @@ section {
 
 .blue {
 	background-color: $main;
+	color: $white;
+}
+
+.secondary {
+	background-color: $secondary;
+	color: $white;
+}
+
+.tertiary {
+	background-color: $tertiary;
 	color: $white;
 }
 
@@ -486,6 +497,15 @@ section {
 .dark .cta-box {
 	background-color: darken($dark, 5%);
 	color: darken($light, 30%);
+}
+
+.secondary .cta-box {
+	background-color: darken($secondary, 5%);
+	color: lighten($secondary, 30%);
+}
+
+.secondary .cta-box a {
+	color: $white;
 }
 
 .blue .cta-box {
