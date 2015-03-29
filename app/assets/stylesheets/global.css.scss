@@ -107,7 +107,6 @@ input.button {
 	padding: 23px;
 	font-size: 12px;
 	text-transform: uppercase;
-	border-radius: 3px;
 	font-weight: 700;
 	margin: 30px 0;
 	display: inline-block;
@@ -137,14 +136,14 @@ input.button:hover {
 	background-color: $main;
 }
 
-.cta-box {
+.panel-alt {
 	background-color: darken($dark, 5%);
 	color: darken($light, 30%);
 	padding: 30px;
 	font-size: 16px;
 }
 
-.cta-box p:last-child {
+.panel-alt p:last-child {
 	margin-bottom: 0;
 }
 
@@ -208,9 +207,8 @@ header .row {
 
 
 footer {
-	background-color: $dark;
+	background-color: $white;
 	padding: 2em 0;
-	margin-bottom: 60px;
 }
 
 footer .row {
@@ -218,7 +216,7 @@ footer .row {
 }
 
 footer a {
-	color: $light;
+	color: $dark;
 	font-size: 13px;
 	text-transform: uppercase;
 	display: block;
@@ -226,7 +224,7 @@ footer a {
 }
 
 footer .clients a {
-	color: darken($white, 30);
+	color: lighten($dark, 15);
 }
 
 footer a:hover,
@@ -235,8 +233,8 @@ footer .clients a:hover {
 }
 
 #newsletter {
-	background-color: darken($dark, 2%);
-	color: $light;
+	background-color: $light;
+	color: $dark;
 	width: 100%;
 	padding: 30px;
 	font-size: 16px;
@@ -246,24 +244,12 @@ footer .clients a:hover {
 #newsletter .mc-field-group input {
 	width: 70%;
 	float: left;
-	-webkit-border-top-right-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
-	-moz-border-radius-topright: 0;
-	-moz-border-radius-bottomright: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
 }
 
 #newsletter .button {
 	width: 30%;
 	float: left;
 	margin: 0;
-	-webkit-border-top-left-radius: 0;
-	-webkit-border-bottom-left-radius: 0;
-	-moz-border-radius-topleft: 0;
-	-moz-border-radius-bottomleft: 0;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
 }
 
 
@@ -440,7 +426,14 @@ a.selected {
 }
 
 #features .image {
-	height: 300px;
+	height: 200px;
+}
+
+#features .first,
+#features .second,
+#features .third {
+	padding: 180px 0;
+	overflow: hidden;
 }
 
 #features .first .image {
@@ -487,48 +480,45 @@ section {
 }
 
 
-.cta-box {
+.panel-alt {
 	padding: 30px;
 	font-size: 16px;
 }
 
-.cta-box p:last-child {
+.panel-alt p:last-child {
 	margin-bottom: 0;
 }
 
-.dark .cta-box {
+.dark .panel-alt {
 	background-color: darken($dark, 5%);
 	color: darken($light, 30%);
 }
 
-.secondary .cta-box {
+.secondary .panel-alt {
 	background-color: darken($secondary, 5%);
 	color: lighten($secondary, 30%);
 }
 
-.secondary .cta-box a {
+.secondary .panel-alt a {
 	color: $white;
 }
 
-.blue .cta-box {
+.blue .panel-alt {
 	background-color: darken($main, 5%);
 	color: darken($light, 10%);
 }
 
-.blue .cta-box a {
+.blue .panel-alt a {
 	color: $dark;
 }
 
-.light .cta-box {
+.light .panel-alt {
 	background-color: darken($light, 5%);
 	color: lighten($dark, 10%);
 }
 
 
-#advice ul {
-	margin-top: 30px;
-	overflow: hidden;
-}
+
 
 #advice ul li {
 }
