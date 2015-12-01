@@ -5,36 +5,10 @@
 
 
 <div id="hero" class="home">
-	<header id="header" class="home">
-		<div class="wrapper">
-			<div class="row">
-				<div class="c12">
-					<div id="logo">
-						<%= link_to "Marshall Havard", root_path %>
-					</div>
-					<nav class="nav-collapse">
-						<ul>
-							<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
-							<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
-							<li><%= link_to_active_class "Services", "selected", services_path %></li>
-							<li><%# link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %></li>
-							<li><%= link_to_active_class "About us", "selected", '/about-us' %></li>
-							<li><%= link_to_active_class "Contact", "selected", '/contact', 'data-no-turbolink' => true %></li>
-						</ul>
-					</nav>
-					<script>
-			      		var navigation = responsiveNav(".nav-collapse");
-			    	</script>
-				</div>
-			</div>
-		</div>
-	</header>
 	<div class="wrapper">
 
 		<div class="fake-row">
-			<h1>Your local accountant</h1>
-			<p>Accountancy services for small businesses, contractors and individuals.</p>
-			<p class="caption">Greg and Sarah at the Bluebird Cafe, Lee-on-the-Solent</p>
+			<h2 style="text-align: left"><span>Hello. We are <strong>Marshall Havard</strong>.</span>We have been helping individuals and small business with recurring and one-off accounting challenges for over 30 years.  With highstreet shops in Gosport and Cowplain, we are available to talk to face-to-face when it suits you. </h2>
 		</div>
 	</div>
 </div>
@@ -47,10 +21,10 @@
 
 <div id="features">
 	<div class="wrapper">
-		<section class="blue first">
+		<section class="first">
 			<div class="row">
 				<div class="c6">
-					<h1>Accountancy services for small business &amp; individuals</h1>
+					<h2>Accountancy services for small business &amp; individuals</h2>
 					<p>With over 25 years experience of helping contractors and small businesses, Marshall Havard is your best option. We provide a wide range of services, and are happy to work in a way that suits you.</p>
 					<%= link_to "See how we can help you", clients_path %>
 				</div>
@@ -59,12 +33,12 @@
 			</div>
 			
 		</section>
-		<section class="dark second">
+		<section class="second">
 			<div class="row">
 				<div class="c6 image">
 				</div>
 				<div class="c6">
-					<h1>Free to access online advice &amp; guidance</h1>
+					<h2>From yearly tax returns, to once-in-a-lifetime opportunities</h2>
 					<p>We have created an online resource to help you find the answers you're after. Find the information that is relevant to you. If you need any other assistance, we are just a phone call away.</p>
 					<%= link_to "Discover the answers you're after", '/advice' %>
 				</div>
@@ -73,7 +47,7 @@
 		<section class="third">
 			<div class="row">
 				<div class="c6">
-					<h1>Thirty years of local &amp; national experience</h1>
+					<h2>Thirty years of local &amp; national experience</h2>
 					<p>We have been dealing with company and personal accounts in Hampshire for a quarter of a century. We now help people all over the country with everything from end of year tax returns to business advice.</p>
 					<%= link_to "Find out more about us", '/about-us' %>
 				</div>

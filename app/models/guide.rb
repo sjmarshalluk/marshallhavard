@@ -15,6 +15,15 @@ class Guide < ActiveRecord::Base
 
 	validates :summary, length: {maximum: 60}
 
+scope :next, lambda {|id| where("id > ?",id).order("id ASC") } # this is the default ordering for AR
+    scope :previous, lambda {|id| where("id < ?",id).order("id DESC") }
 
+    def next
+      Guide.next(self.id).first
+    end
+
+    def previous
+      Guide.previous(self.id).first
+    end
 
 end

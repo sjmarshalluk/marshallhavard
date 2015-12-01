@@ -1,10 +1,24 @@
 
-			<div class="panel">
+<section id="hero" class="dark padded">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c8 s2 center">
+				<h1><%= @guide.title %></h1>
+				<p><%= @guide.summary %></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-				<div class="c10 s1 half-padded">
+
+			<div class="panel">
+				<h1><%= link_to "Previous", @previous %></h1>
+				<h1><%= link_to "Next", @next %></h1>
+
+				<div class="c8 s2 half-padded">
 					<div id="helpsheet">
 						<h5>Help sheet</h5>
-						<h1><%= @guide.title %></h1>
 						<p><%= @guide.body.html_safe %></p>
 					</div>
 

@@ -1,18 +1,26 @@
 
 
-<div class="wrapper">
-	<section  class="padded">
+<section id="hero" class="dark padded">
+	<div class="wrapper">
 		<div class="row">
-			<div class="c8">
-				<h1>Our services</h1>
+			<div class="c8 s2 center">
+				<h2>Our services</h2>
 				<p>There are many ways we can help our clients.</p>
 			</div>
 		</div>
+	</div>
+</section>
 
+<section class="padded">
+
+	<div class="wrapper">
 		<div class="row">
 			<% @services.each do |service| %>
 				<div class="c3 service-box">
-					<%= link_to service.name, service, remote: true, class: "ajax", rel: "service" %>
+					<%= link_to service, remote: true, class: "ajax", rel: "service" do %>
+						<h4><%= service.name %></h4>
+						<p><%= truncate(service.description, :length => 80) %></p>
+					<% end %>
 				</div>
 			<% end %>
 		</div>
@@ -22,8 +30,9 @@
 			<%= link_to "Add a service", new_service_path %>
 		</div>
 		<% end %>
-	</section>
-</div>
+	</div>
+</section>
+
 
 
 

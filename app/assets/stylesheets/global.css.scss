@@ -18,9 +18,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 	height: 100%;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.6;
-  	height: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -53,6 +53,7 @@ h3 {
 h4 {
   font-weight: 500;
   margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
 h5 {
@@ -149,36 +150,48 @@ input.button:hover {
 
 
 header {
-	background-color: #fff;
 	color: $dark;
 	overflow: hidden;
 	z-index: 300;
+  position: absolute;
+  padding: 40px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+header #logo {
+  float: left;
 }
 
 header nav {
-	float: right;
+	float: left;
+  margin-left: 20px;
 }
 
 header nav li {
 	float: left;
 	font-size: 14px;
+  margin-right: 15px;
 }
 
 header a {
-	color: $dark;
+	color: $white;
 	font-weight: 500;
-	padding: 30px 20px;
+	padding: 10px 0 2px;
 	display: inline-block;
+  border-bottom: 2px solid transparent;
 }
 
 header a:hover,
 header a.selected {
-	color: $main
+  border-bottom: 2px solid $white;
+  color: $white;
+  opacity: 0.7;
 }
 
 header #logo {
 	display: inline-block;
-	margin: 18px 0;
+	margin: 0;
 }
 
 header #logo a {
@@ -198,6 +211,21 @@ header .row {
 	margin-bottom: 0;
 }
 
+header .btn {
+  float: right;
+}
+
+.btn {
+  padding: 8px 10px;
+  border: 2px solid $main;
+  color: $main;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: $main;
+  color: $white;
+}
 
 
 
@@ -216,7 +244,7 @@ footer .row {
 }
 
 footer a {
-	color: $dark;
+	color: $white;
 	font-size: 13px;
 	text-transform: uppercase;
 	display: block;
@@ -224,7 +252,7 @@ footer a {
 }
 
 footer .clients a {
-	color: lighten($dark, 15);
+	color: lighten($dark, 45);
 }
 
 footer a:hover,
@@ -233,12 +261,13 @@ footer .clients a:hover {
 }
 
 #newsletter {
-	background-color: $light;
-	color: $dark;
+	background-color: lighten($dark, 5);
+	color: $white;
 	width: 100%;
 	padding: 30px;
 	font-size: 16px;
 	overflow: hidden;
+  border-radius: 3px;
 }
 
 #newsletter .mc-field-group input {
@@ -412,7 +441,7 @@ a.selected {
 	font-size: 18px;
 	color: lighten($main,40%);
 	width: 66%;
-	margin-bottom: 0;
+	margin: 0 auto;
 }
 
 
@@ -451,7 +480,6 @@ a.selected {
 
 
 section {
-	background-color: $light;
 	margin-bottom: 0px;
 }
 

@@ -1,6 +1,7 @@
 class GuidesController < ApplicationController
 before_action :require_user
 
+
 def index
 	@guides = Guide.all
   	@client = Client.find(params[:client_id])
@@ -22,8 +23,7 @@ def create
 end
 
 def show
-  	@guide = Guide.find(params[:id])
-	render :layout => 'plain.html.erb'
+  @guide = Guide.find(params[:id])
 end
 
 def edit
@@ -47,6 +47,11 @@ def destroy
   flash[:success] = "Deleted"
   redirect_to root_path
 end
+
+
+
+
+
 
 
 

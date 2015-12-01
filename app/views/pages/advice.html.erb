@@ -1,21 +1,21 @@
 
 
-<div class="wrapper">
-
-
-	<section id="advice" class="dark padded">
-		<div class="row no-margin">
-			<div class="c8">
+<section id="hero" class="dark padded">
+	<div class="wrapper">
+		<div class="row">
+			<div class="c8 s2 center">
 				<h1>Advice &amp; information</h1>
 				<p>We know that finding the information you need can be hard, that's why we decided to write our own guides to help you get the information you need. Here we have collected all of our guides and commonly asked questions here in one place. However, to browse the help sheets that are just relevant to you, select from one of the options below.</p>
 			</div>
-			<!--
-			<div class="c3 s1 panel-alt">
-				<p>Talk to one of our experts today to find out how we can help you save money.</p> 
-				<p>Call us on 01234 567 890, or <a href="mailto:hello@marshallhavard.com">drop us an email</a></p>
 			</div>
-			-->
 		</div>
+	</div>
+</section>
+ 
+
+
+	<section id="advice" class="padded">
+
 
 		<div class="row no-margin">
 			<div class="panel-alt">
@@ -31,7 +31,7 @@
 				<ul id="sheets">
 					<% @guides.each do |guide|%>
 						<li class="c3">
-							<%= link_to guide_path(guide), remote: true, class: "ajax", rel: "advice" do %>
+							<%= link_to guide_path(guide) do %>
 								<div class="panel">
 									<h5>Help Sheet</h5>
 									<h3><%= guide.title %></h3>
@@ -54,10 +54,11 @@
 				</ul>
 			</div>
 		
+		</div>
 	</section>
 
 
-</div>
+
 
  
 <script>

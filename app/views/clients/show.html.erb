@@ -1,51 +1,50 @@
 
-<div class="wrapper">
-	<div id="hero" class="padded">
-		<div class="row no-margin">
-			<h1 class="narrow"><%= @client.headline %></h1>
-			<p><%= @client.intro %></p>
 
+	<div id="hero" class="padded center">
+		<div class="wrapper push-top">
+			<div class="row no-margin">
+				<h2>
+					<%= @client.title %><br/>
+					<span><%= @client.headline %></span>
+				</h2>
+				<p><%= @client.intro %></p>
+			</div>
 		</div>
 	</div>
-	<div id="sub-nav">
-		<div class="row no-margin">
-			<nav>
-				<ul>
-					<li><a href="#help">Our services &amp; specialities</a></li>
-					<li><a href="#advice">Helpsheets &amp; common questions</a></li>
-					<li><a href="#why">Why we're right for you</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+
 
 
 
 <% if @client.services.present? %>
 	<section id="help">
-		<div class="padded">
-			<div class="row">
-				<div class="c8">
-					<h2>How we can help</h2>
-					<p><%= @client.help_intro %></p>
-				</div>
-			</div>
-			<div class="row" style="position: relative; overflow: visible">
-				<% @client.services.each do |service|%>
-					<div class="c3 service-box">
-						<%= link_to service.name, client_service_path(@client, service), remote: true, class: "open" %>
+		<div class="wrapper">
+			<div class="padded">
+				<div class="row">
+					<div class="c8 s2 center push-top">
+						<p><%= @client.help_intro %></p>
 					</div>
-				<% end %>
-				<div id="service-detail">
 				</div>
-			</div>
+				<div class="row" style="position: relative; overflow: visible">
+					<% @client.services.each do |service|%>
+						<div class="c3 service-box">
+							<%= link_to client_service_path(@client, service), remote: true, class: "ajax", rel: "service" do %>
+								<h4><%= service.name %></h4>
+								<p><%= simple_format truncate(service.description, :length => 80) %></p>
+							<% end %>
+						</div>
+					<% end %>
+					<div id="service-detail">
+					</div>
+				</div>
 
+			</div>
 		</div>
 	</section>
 <% end %>
 
 <% if @client.guides.present? or @client.questions.present? %>
-	<section id="advice" class="dark">
+	<section id="advice" class="light">
+		<div class="wrapper">
 		<div class="padded">
 			<div class="row">
 				<div class="c8">
@@ -59,7 +58,7 @@
 					<% @client.guides.each do |guide| %>
 
 						<li class="c3">
-							<%= link_to client_guide_path(@client, guide), remote: true, class: "ajax", rel: "advice" do %>
+							<%= link_to client_guide_path(@client, guide) do %>
 								<div class="panel">
 									<h5>Help Sheet</h5>
 									<h3><%= guide.title %></h3>
@@ -85,6 +84,7 @@
 			</div>
 
 			
+		</div>
 		</div>
 	</section>
 <% end %>

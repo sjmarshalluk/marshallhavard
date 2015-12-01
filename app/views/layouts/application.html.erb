@@ -6,8 +6,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="//use.typekit.net/mkd2fyg.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+
+  <script src="https://use.typekit.net/mkd2fyg.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	
 </head>
 <body>
@@ -32,17 +33,16 @@
 				</div>
 				<nav class="nav-collapse">
 					<ul id="global-nav">
-						<li><%= link_to_active_class "Who we can help", "selected", clients_path %></li>
-						<li><%= link_to_active_class "Advice & information", "selected", '/advice' %></li>
+						<li><%= link_to_active_class "How We Help", "selected", clients_path %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
-						<li><%# link_to_active_class "More", "selected", '/big_menu', class: "big-menu" %></li>
-						<li><%= link_to_active_class "About us", "selected", '/about-us' %></li>
-						<li><%= link_to_active_class "Contact", "selected", '/contact', 'data-no-turbolink' => true %></li>
+						<li><%= link_to_active_class "Advice", "selected", advice_path %></li>
+						<li><%= link_to_active_class "About Us", "selected", '/about-us' %></li>
 					</ul>
 				</nav>
 				<script>
 		      		var navigation = responsiveNav(".nav-collapse");
 		    	</script>
+		    <%= link_to "Get in touch", '/contact', :class => 'btn' %></p>
 			</div>
 		</div>
 	</div>
@@ -54,14 +54,15 @@
 </div>
 
 
-<div class="wrapper">
-	<footer class="padded">
+
+	<footer class="padded dark">
+		<div class="wrapper">
 		<div class="row">
 			<div class="c3">
 				<ul>
 					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "How we can help", clients_path %></li>
 					<li><%= link_to "Services", services_path %></li>
-					<li><%= link_to "Advice & information", '/advice' %></li>
 					<li><%= link_to "About Us", '/about-us' %></li>
 					<li><%# link_to "The team", '/team' %></li>
 					<li><%= link_to "Contact", '/contact' %></li>
@@ -106,8 +107,8 @@
 				</div>
 			</div>
 		</div>	
+		</div>
 	</footer>
-</div>
 
 <% else %>
 
