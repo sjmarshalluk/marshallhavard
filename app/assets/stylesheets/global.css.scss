@@ -213,6 +213,8 @@ header .row {
 
 header .btn {
   float: right;
+  border: 2px solid $white;
+  color: $white;
 }
 
 .btn {
@@ -439,7 +441,6 @@ a.selected {
 
 #hero p {
 	font-size: 18px;
-	color: lighten($main,40%);
 	width: 66%;
 	margin: 0 auto;
 }

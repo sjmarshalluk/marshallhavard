@@ -4,8 +4,8 @@
 		<div class="wrapper push-top">
 			<div class="row no-margin">
 				<h2>
-					<%= @client.title %><br/>
-					<span><%= @client.headline %></span>
+					<strong><%= @client.title %></strong><br/>
+					<em><%= @client.headline %></em>
 				</h2>
 				<p><%= @client.intro %></p>
 			</div>
@@ -20,8 +20,9 @@
 		<div class="wrapper">
 			<div class="padded">
 				<div class="row">
-					<div class="c8 s2 center push-top">
-						<p><%= @client.help_intro %></p>
+					<div class="c8 s2 center push-top-half">
+						<h5>How we can help</h5>
+						<p class="push-top-half"><%= @client.help_intro %></p>
 					</div>
 				</div>
 				<div class="row" style="position: relative; overflow: visible">
