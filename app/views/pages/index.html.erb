@@ -4,66 +4,39 @@
 
 
 
-<div id="hero" class="home">
-	<div class="wrapper">
 
-		<div class="fake-row">
-			<h2 style="text-align: left"><span>Hello. We are <strong>Marshall Havard</strong>.</span>We have been helping individuals and small business with recurring and one-off accounting challenges for over 30 years.  With highstreet shops in Gosport and Cowplain, we are available to talk to face-to-face when it suits you. </h2>
+	<section class="dark padded" style="height:100vh;">
+		<div class="wrapper push-top">
+		<div class="row no-margin">
+			<div class="c6">
+				<h2 style="text-align: left"><span>Hello. We are <br/><strong>Marshall Havard</strong>.</span></h2>
+			</div>
 		</div>
-	</div>
-</div>
-
-<div class="wrapper">
-	<div id="client-logos">
-		
-	</div>
-</div>
-
-<div id="features">
-	<div class="wrapper">
-		<section class="first">
-			<div class="row">
-				<div class="c6">
-					<h2>Accountancy services for small business &amp; individuals</h2>
-					<p>With over 25 years experience of helping contractors and small businesses, Marshall Havard is your best option. We provide a wide range of services, and are happy to work in a way that suits you.</p>
-					<%= link_to "See how we can help you", clients_path %>
-				</div>
-				<div class="c6 image">
-				</div>
+		<div class="row">
+			<div class="c6">
+				<p class="intro">For 30 years we have been helping clients of all types. Not only can we help you stay inside the laws, but we might also be able to save you money.</p>
+				<p class="intro"><%= link_to "Find out how we can help you", clients_path %></p>
 			</div>
-			
-		</section>
-		<section class="second">
-			<div class="row">
-				<div class="c6 image">
-				</div>
-				<div class="c6">
-					<h2>From yearly tax returns, to once-in-a-lifetime opportunities</h2>
-					<p>We have created an online resource to help you find the answers you're after. Find the information that is relevant to you. If you need any other assistance, we are just a phone call away.</p>
-					<%= link_to "Discover the answers you're after", '/advice' %>
-				</div>
-			</div>
-		</section>
-		<section class="third">
-			<div class="row">
-				<div class="c6">
-					<h2>Thirty years of local &amp; national experience</h2>
-					<p>We have been dealing with company and personal accounts in Hampshire for a quarter of a century. We now help people all over the country with everything from end of year tax returns to business advice.</p>
-					<%= link_to "Find out more about us", '/about-us' %>
-				</div>
-				<div class="c6 image">
-				</div>
-			</div>
-		</section>
-		
-	</div>
-</div>
+			<div class="c3 s3 small">
+				<p>Prefer to talk to someone?</p>
+				<p>Call us on 01234 567 890</p>
+				<p>Or visit us at <%= link_to "one of our shops", '/contact' %></p>
+		</div>
+		</div>
+	
+	</section>
 
-<div class="wrapper">
-	<div id="contact-us" class="center">
-		<h3>Talk to one of our experts today. Call us on 01234 567 890</h3>
-	</div>
-</div>
+	<% if logged_in? %>
+		<div class="admin-tools center small-copy push-top faded">
+			<%= link_to "Add a client type", new_client_path %>
+		</div>
+	<% end %>
+
+
+
+
+
+	
 
 
 

@@ -1,9 +1,9 @@
 
 
-<section id="hero" class="dark padded">
-	<div class="wrapper push-top">
+<section id="hero" class="dark half-padded">
+	<div class="wrapper push-top-half">
 		<div class="row">
-			<div class="c8 s2 center">
+			<div class="c6">
 				<h2>Advice &amp; information</h2>
 				<p>We know that finding the information you need can be hard, that's why we decided to write our own guides to help you get the information you need.</p>
 			</div>
@@ -14,7 +14,7 @@
  
 
 
-	<section id="advice" class="light padded">
+	<section id="advice" class="padded">
 		<div class="wrapper">
 
 
@@ -24,8 +24,8 @@
 						<li class="c3">
 							<%= link_to guide_path(guide) do %>
 								<div class="panel">
-									<h5>Help Sheet</h5>
-									<h3><%= guide.title %></h3>
+									<h6>Help Sheet</h6>
+									<h4><%= guide.title %></h4>
 									<p class="faded small-copy"><%= guide.summary %></p>
 								</div>
 							<% end %>					

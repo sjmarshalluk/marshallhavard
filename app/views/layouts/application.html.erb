@@ -24,8 +24,8 @@
 	</div>
 <% end %>
 
-<header id="header">
-	<div class="wrapper">
+<header id="header" class="<%= yield(:dark) %>">
+
 		<div class="row">
 			<div class="c12">
 				<div id="logo">
@@ -33,21 +33,20 @@
 				</div>
 				<nav class="nav-collapse">
 					<ul id="global-nav">
-						<li><%= link_to_active_class "How We Help", "selected", clients_path %></li>
+						<li><%= link_to_active_class "How We Can Help", "selected", clients_path %></li>
 						<li><%= link_to_active_class "Services", "selected", services_path %></li>
 						<li><%= link_to_active_class "Advice", "selected", advice_path %></li>
 						<li><%= link_to_active_class "About Us", "selected", '/about-us' %></li>
+						<li><%= link_to_active_class "Contact", "selected", '/contact' %></li>
 					</ul>
 				</nav>
 				<script>
 		      		var navigation = responsiveNav(".nav-collapse");
 		    	</script>
 
-		    01234 567 890
-		    <%= link_to "Get in touch", '/contact', :class => 'btn' %></p>
 			</div>
 		</div>
-	</div>
+
 </header>
 
 
@@ -57,7 +56,7 @@
 
 
 
-	<footer class="padded dark">
+	<footer class="padded light" style="display: none;">
 		<div class="wrapper">
 		<div class="row">
 			<div class="c3">

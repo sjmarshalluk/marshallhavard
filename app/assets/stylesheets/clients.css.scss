@@ -3,20 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#client-list h1 {
+#client-list {
+}
+
+.client-list h1 {
 	margin-bottom: 10px;
 }
-
-#client-list li a {
-	padding: 50px 0 40px;
-	margin-bottom: 1px;
-	display: block;
-	background-color: #fafafa;
+ 
+.client-list a {
+	margin-bottom: 20px;
+	color: $white;
+	opacity: 0.6;
+	border-bottom: 2px solid $white;
 }
 
-#client-list li a:hover {
-	background-color: $main;
-	color: #ffffff;
+.client-list a:hover {
+	opacity: 1;
 }
 
  
@@ -80,7 +82,7 @@
 
 #sheets .panel {
 	height: 300px;
-	margin: 10px;
+	float: left;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	-o-transition: all 0.2s ease-out;

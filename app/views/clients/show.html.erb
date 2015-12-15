@@ -1,68 +1,54 @@
+<%= content_for :dark, 'dark' %>
 
-
-	<div id="hero" class="padded center">
-		<div class="wrapper push-top">
-			<div class="row no-margin">
+<div class="padded">
+	<div class="wrapper push-top">
+		<div class="row">
+			<div class="c8">
 				<h2>
 					<strong><%= @client.title %></strong><br/>
 					<em><%= @client.headline %></em>
 				</h2>
-				<p><%= @client.intro %></p>
-			</div>
-		</div>
-	</div>
+				<p class="intro"><%= @client.intro %></p>
 
 
 
 
-<% if @client.services.present? %>
-	<section id="help">
-		<div class="wrapper">
-			<div class="padded">
-				<div class="row">
-					<div class="c8 s2 center push-top-half">
-						<h5>How we can help</h5>
-						<p class="push-top-half"><%= @client.help_intro %></p>
+
+
+
+		<% if @client.services.present? %>
+
+
+
+				<h4 class="push-top-half border">How we can help</h4>
+				<p><%= @client.help_intro %></p>
+
+
+				<div class="push-top-half">
+				<% @client.services.each do |service|%>
+					<div class="c6 service-box">
+						<h5><%= service.name %></h5>
+						<p><%= simple_format truncate(service.description, :length => 80) %></p>
 					</div>
-				</div>
-				<div class="row" style="position: relative; overflow: visible">
-					<% @client.services.each do |service|%>
-						<div class="c3 service-box">
-							<%= link_to client_service_path(@client, service), remote: true, class: "ajax", rel: "service" do %>
-								<h4><%= service.name %></h4>
-								<p><%= simple_format truncate(service.description, :length => 80) %></p>
-							<% end %>
-						</div>
-					<% end %>
-					<div id="service-detail">
-					</div>
+				<% end %>
 				</div>
 
-			</div>
-		</div>
-	</section>
-<% end %>
+		<% end %>
 
-<% if @client.guides.present? or @client.questions.present? %>
-	<section id="advice" class="light">
-		<div class="wrapper">
-		<div class="padded">
-			<div class="row">
-				<div class="c8">
-					<h2>Expert advice &amp; information</h2>
-					<p><%= @client.advice_intro %></p>
 
-				</div>
-			</div>
-			<div class="row">
+		<% if @client.guides.present? or @client.questions.present? %>
+
+				<h4 class="push-top-half border">Expert advice &amp; information</h4>
+				<p><%= @client.advice_intro %></p>
+
+
 				<ul id="sheets">
 					<% @client.guides.each do |guide| %>
 
-						<li class="c3">
+						<li class="c4">
 							<%= link_to client_guide_path(@client, guide) do %>
 								<div class="panel">
-									<h5>Help Sheet</h5>
-									<h3><%= guide.title %></h3>
+									<h4><%= guide.title %></h4>
 									<p class="faded small-copy"><%= guide.summary %></p>
 								</div>
 							<% end %>
@@ -81,36 +67,28 @@
 						</li>
 					<% end %>
 				</ul>
-				
 			</div>
 
+			<div class="c3 s1">
+				<p class="small">Feel free to contact us on this number if you have any questions</p>
+			</div>
 			
-		</div>
-		</div>
-	</section>
-<% end %>
 
-<section id="why">
-	<div class="padded">
-		<div class="row">
-			<div class="c8">
-				<h2>Why Marshall Havard</h2>
-				<p><%= @client.advice_intro %></p>
-			</div>
-		</div>
-	
-
-
-		<% if logged_in? %>
-			<div class="admin-tools center small-copy push-top faded">
-				<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
-				| <%= link_to "Edit", edit_client_path(@client) %> 
-				| <%= link_to "Delete", client_path(@client), method: :delete %></p>
-			</div>
 		<% end %>
 	</div>
-	
-</section>
+</div>
+
+
+
+<% if logged_in? %>
+	<div class="t-center">
+	<div class="admin-tools center small-copy push-top faded">
+		<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
+				| <%= link_to "Edit", edit_client_path(@client) %> 
+				| <%= link_to "Delete", client_path(@client), method: :delete %></p>
+	</div>
+<% end %>
+
 
 
 	<div id="contact-us" class="center">

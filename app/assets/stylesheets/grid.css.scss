@@ -1,201 +1,183 @@
 
+@import '_setup';
 
+// Objects: The GRID
+//
+// Styleguide 5.0.0
 
-
-.row{
-	width:100%;
-	overflow:hidden;
-	padding: 0 50px;
-	margin-bottom: 30px;
+.wrapper,
+.grid {
+  margin: 0 auto;
+  max-width: $site-max-width;
+  overflow: hidden;
+}
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+.row:before, .row:after {
+  content: '';
+  display: table;
 }
 
-.row.no-margin {
-	margin-bottom: 0;
+@for $i from 1 through 11 {
+  .c#{$i} {
+    width: 8.3333333333% * $i;
+  }
 }
-
-.row:before,
-.row:after {
-	content:'';
-	display: table;
-	clear: both;
+@for $i from 1 through 12 {
+  .s#{$i} {
+    margin-left: 8.3333333333% * $i;
+  }
 }
-
-.c1 {
-	width:8.33333%
+@for $i from 1 through 12 {
+  .c#{$i} {
+    position: relative;
+    float: left;
+    padding-left:  $h-gutter;
+    padding-right: $h-gutter;
+    min-height: 1px;
+  }
 }
-
-.c2 {
-	width:16.66667%
-} 
-
-.c3 {
-	width:25.0%
-} 
-
-.c4 {
-	width:33.33333%
-} 
-
-.c5 {
-	width:41.66667%
-} 
-
-.c6 {
-	width:50.0%
-} 
-
-.c7 {
-	width:58.33333%
-}
-
-.c8 {
-	width:66.66667%
-}
-
-.c9 {
-	width:75.0%
-} 
-
-.c10 {
-	width:83.33333%
-}
-
-.c11 {
-	width:91.66667%
-}
-
-.c12 {
-	width:100%
-}
-
-
-.c1,
-.c2,
-.c3,
-.c4,
-.c5,
-.c6,
-.c7,
-.c8,
-.c9,
-.c10,
-.c11,
-.c12 {
-	position: relative;
-	float: left;
-	min-height:1px;
-}
-
-.fake-row {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.s1 {
-	margin-left:8.33333%;
-}
-
-.s2 {
-	margin-left:16.66667%
-} 
-
-.s3 {
-	margin-left:25.0%
-}
-
-.s4 {
-	margin-left:33.33333%
-} 
-
-.s5 {
-	margin-left:41.66667%
-}
-
-.s6 {
-	margin-left:50.0%
-}
-
-.s7 {
-	margin-left:58.33333%
-}
-
-.s8 {
-	margin-left:66.66667%
-}
-
-.s9 {
-	margin-left:75.0%
-}
-
-.s10 {
-	margin-left:83.33333%
-}
-
-.s11 {
-	margin-left:91.66667%
-}
-
+.c12,
 .s12 {
-	margin-left:100.0%
+  float: none;
+  width: 100%;
+}
+.no-pad {
+  padding-left: 0px;
+  padding-right: 0px
+}
+.slim {
+  padding-left: $v-gutter/2;
+  padding-right: $v-gutter/2;
 }
 
+@include respond-to-max(med) {
+  @for $i from 1 through 12 {
+    .med-c#{$i} {
+      width: 8.3333333333% * $i;
+    }
+  }
+  @for $i from 0 through 12 {
+    .med-s#{$i} {
+      margin-left: 8.3333333333% * $i;
+    }
+  }
+
+  .med-no-pad {
+    padding-left: 0px;
+    padding-right: 0px
+  }
+  .slim {
+    padding-left: $h-gutter;
+    padding-right: $h-gutter;
+  }
+}
+
+@include respond-to-max(sml) {
+  @for $i from 1 through 11 {
+    .sml-c#{$i} {
+      width: 8.3333333333% * $i;
+    }
+  }
+  @for $i from 0 through 12 {
+    .sml-s#{$i} {
+      margin-left: 8.3333333333% * $i;
+    }
+  }
+  .sml-c12 {
+    width: 100%;
+  }
+}
+
+// Layout and Positioning
+.center {
+  margin-left:  auto;
+  margin-right: auto;
+  float: none;
+  clear: both;
+}
+.pull-right {
+  float: right;
+  margin-left: $h-gutter;
+}
 .push-top {
-	margin-top: 5em;
+  margin-top: 120px;
+
+  @include respond-to-max(med) {
+    margin-top: 60px;
+  }
+}
+.push-bottom {
+  margin-bottom: 120px;
+
+  @include respond-to-max(med) {
+    margin-bottom: 60px;
+  }
 }
 
-.half-padded {
-	padding: 80px 0;
+.push-bottom-half {
+  margin-bottom: 60px;
+
+  @include respond-to-max(med) {
+    margin-bottom: 30px;
+  }
 }
 
-.padded {
-	padding: 80px 0;
+.m-no-push-top {
+  @include respond-to-max(med) {
+    margin-top: 0 !important;
+  }
 }
 
-.big-padded {
-	padding: 220px 0 20px;
+.m-no-push-bottom {
+  @include respond-to-max(med) {
+    margin-bottom: 0 !important;
+  }
 }
 
-
-
-
-
-
-@media only screen and (max-width: 500px) {
-
-.c1,
-.c2,
-.c3,
-.c4,
-.c5,
-.c6,
-.c7,
-.c8,
-.c9,
-.c10,
-.c11,
-.c12 {
-	width:100%
+.push-top-half {
+  margin-top: 60px;
+  @media print {
+    margin-top: 0;
+  }
 }
 
-.s1,
-.s2,
-.s3,
-.s4,
-.s5,
-.s6,
-.s7,
-.s8,
-.s9,
-.s10,
-.s11,
-.s12 {
-	margin-left:0
+.push-top-half.border {
+  	border-top: 1px solid $grey;
+  	padding-top: 60px;
 }
 
-.padded {
-	padding: 60px 0;
+.push-top-quart {
+  margin-top: 35px;
+
+  @media print {
+    margin-top: 0;
+  }
 }
 
 
 
+// Display
+.m-hide {
+  @include respond-to-max(med) {
+    display: none;
+  }
 }
+.m-sml-hide {
+  @include respond-to-max(sml) {
+    display: none;
+  }
+}
+.m-block {
+  @include respond-to-max(med) {
+    display: block;
+  }
+}
+.no-print {
+  @media print {
+    display: none;
+  }
+}
+

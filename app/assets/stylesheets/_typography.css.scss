@@ -1,0 +1,181 @@
+@import '_setup';
+
+//*** Global > Typography  ***//
+
+body {
+  color: $text;
+  font-family: $sans-serif-stack;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+
+// Typography: Text
+//
+// .meta        - Meta text, good for timestamps and other categorical info
+// .alt         - Use sparingly!
+// .faded       - Light
+// .t-center    - Centered text
+// .inline      - Make a block element inline
+// .alert       - Make the text red!
+// .success     - Make the test green!
+// .no-margin   - No space below
+//
+// Styleguide 2.0.0
+
+p {
+  margin: 0 0 1em;
+  font-weight: norml;
+}
+p em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bold;
+}
+::selection {
+  background: $main;
+  color: $white;
+}
+p.intro {
+  font-size: $type-sz-4;
+}
+p.alt {
+  color: $main;
+}
+.small {
+  font-size: 14px;
+}
+.faded {
+  color: darken($grey, 20%);
+}
+.no-margin {
+  margin: 0;
+}
+.t-center {
+  text-align: center;
+}
+del {
+  position: relative;
+  text-decoration: none;
+}
+del:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  background: $text;
+  height: 5px;
+
+  @include respond-to(site-width) {
+    height: 10px;
+  }
+}
+.inline {
+  display: inline;
+}
+.alert {
+  margin-left: 0.5em;
+  color: $error;
+}
+.success {
+  margin-left: 0.5em;
+  color: $success;
+}
+
+//*** Global > Typography > Headings  ***//
+
+// Typography: Headers
+//
+// Styleguide 2.1.0
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75em;
+  font-weight: 300;
+}
+h1 {
+  margin-bottom: 0.5em;
+  font-size: $type-sz-1-m;
+  line-height: 1;
+
+  @include respond-to(site-width) {
+    font-size: $type-sz-1;
+    letter-spacing: -3px;
+  }
+
+  @media print {
+    font-size: $type-sz-2;
+  }
+}
+h1.xlg {
+  @include respond-to(site-width) {
+    font-size: $type-sz-xlg;
+  }
+}
+h1 span {
+  color: darken($main, 5%)
+}
+h2 {
+  font-size: $type-sz-2;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+h3 {
+  font-size: $type-sz-3;
+}
+h4 {
+  font-size: $type-sz-4;
+  font-weight: 500;
+}
+h5 {
+  font-size: $base-font-size;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+h6 {
+  font-size: $type-sz-6;
+}
+
+//*** Global > Links/Controls ***//
+
+// Typography: Links
+//
+// :hover               - Hover State
+// :active              - Active State
+//
+// Styleguide 2.2.0
+
+a, button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: none; // For FF 3.6
+}
+a, 
+form.general div.submit button {
+  color: $main;
+  text-decoration: none;
+  border-bottom: 2px solid $main;
+  @include transition(border-color 0.25s);
+  @include transition(color 0.25s)
+}
+
+a:hover, 
+a:focus {
+  color: $text;
+  border-bottom: 2px solid $text;
+}
+a:active {}
+a:visited {}
+a.small {
+  font-size: $type-sz-6;
+  padding: 10px;
+}
+
+

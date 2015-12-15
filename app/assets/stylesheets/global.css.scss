@@ -11,118 +11,26 @@ html {
   height: 100%;
 }
 
-body {
-	font-family: "museo-sans", sans-serif;
-	color: $dark;
-	background-color: #ffffff;
-	-webkit-font-smoothing: antialiased;
-	font-weight: 300;
-	height: 100%;
-	font-size: 16px;
-	line-height: 1.6;
-  height: 100%;
+
+
+
+
+
+
+.push-top {
+  margin-top: 5em;
 }
 
-h1 {
-	font-family: "museo-sans", sans-serif;
-	font-size: 48px;
-	font-weight: 100;
-	margin-bottom: 1em;
-	line-height: 1.2;
+.half-padded {
+  padding: 40px 0;
 }
 
-h2 {
-	font-family: "museo-sans", sans-serif;
-	font-size: 32px;
-	font-weight: 300;
-	margin: 0 0 1em;
+.padded {
+  padding: 80px 0;
 }
 
-.faded {
-	color: lighten($dark,50%);
-}
-
-h3 {
-	font-family: "museo-sans", sans-serif;
-	font-weight: 300;
-  	font-size: 24px;
-  	line-height: 1.2;
-	margin: 0 0 1em;
-}
-
-h4 {
-  font-weight: 500;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-h5 {
-	font-weight: 500;
-	font-size: 12px;
-	color: lighten($dark,50%);
-	text-transform: uppercase;
-	margin-bottom: 1em;
-}
-
-p {
-	font-size: 1em;
-	margin-bottom: 2em;
-}
-
-p.no-margin {
-	margin-bottom: 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-a,
-input {
-	text-decoration: none;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-	color: $main;
-  	outline: 0;
-}
-
-em {
-	font-style: italic;
-}
-
-strong {
-	font-weight: 900;
-}
-
-a:hover {
-	color: $dark;
-}
-
-a.button,
-input.button {
-	background-color: $main;
-	color: $white;
-	padding: 23px;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin: 30px 0;
-	display: inline-block;
-	cursor: pointer;
-	border: 1px solid darken( $main, 15% );
-}
-
-a.button:hover,
-input.button:hover {
-	background-color: $main;
-	color: #fff;
-}
-
-.center {
-	text-align: center;
+.big-padded {
+  padding: 220px 0 20px;
 }
 
 
@@ -154,7 +62,7 @@ header {
 	overflow: hidden;
 	z-index: 300;
   position: absolute;
-  padding: 40px 0;
+  padding: 30px;
   width: 100%;
   font-size: 14px;
 }
@@ -164,8 +72,7 @@ header #logo {
 }
 
 header nav {
-	float: left;
-  margin-left: 20px;
+	float: right;
 }
 
 header nav li {
@@ -195,11 +102,16 @@ header #logo {
 }
 
 header #logo a {
-	background-image: url('../assets/marshall-havard.png');
-	width: 40px;
-	height: 40px;
+	background-image: url('../assets/MH-logo.png');
+	width: 79px;
+	height: 36px;
+  background-size: 79px 36px;
 	text-indent: -9999px;
 	padding: 0;
+}
+
+header #logo a:hover {
+  border-bottom: none;
 }
 
 header .right {
@@ -215,6 +127,12 @@ header .btn {
   float: right;
   border: 2px solid $white;
   color: $white;
+}
+
+header .phone {
+  float: right;
+  margin-right: 20px;
+  padding-top: 10px;
 }
 
 .btn {
@@ -427,7 +345,7 @@ a.selected {
 
 
 #hero {
-	background-color: $main;
+  padding-top: 120px;
 	overflow: hidden;
 }
 
@@ -440,10 +358,10 @@ a.selected {
 }
 
 #hero p {
-	font-size: 18px;
-	width: 66%;
-	margin: 0 auto;
+  font-weight: 300;
 }
+
+
 
 
 
@@ -487,6 +405,11 @@ section {
 .dark {
 	background-color: $dark;
 	color: $white;
+  background: $dark; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($dark, darken($main, 20)); /* Standard syntax */
 }
 
 .blue {

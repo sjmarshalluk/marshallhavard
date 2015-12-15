@@ -4,38 +4,19 @@
 	<section id="advice" class="dark padded">
 		<div class="wrapper push-top">
 		<div class="row no-margin">
-			<div class="c8 s2 center">
-				<h2>Businesses and individuals</h2>
-				<p>For 30 years we have been helping clients of all types. Not only can we help you stay inside the laws, but we might also be able to save you money.</p>
-			</div>
-			<!--
-			<div class="c3 s1 cta-box">
-				<p>Talk to one of our experts today to find out how we can help you save money.</p> 
-				<p>Call us on 01234 567 890, or <a href="mailto:hello@marshallhavard.com">drop us an email</a></p>
-			</div>
-			-->
-		</div>
-
-		<div class="row">
-			<div id="advice-index">
-			<ul>
+			<div class="c8 client-list">
 				<% @clients.each do |client| %> 
-					<li class="c4">
-						
-								
-						<%= link_to client_path(client) do %>
-							<h3><%= client.title %></h3>
-							<p class="small-copy"><%= client.intro %></p>
-							Find out more
-						<% end %>
-										
-
-						
-					</li>
-				<% end %>
-			</ul>
+						<h2>	
+							<%= link_to "#{client.title}", client_path(client) %>
+	
+						</h2>
+					<% end %>
+				
 			</div>
+			<div class="c3 s1">
+				<p class="small">We can help in all of these exciting ways. If you have any questions, please do not hesitate to get in touch.</p>
 		</div>
+		
 		</div>
 	
 	</section>

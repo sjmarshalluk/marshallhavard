@@ -1,0 +1,129 @@
+
+$main:            #3fb0cf;
+$secondary:       #ffc30c;
+$tertiary:        #56bc8a;
+$dark:            #183255;
+$light:           #eeeeee;
+$white:           #ffffff;
+$border:          #e7ecef;
+$text:            #3c3838;
+$grey:            #cfcfcf;
+$error:           #C00;
+$success:         #478e2e;
+
+
+// Colors
+
+
+// Social Colors
+$facebook:        #4a629e;
+$twitter:         #00acee;
+$instagram:       #306a92;
+$tumblr:          #34465d;
+
+// Color Palette
+$palette-blue:    #5ea9dd;
+
+// Typography
+$sans-serif-stack: 'Museo sans', Arial, sans-serif;
+$base-font-size: 18px;
+$type-sz-xlg:    80px;
+$type-sz-1-m:    36px;
+$type-sz-1:      60px;
+$type-sz-2:      42px;
+$type-sz-3:      36px;
+$type-sz-4:      22px;
+$type-sz-5:      18px;
+$type-sz-6:      12px;
+
+// Breakpoints
+$one-column: 750px;
+
+// Decoration
+$border-radius: 4px;
+
+// Layout
+$h-gutter:          6px;
+$v-gutter:          80px;
+$site-max-width:  1445px;
+
+
+// Media Query Mixins
+$fix-mqs: false !default;
+
+@mixin respond-to($content) {
+  @if $fix-mqs {
+    @if $content == med {
+      $content: 800px;
+    } @else if $content == sml {
+      $content: 500px;
+    }
+    @if $fix-mqs >= $content {
+      @content;
+    }
+  }
+  @else {
+    @if $content == site-width {
+      @media only screen and (min-width: $site-max-width) { @content; }
+    } @else if $content == med {
+      @media only screen and (min-width: 800px) { @content; }
+    } @else if $content == sml {
+      @media only screen and (min-width: 500px) { @content; }
+    } @else {
+      @media only screen and (min-width: $content) { @content; }
+    }
+  }
+}
+
+@mixin respond-to-max($content) {
+  @if $content == site-width {
+    @media only screen and (max-width: 1144px) { @content; }
+  } @else if $content == med {
+    @media only screen and (max-width: 799px) { @content; }
+  } @else if $content == sml {
+    @media only screen and (max-width: 499px) { @content; }
+  } @else {
+    @media only screen and (max-width: $content) { @content; }
+  }
+}
+
+// Vendor Prefix Mixins
+@mixin transition ($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+       -o-transition: $value;
+          transition: $value;
+}
+@mixin transform ($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+       -o-transform: $value;
+          transform: $value;
+}
+
+// Color Functions
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// Retina Images
+@mixin bg-retina-image($file, $type, $width, $height) {
+  margin: 0 auto;
+  max-width: $width;
+  min-height: $height;
+  background: transparent image-url($file + '.' + $type) center center no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  text-indent: -9999em;
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (-moz-min-device-pixel-ratio: 2),
+         (min-device-pixel-ratio: 2) {
+    background-image: image-url($file + '-2x.' + $type);
+  }
+}
