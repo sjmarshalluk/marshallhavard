@@ -1,0 +1,2369 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+body {
+  line-height: 1;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/reset.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+body {
+  color: #3c3838;
+  font-family: "museo-sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+p {
+  margin: 0 0 1em;
+  font-weight: norml;
+}
+
+/* line 33, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+p em {
+  font-style: italic;
+}
+
+/* line 37, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 40, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+::selection {
+  background: #3fb0cf;
+  color: white;
+}
+
+/* line 44, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+p.intro {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/* line 48, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+p.alt {
+  color: #3fb0cf;
+}
+
+/* line 51, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.small {
+  font-size: 14px;
+}
+
+/* line 54, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.faded {
+  color: #9c9c9c;
+}
+
+/* line 57, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 60, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.t-center {
+  text-align: center;
+}
+
+/* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+del {
+  position: relative;
+  text-decoration: none;
+}
+
+/* line 67, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+del:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  background: #3c3838;
+  height: 5px;
+}
+@media only screen and (min-width: 1445px) {
+  /* line 67, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+  del:after {
+    height: 10px;
+  }
+}
+
+/* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.inline {
+  display: inline;
+}
+
+/* line 83, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.alert {
+  margin-left: 0.5em;
+  color: #cc0000;
+}
+
+/* line 87, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+.success {
+  margin-left: 0.5em;
+  color: #478e2e;
+}
+
+/* line 98, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75em;
+  font-weight: 300;
+}
+
+/* line 102, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h1 {
+  margin-bottom: 0.5em;
+  font-size: 36px;
+  line-height: 1;
+}
+@media only screen and (min-width: 1445px) {
+  /* line 102, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+  h1 {
+    font-size: 60px;
+    letter-spacing: -3px;
+  }
+}
+@media print {
+  /* line 102, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+  h1 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (min-width: 1445px) {
+  /* line 116, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+  h1.xlg {
+    font-size: 80px;
+  }
+}
+
+/* line 121, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h1 span {
+  color: #31a4c4;
+}
+
+/* line 124, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* line 129, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h3 {
+  font-size: 36px;
+}
+
+/* line 132, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* line 136, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* line 141, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+h6 {
+  font-size: 12px;
+}
+
+/* line 154, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+a, button {
+  cursor: pointer;
+}
+
+/* line 157, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+/* line 162, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+a,
+form.general div.submit button {
+  color: #3fb0cf;
+  text-decoration: none;
+  border-bottom: 2px solid #3fb0cf;
+  -webkit-transition: border-color 0.25s;
+  -moz-transition: border-color 0.25s;
+  -o-transition: border-color 0.25s;
+  transition: border-color 0.25s;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+/* line 172, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+a:hover,
+a:focus {
+  color: #3c3838;
+  border-bottom: 2px solid #3c3838;
+}
+
+/* line 178, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/_typography.css.scss */
+a.small {
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+html {
+  height: 100%;
+}
+
+/* line 20, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.push-top {
+  margin-top: 5em;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.half-padded {
+  padding: 40px 0;
+}
+
+/* line 28, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.padded {
+  padding: 80px 0;
+}
+
+/* line 32, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.big-padded {
+  padding: 220px 0 20px;
+}
+
+/* line 38, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.wrapper {
+  max-width: 1400px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+/* line 44, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.dark-bg {
+  background-color: #3fb0cf;
+}
+
+/* line 48, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.panel-alt {
+  background-color: #122641;
+  color: #a2a2a2;
+  padding: 30px;
+  font-size: 16px;
+}
+
+/* line 55, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.panel-alt p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 60, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header {
+  color: #183255;
+  overflow: hidden;
+  z-index: 300;
+  position: absolute;
+  padding: 25px 20px;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* line 70, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header.alt {
+  background-color: #183255;
+}
+
+/* line 74, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #logo {
+  float: left;
+}
+
+/* line 78, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header nav {
+  float: right;
+}
+
+/* line 82, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header nav li {
+  float: left;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+/* line 88, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header a {
+  color: white;
+  font-weight: 500;
+  padding: 10px 0 2px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+/* line 97, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header a:hover,
+header a.selected {
+  border-bottom: 2px solid white;
+  color: white;
+  opacity: 0.7;
+}
+
+/* line 103, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #logo {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 108, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #logo a {
+  background-image: url("../assets/MH-logo.png");
+  width: 79px;
+  height: 36px;
+  background-size: 79px 36px;
+  text-indent: -9999px;
+  padding: 0;
+}
+
+/* line 117, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header #logo a:hover {
+  border-bottom: none;
+}
+
+/* line 121, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header .right {
+  float: right;
+  margin-left: 20px;
+}
+
+/* line 126, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header .row {
+  margin-bottom: 0;
+}
+
+/* line 130, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header .btn {
+  float: right;
+  border: 2px solid white;
+  color: white;
+}
+
+/* line 136, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+header .phone {
+  float: right;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+
+/* line 142, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.btn {
+  padding: 8px 10px;
+  border: 2px solid #3fb0cf;
+  color: #3fb0cf;
+  border-radius: 3px;
+}
+
+/* line 149, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.btn:hover {
+  background-color: #3fb0cf;
+  color: white;
+}
+
+/* line 161, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+footer {
+  background-color: white;
+  padding: 2em 0;
+}
+
+/* line 166, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+footer .row {
+  margin-bottom: 0;
+}
+
+/* line 170, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+footer a {
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  padding: 7px 0;
+}
+
+/* line 178, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+footer .clients a {
+  color: #79a2d9;
+}
+
+/* line 183, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+footer a:hover,
+footer .clients a:hover {
+  color: #3fb0cf;
+}
+
+/* line 187, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#newsletter {
+  background-color: #1e3e69;
+  color: white;
+  width: 100%;
+  padding: 30px;
+  font-size: 16px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+/* line 197, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#newsletter .mc-field-group input {
+  width: 70%;
+  float: left;
+}
+
+/* line 202, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#newsletter .button {
+  width: 30%;
+  float: left;
+  margin: 0;
+}
+
+/* line 210, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-small {
+  display: inline-block;
+  margin: 60px 0;
+}
+
+/* line 215, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-small a {
+  background-image: url("../assets/marshall-havard.png");
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  padding: 0;
+  display: block;
+}
+
+/* line 225, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-medium {
+  display: inline-block;
+  margin: 60px 0;
+}
+
+/* line 230, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-medium a {
+  background-image: url("../assets/marshall-havard-medium.png");
+  width: 69px;
+  height: 69px;
+  text-indent: -9999px;
+  padding: 0;
+  display: block;
+}
+
+/* line 239, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-large {
+  display: inline-block;
+  margin: 60px 0;
+}
+
+/* line 244, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#logo-large a {
+  background-image: url("../assets/marshall-havard-large.png");
+  width: 135px;
+  height: 135px;
+  text-indent: -9999px;
+  padding: 0;
+  display: block;
+}
+
+/* line 256, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.success,
+.error,
+.summary {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 5px;
+  background-color: #183255;
+}
+
+/* line 265, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.success p,
+.error p,
+.summary p {
+  margin-bottom: 0;
+}
+
+/* line 270, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.small {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* line 275, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.danger {
+  background-color: #d1440c;
+}
+
+/* line 279, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.danger:hover {
+  background-color: #183255;
+}
+
+/* line 284, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.panel {
+  padding: 30px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* line 291, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.summary .panel {
+  background-color: #000;
+}
+
+/* line 297, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.breadcrumbs,
+.share {
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+/* line 302, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.share {
+  text-align: right;
+}
+
+/* line 308, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.nav-previous a,
+.nav-next a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+/* line 317, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+a.selected {
+  color: #a2adb0;
+}
+
+/* line 321, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.border-top {
+  border-top: 1px solid #dde2e4;
+  padding-top: 2em;
+}
+
+/* line 326, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.small-copy {
+  font-size: 16px;
+}
+
+/* line 332, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#big-menu-content {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 40px;
+}
+
+/* line 338, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.twitter {
+  background-image: url("../assets/twitter.png");
+  width: 31px;
+  height: 25px;
+  display: inline-block;
+  text-indent: -9999px;
+  margin-top: 25px;
+}
+
+/* line 351, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#hero {
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+/* line 356, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#hero h1 {
+  color: #fff;
+}
+
+/* line 360, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#hero h1.narrow {
+  width: 600px;
+}
+
+/* line 364, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#hero p {
+  font-weight: 300;
+}
+
+/* line 375, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.top {
+  display: none;
+  float: right;
+}
+
+/* line 380, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#features .image {
+  height: 200px;
+}
+
+/* line 386, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#features .first,
+#features .second,
+#features .third {
+  padding: 180px 0;
+  overflow: hidden;
+}
+
+/* line 391, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#features .first .image {
+  background: url("../assets/first-illustration.png") top center no-repeat;
+}
+
+/* line 395, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#features .second .image {
+  background: url("../assets/first-illustration.png") top center no-repeat;
+}
+
+/* line 399, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#features .third .image {
+  background: url("../assets/first-illustration.png") top center no-repeat;
+}
+
+/* line 405, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+section {
+  margin-bottom: 0px;
+}
+
+/* line 409, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.dark {
+  background-color: #183255;
+  color: white;
+  background: #183255;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#183255, #227186);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#183255, #227186);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#183255, #227186);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#183255, #227186);
+  /* Standard syntax */
+}
+
+/* line 419, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.dark a {
+  color: white;
+}
+
+/* line 423, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.intro a {
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+/* line 427, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.dark a:hover {
+  color: #3fb0cf;
+  border-bottom: 2px solid #3fb0cf;
+}
+
+/* line 432, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.blue {
+  background-color: #3fb0cf;
+  color: white;
+}
+
+/* line 437, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.secondary {
+  background-color: #ffc30c;
+  color: white;
+}
+
+/* line 442, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.tertiary {
+  background-color: #56bc8a;
+  color: white;
+}
+
+/* line 447, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.light {
+  background-color: #eeeeee;
+}
+
+/* line 451, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 455, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.panel-alt {
+  padding: 30px;
+  font-size: 16px;
+}
+
+/* line 460, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.panel-alt p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 464, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.dark .panel-alt {
+  background-color: #122641;
+  color: #a2a2a2;
+}
+
+/* line 469, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.secondary .panel-alt {
+  background-color: #f2b600;
+  color: #ffe9a5;
+}
+
+/* line 474, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.secondary .panel-alt a {
+  color: white;
+}
+
+/* line 478, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.blue .panel-alt {
+  background-color: #31a4c4;
+  color: #d4d4d4;
+}
+
+/* line 483, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.blue .panel-alt a {
+  color: #183255;
+}
+
+/* line 487, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.light .panel-alt {
+  background-color: #e1e1e1;
+  color: #23497d;
+}
+
+/* line 500, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.admin-tools {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 509, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  /* line 512, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  /* line 515, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  /* line 523, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  /* line 528, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  h1 {
+    font-size: 42px;
+  }
+
+  /* line 532, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav.nav-collapse {
+    width: 100%;
+  }
+
+  /* line 536, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav.nav-collapse ul {
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  /* line 545, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav.nav-collapse ul li {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* line 552, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  nav.nav-collapse ul li a {
+    width: 100%;
+    display: block;
+    padding: 30px;
+  }
+
+  /* line 560, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  /* line 569, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-collapse.opened {
+    max-height: 9999px;
+  }
+
+  /* line 573, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .disable-pointer-events {
+    pointer-events: none !important;
+  }
+
+  /* line 577, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    float: right;
+    color: #3fb0cf;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  /* line 592, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  .nav-toggle:hover {
+    color: #183255;
+  }
+
+  /* line 599, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  #hero h1.narrow {
+    width: 92%;
+  }
+
+  /* line 604, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  #hero p {
+    width: 92%;
+  }
+
+  /* line 609, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  footer .c3 {
+    width: 50%;
+  }
+
+  /* line 614, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  #newsletter {
+    margin-top: 20px;
+    padding: 15px;
+  }
+}
+@media screen and (max-height: 650px) {
+  /* line 628, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+  #big-menu-content {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 0;
+  }
+}
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+/* line 642, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 643, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxWrapper {
+  max-width: none;
+}
+
+/* line 644, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 645, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 646, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxContent {
+  position: relative;
+}
+
+/* line 647, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 648, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 649, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 650, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/* line 651, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 652, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 653, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+/* line 660, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxOverlay {
+  background: url(../assets/overlay.png) repeat 0 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 661, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#colorbox {
+  outline: 0;
+}
+
+/* line 662, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxBottomCenter {
+  height: 21px;
+}
+
+/* line 663, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxContent {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* line 664, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.cboxIframe {
+  background: #fff;
+}
+
+/* line 665, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+/* line 666, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxLoadedContent {
+  margin-bottom: 28px;
+}
+
+/* line 667, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxTitle {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #949494;
+}
+
+/* line 668, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxCurrent {
+  position: absolute;
+  bottom: 4px;
+  left: 58px;
+  color: #949494;
+}
+
+/* line 669, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxLoadingOverlay {
+  background: url(../assets/loading_background.png) no-repeat center center;
+}
+
+/* line 670, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxLoadingGraphic {
+  background: url(../assets/loading.gif) no-repeat center center;
+}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+/* line 673, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+  background: none;
+}
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+/* line 676, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0;
+}
+
+/* line 678, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxSlideshow {
+  position: absolute;
+  top: 4px;
+  right: 30px;
+  color: #0092ef;
+}
+
+/* line 679, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxPrevious {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../assets/controls.png) no-repeat -75px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+
+/* line 680, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxPrevious:hover {
+  background-position: -75px -25px;
+}
+
+/* line 681, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxNext {
+  position: absolute;
+  top: 0;
+  left: 27px;
+  background: url(../assets/controls.png) no-repeat -50px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+
+/* line 682, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxNext:hover {
+  background-position: -50px -25px;
+}
+
+/* line 683, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../assets/controls.png) no-repeat -25px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+
+/* line 684, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+#cboxClose:hover {
+  background-position: -25px -25px;
+}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+/* line 698, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/global.css.scss */
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/* line 9, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.wrapper,
+.grid {
+  margin: 0 auto;
+  max-width: 1445px;
+  overflow: hidden;
+}
+
+/* line 14, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 18, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.row:before, .row:after {
+  content: '';
+  display: table;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c1 {
+  width: 8.33333%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c2 {
+  width: 16.66667%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c3 {
+  width: 25.0%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c4 {
+  width: 33.33333%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c5 {
+  width: 41.66667%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c6 {
+  width: 50.0%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c7 {
+  width: 58.33333%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c8 {
+  width: 66.66667%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c9 {
+  width: 75.0%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c10 {
+  width: 83.33333%;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c11 {
+  width: 91.66667%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s1 {
+  margin-left: 8.33333%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s2 {
+  margin-left: 16.66667%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s3 {
+  margin-left: 25.0%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s4 {
+  margin-left: 33.33333%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s5 {
+  margin-left: 41.66667%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s6 {
+  margin-left: 50.0%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s7 {
+  margin-left: 58.33333%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s8 {
+  margin-left: 66.66667%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s9 {
+  margin-left: 75.0%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s10 {
+  margin-left: 83.33333%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s11 {
+  margin-left: 91.66667%;
+}
+
+/* line 29, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.s12 {
+  margin-left: 100.0%;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c1 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c2 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c3 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c4 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c5 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c6 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c7 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c8 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c9 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c10 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c11 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c12 {
+  position: relative;
+  float: left;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-height: 1px;
+}
+
+/* line 43, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.c12,
+.s12 {
+  float: none;
+  width: 100%;
+}
+
+/* line 47, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.no-pad {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 51, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.slim {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c1 {
+    width: 8.33333%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c2 {
+    width: 16.66667%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c3 {
+    width: 25.0%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c4 {
+    width: 33.33333%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c5 {
+    width: 41.66667%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c6 {
+    width: 50.0%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c7 {
+    width: 58.33333%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c8 {
+    width: 66.66667%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c9 {
+    width: 75.0%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c10 {
+    width: 83.33333%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c11 {
+    width: 91.66667%;
+  }
+
+  /* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-c12 {
+    width: 100.0%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s0 {
+    margin-left: 0%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s3 {
+    margin-left: 25.0%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s6 {
+    margin-left: 50.0%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s9 {
+    margin-left: 75.0%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-s12 {
+    margin-left: 100.0%;
+  }
+
+  /* line 68, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .med-no-pad {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* line 72, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .slim {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+@media only screen and (max-width: 499px) {
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c1 {
+    width: 8.33333%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c2 {
+    width: 16.66667%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c3 {
+    width: 25.0%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c4 {
+    width: 33.33333%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c5 {
+    width: 41.66667%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c6 {
+    width: 50.0%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c7 {
+    width: 58.33333%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c8 {
+    width: 66.66667%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c9 {
+    width: 75.0%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c10 {
+    width: 83.33333%;
+  }
+
+  /* line 80, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c11 {
+    width: 91.66667%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s0 {
+    margin-left: 0%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s3 {
+    margin-left: 25.0%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s6 {
+    margin-left: 50.0%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s9 {
+    margin-left: 75.0%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-s12 {
+    margin-left: 100.0%;
+  }
+
+  /* line 89, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .sml-c12 {
+    width: 100%;
+  }
+}
+/* line 95, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  clear: both;
+}
+
+/* line 101, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.pull-right {
+  float: right;
+  margin-left: 6px;
+}
+
+/* line 105, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-top {
+  margin-top: 120px;
+}
+@media only screen and (max-width: 799px) {
+  /* line 105, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .push-top {
+    margin-top: 60px;
+  }
+}
+
+/* line 112, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-bottom {
+  margin-bottom: 120px;
+}
+@media only screen and (max-width: 799px) {
+  /* line 112, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .push-bottom {
+    margin-bottom: 60px;
+  }
+}
+
+/* line 120, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-bottom-half {
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 799px) {
+  /* line 120, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .push-bottom-half {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 128, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .m-no-push-top {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 134, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .m-no-push-bottom {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* line 140, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-top-half {
+  margin-top: 60px;
+}
+@media print {
+  /* line 140, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .push-top-half {
+    margin-top: 0;
+  }
+}
+
+/* line 147, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-top-half.border {
+  border-top: 1px solid #cfcfcf;
+  padding-top: 60px;
+}
+
+/* line 152, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+.push-top-quart {
+  margin-top: 35px;
+}
+@media print {
+  /* line 152, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .push-top-quart {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 163, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .m-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  /* line 168, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .m-sml-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 173, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .m-block {
+    display: block;
+  }
+}
+
+@media print {
+  /* line 178, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/grid.css.scss */
+  .no-print {
+    display: none;
+  }
+}
+
+/* line 4, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+form {
+  width: 100%;
+  color: #183255;
+}
+
+/* line 9, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+form h2 {
+  padding-left: 15px;
+}
+
+/* line 13, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+form p {
+  width: 100%;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #6594d4;
+}
+
+/* line 20, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+form section {
+  margin-bottom: 50px;
+}
+
+/* line 24, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+label {
+  padding: 25px 0 5px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* line 32, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+input,
+textarea,
+select {
+  font-family: "museo-sans", sans-serif;
+  font-size: 16px;
+  color: #183255;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border: 1px solid #ddd;
+}
+
+/* line 43, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+select,
+input {
+  height: 60px;
+}
+
+/* line 47, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+input.button {
+  width: auto;
+  border: none;
+  height: auto;
+}
+
+/* line 53, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+textarea {
+  height: 300px;
+}
+
+/* line 58, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+input:focus,
+textarea:focus {
+  outline: none;
+  background-color: #e2f3f8;
+  border: 1px solid #3fb0cf;
+}
+
+/* line 64, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/forms.css.scss */
+input.boolean {
+  width: 30px;
+  height: auto;
+}
+
+/* line 1, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/services.css.scss */
+.service-box {
+  height: 150px;
+}
+
+/* line 2, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/sessions.css.scss */
+.login {
+  text-align: center;
+}
+
+/* line 6, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/sessions.css.scss */
+.login form {
+  text-align: left;
+}
+
+/* line 3, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing {
+  background-color: #3fb0cf;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 12, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing h1 span {
+  color: #ffffff;
+  display: block;
+  font-weight: 300;
+}
+
+/* line 18, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing p {
+  width: 67%;
+  color: #e2f3f8;
+}
+
+/* line 23, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing p a {
+  color: #ffffff;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 28, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing p a:hover {
+  color: #183255;
+  border-bottom: 1px solid #183255;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing #wrap {
+  min-height: 100%;
+  max-width: 1300px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+/* line 41, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing #main {
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+/* line 46, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing #footer {
+  position: relative;
+  height: 60px;
+  clear: both;
+  max-width: 1300px;
+  padding: 0 60px;
+  margin: -60px auto 0;
+}
+
+/* line 55, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing #footer a {
+  color: #183255;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 62, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/landing.css.scss */
+#landing #footer a:hover {
+  color: #ffffff;
+}
+
+/* line 8, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home {
+  padding: 200px 0 100px;
+  margin-bottom: 0;
+}
+
+/* line 13, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home h1 {
+  width: 100%;
+  font-size: 64px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* line 20, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home h2 {
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 26, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home h2 span {
+  color: white;
+  display: block;
+}
+
+/* line 31, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home h2 span strong {
+  color: #3fb0cf;
+}
+
+/* line 35, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home p {
+  font-size: 18px;
+  color: #cccccc;
+  text-align: center;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+/* line 43, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero p.caption {
+  font-size: 16px;
+  width: 66%;
+  margin: 180px auto 0;
+}
+
+/* line 49, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#hero.home {
+  background-color: #183255;
+}
+
+/* line 53, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+header.home {
+  background: none;
+  margin-bottom: 200px;
+  border-bottom: none;
+}
+
+/* line 59, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+header.home a {
+  color: #eeeeee;
+}
+
+/* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+header.home a:hover {
+  color: #3fb0cf;
+  background-color: #eeeeee;
+}
+
+/* line 68, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+header.home #logo a {
+  background-image: url("../assets/marshall-havard-white.png");
+}
+
+/* line 72, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+header.home #logo a:hover {
+  background-color: transparent;
+}
+
+/* line 78, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#client-logos {
+  background-color: #eeeeee;
+  height: 200px;
+  width: 100%;
+  margin: 60px 0 0 0;
+}
+
+/* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#contact-us {
+  background-color: #3fb0cf;
+  padding: 100px 0;
+  color: white;
+  width: 100%;
+}
+
+/* line 92, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#contact-us h3 {
+  margin-bottom: 0;
+}
+
+/* line 100, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/pages.css.scss */
+#team img {
+  margin-bottom: 1em;
+}
+
+/* line 9, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.client-list h1 {
+  margin-bottom: 10px;
+}
+
+/* line 13, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.client-list a {
+  margin-bottom: 20px;
+  color: white;
+  opacity: 0.6;
+  border-bottom: 2px solid #3fb0cf;
+}
+
+/* line 20, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.client-list a:hover {
+  opacity: 1;
+  color: white;
+  border-bottom: 2px solid #3fb0cf;
+}
+
+/* line 35, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#content.sheet {
+  background-color: #3fb0cf;
+  padding: 100px 0;
+}
+
+/* line 40, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.sheet .panel {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* line 47, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#actions.row {
+  margin-bottom: 0;
+}
+
+/* line 51, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#actions {
+  font-weight: 500;
+  color: #eeeeee;
+}
+
+/* line 55, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#actions a {
+  color: #3fb0cf;
+}
+
+/* line 59, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.sheet h1 {
+  margin-bottom: 0;
+}
+
+/* line 63, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.more-help {
+  text-align: center;
+  padding-top: 60px;
+  margin-top: 60px;
+  border-top: 1px solid #e7ecef;
+}
+
+/* line 71, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.sheet .padded {
+  padding: 60px 0;
+}
+
+/* line 76, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#sheets a {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  color: #183255;
+}
+
+/* line 85, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#sheets .panel {
+  height: 300px;
+  float: left;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+}
+
+/* line 97, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#sheets a:hover .panel {
+  background-color: #eeeeee;
+  color: #3fb0cf;
+}
+
+/* line 106, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+.lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+}
+
+/* line 123, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+#service-detail {
+  display: none;
+  color: #183255;
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  margin: 20px 50px;
+  box-sizing: content-box;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 140, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #sub-nav-sticky-wrapper {
+    display: none;
+  }
+
+  /* line 144, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #sheets .panel {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* line 150, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #sheets .panel h5,
+  #sheets .panel p {
+    display: none;
+  }
+
+  /* line 154, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #sheets .panel a {
+    display: block;
+    position: relative;
+    bottom: auto;
+  }
+
+  /* line 162, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #content.sheet {
+    padding: 10px 0;
+  }
+
+  /* line 166, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  .sheet .panel {
+    padding: 30px;
+    margin-bottom: 0;
+  }
+
+  /* line 171, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #actions .c6 {
+    width: 50%;
+  }
+
+  /* line 175, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #actions {
+    background-color: white;
+    border-bottom: 1px solid #e7ecef;
+    padding: 0;
+  }
+
+  /* line 181, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  .sheet h1 {
+    margin-bottom: 0;
+  }
+
+  /* line 185, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  .more-help {
+    text-align: center;
+    padding-top: 60px;
+    margin-top: 60px;
+    border-top: 1px solid #e7ecef;
+  }
+
+  /* line 193, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  .sheet .padded {
+    padding: 60px 0;
+  }
+
+  /* line 199, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #client-list li a {
+    padding: 30px 0 30px;
+    border-bottom: 1px solid #e7ecef;
+    display: block;
+    background-color: #fafafa;
+  }
+
+  /* line 206, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #client-list li a h1 {
+    font-size: 32px;
+  }
+
+  /* line 210, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/clients.css.scss */
+  #client-list li a h3 {
+    margin-bottom: 0;
+  }
+}
+/* line 6, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+#advice-index ul li a {
+  float: left;
+  background-color: #fafafa;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  height: 400px;
+  padding: 30px;
+  display: block;
+  color: #183255;
+  border-radius: 3px;
+  margin: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+/* line 23, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+#advice-index ul li a:hover {
+  background-color: #e9e9e9;
+}
+
+/* line 27, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+#advice-index ul li a:hover h3 {
+  color: #3fb0cf;
+}
+
+/* line 34, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+ul.inline {
+  font-size: 16px;
+  z-index: 100;
+  overflow: hidden;
+  width: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+/* line 45, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+ul.inline li {
+  margin-right: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 51, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+ul.inline li a {
+  color: #eeeeee;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* line 57, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+ul.inline li a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 65, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+  #advice-index .panel {
+    padding: 20px;
+  }
+
+  /* line 69, /Users/steve/Dropbox/Projects/marshallhavard/app/assets/stylesheets/advice.css.scss */
+  #advice-index ul {
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+}
