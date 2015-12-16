@@ -33,10 +33,10 @@
 					<% end %>
 					<% @questions.each do |question|%>
 						<li class="c3">
-							<%= link_to question_path(question), remote: true, class: "ajax", rel: "advice" do %>
+							<%= link_to question_path(question) do %>
 								<div class="panel">
-									<h5>Common question</h5>
-									<h3><%= question.question %></h3>
+									<h6>Common question</h6>
+									<h4><%= question.question %></h4>
 								</div>
 							<% end %>
 						</li>
