@@ -23,6 +23,7 @@ def create
 end
 
 def show
+  @guides = Guide.all
   @guide = Guide.find(params[:id])
 end
 

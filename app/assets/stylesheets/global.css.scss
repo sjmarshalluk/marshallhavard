@@ -69,6 +69,12 @@ header {
 
 header.alt {
   background-color: $dark;
+  color: $white;
+  background: $dark; 
+  background: -webkit-linear-gradient($dark, #193c5d); 
+  background: -o-linear-gradient($dark, #193c5d);
+  background: -moz-linear-gradient($dark, #193c5d); 
+  background: linear-gradient($dark, #193c5d); 
 }
 
 header #logo {
@@ -409,11 +415,11 @@ section {
 .dark {
 	background-color: $dark;
 	color: $white;
-  background: $dark; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($dark, darken($main, 20)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($dark, darken($main, 20)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($dark, darken($main, 20)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($dark, darken($main, 20)); /* Standard syntax */
+  background: $dark; 
+  background: -webkit-linear-gradient($dark, darken($main, 20)); 
+  background: -o-linear-gradient($dark, darken($main, 20));
+  background: -moz-linear-gradient($dark, darken($main, 20)); 
+  background: linear-gradient($dark, darken($main, 20)); 
 }
 
 .dark a {

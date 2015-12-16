@@ -1,44 +1,40 @@
 
-<section id="hero" class="dark padded">
-	<div class="wrapper">
+
+
+<%= content_for :dark, 'alt' %>
+
+<div class="padded">
+	<div class="wrapper push-top">
 		<div class="row">
-			<div class="c8 s2 center">
-				Back
-				<h1><%= @guide.title %></h1>
-				<p><%= @guide.summary %></p>
+			<div class="c8">
+				<h2><strong><%= @guide.title %></strong></h2>
+				<p class="intro faded"><em><%= @guide.summary %></em></p>
+				<p class="overrides"><%= @guide.body.html_safe %></p>
+
+				<div class="more-help small-copy">
+					<h4>Need more advice?</h4>
+					<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+				</div>
+
+
+				<% if logged_in? %>
+					<div class="admin-tools center small-copy push-top faded">
+						<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago 
+						| <%= link_to "Edit", edit_guide_path(@guide) %> 
+						| <%= link_to "Delete", guide_path(@guide), method: :delete %></p>
+					</div>
+				<% end %>
 			</div>
+
+			<div class="c3 s1">
+				<ul>
+					<% @guides.each do |guide|%>
+						<li><%= link_to_active_class "#{guide.title}", "selected", guide_path(guide) %></li>
+					<% end %>
+				</ul>
 			</div>
 		</div>
 	</div>
-</section>
-
-
-			<div class="panel">
-				<h1><%= link_to "Previous", @previous %></h1>
-				<h1><%= link_to "Next", @next %></h1>
-
-				<div class="c8 s2 half-padded">
-					<div id="helpsheet">
-						<h5>Help sheet</h5>
-						<p><%= @guide.body.html_safe %></p>
-					</div>
-
-					<div class="more-help small-copy">
-						<h4>Need more advice?</h4>
-						<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
-					</div>
-
-
-					<% if logged_in? %>
-						<div class="admin-tools center small-copy push-top faded">
-							<p class="no-margin">Last updated: <%= time_ago_in_words @guide.updated_at %> ago 
-							| <%= link_to "Edit", edit_guide_path(@guide) %> 
-							| <%= link_to "Delete", guide_path(@guide), method: :delete %></p>
-						</div>
-					<% end %>
-				</div>
-
-			</div>
-
+</div>
 
 
