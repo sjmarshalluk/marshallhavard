@@ -18,8 +18,10 @@
 			<div class="c12">
 			<% @services.each do |service| %>
 				<div class="service-box c4">
+					<%= link_to service_path(service) do %>
 					<h4><%= service.name %></h4>
 					<p class="faded"><%= truncate(service.description, :length => 80) %></p>
+					<% end %>
 				</div>
 			<% end %>
 			</div>

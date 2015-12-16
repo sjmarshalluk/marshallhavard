@@ -1,4 +1,4 @@
-<%= content_for :dark, 'dark' %>
+<%= content_for :dark, 'alt' %>
 
 <div class="padded">
 	<div class="wrapper push-top">
@@ -27,8 +27,10 @@
 				<div class="push-top-half">
 				<% @client.services.each do |service|%>
 					<div class="c6 service-box">
+						
 						<h5><%= service.name %></h5>
-						<p><%= simple_format truncate(service.description, :length => 80) %></p>
+						<p class="faded"><%= simple_format truncate(service.description, :length => 80) %></p>
+
 					</div>
 				<% end %>
 				</div>
@@ -37,36 +39,37 @@
 
 
 		<% if @client.guides.present? or @client.questions.present? %>
+				<div class="push-top-half border clear">
+					<h4>Expert advice &amp; information</h4>
+					<p><%= @client.advice_intro %></p>
 
-				<h4 class="push-top-half border">Expert advice &amp; information</h4>
-				<p><%= @client.advice_intro %></p>
 
+					<ul id="sheets">
+						<% @client.guides.each do |guide| %>
 
-				<ul id="sheets">
-					<% @client.guides.each do |guide| %>
+							<li class="c4">
+								<%= link_to client_guide_path(@client, guide) do %>
+									<div class="panel">
+										<h4><%= guide.title %></h4>
+										<p class="faded small-copy"><%= guide.summary %></p>
+									</div>
+								<% end %>
+								
+							</li>
+						<% end %>
 
-						<li class="c4">
-							<%= link_to client_guide_path(@client, guide) do %>
-								<div class="panel">
-									<h4><%= guide.title %></h4>
-									<p class="faded small-copy"><%= guide.summary %></p>
-								</div>
-							<% end %>
-							
-						</li>
-					<% end %>
-
-					<% @client.questions.each do |question|%>
-						<li class="c3">
-							<%= link_to client_question_path(@client, question), remote: true, class: "ajax", rel: "advice" do %>
-								<div class="panel">
-									<h5>Common question</h5>
-									<h3><%= question.question %></h3>
-								</div>
-							<% end %>
-						</li>
-					<% end %>
-				</ul>
+						<% @client.questions.each do |question|%>
+							<li class="c4">
+								<%= link_to client_question_path(@client, question) do %>
+									<div class="panel">
+										<h4>Common question</h4>
+										<p class="faded small-copy"><%= question.question %></p>
+									</div>
+								<% end %>
+							</li>
+						<% end %>
+					</ul>
+				</div>
 			</div>
 
 			<div class="c3 s1">

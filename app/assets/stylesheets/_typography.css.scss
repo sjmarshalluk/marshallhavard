@@ -43,6 +43,7 @@ strong {
 }
 p.intro {
   font-size: $type-sz-4;
+  font-weight: 300;
 }
 p.alt {
   color: $main;
@@ -130,7 +131,7 @@ h3 {
 }
 h4 {
   font-size: $type-sz-4;
-  font-weight: 500;
+  font-weight: 700;
 }
 h5 {
   font-size: $base-font-size;
@@ -163,7 +164,8 @@ form.general div.submit button {
   text-decoration: none;
   border-bottom: 2px solid $main;
   @include transition(border-color 0.25s);
-  @include transition(color 0.25s)
+  @include transition(color 0.25s);
+  @include transition(opacity 0.25s);
 }
 
 a:hover, 

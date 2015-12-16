@@ -62,9 +62,13 @@ header {
 	overflow: hidden;
 	z-index: 300;
   position: absolute;
-  padding: 30px;
+  padding: 25px 20px;
   width: 100%;
   font-size: 14px;
+}
+
+header.alt {
+  background-color: $dark;
 }
 
 header #logo {
@@ -406,10 +410,23 @@ section {
 	background-color: $dark;
 	color: $white;
   background: $dark; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: -webkit-linear-gradient($dark, darken($main, 20)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($dark, darken($main, 20)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($dark, darken($main, 20)); /* For Firefox 3.6 to 15 */
     background: linear-gradient($dark, darken($main, 20)); /* Standard syntax */
+}
+
+.dark a {
+  color: $white;
+}
+
+.intro a {
+  @include transition(color 0.25s);
+}
+
+.dark a:hover {
+  color: $main;
+  border-bottom: 2px solid $main;
 }
 
 .blue {
@@ -431,6 +448,9 @@ section {
 	background-color: $light;
 }
 
+.clear {
+  clear: both;
+}
 
 .panel-alt {
 	padding: 30px;
