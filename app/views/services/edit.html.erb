@@ -4,7 +4,7 @@
 		<div class="c8">
 			<h1>Edit <em><%= @service.name %></em></h1>
 
-			<%= simple_form_for(@service, :defaults => { :input_html => { :class => "tinymce" } }) do |f| %>
+			<%= simple_form_for(@service) do |f| %>
 				<%= f.input :name %>
 				<%= f.input :description %>
 				<% Client.all.each do |client| %>

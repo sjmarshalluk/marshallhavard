@@ -11,6 +11,8 @@ class Service < ActiveRecord::Base
 	has_many :client_service
 	has_many :clients, :through => :client_service
 
+  validates :description, length: {maximum: 100}
+
 
 	def self.get_previous_service(current_service)
         Service.where("services.id < ? ", current_service.id).order('created_at asc').last
