@@ -1,25 +1,42 @@
 
-			
-			<div class="panel">
-				<div class="c10 s1 padded">
-					<div id="helpsheet">
-						<h5>Help sheet</h5>
-						<h1><%= @question.question %></h1>
-						<p><%= @question.answer.html_safe %></p>
-					</div>
 
-					<div class="more-help small-copy">
-						<h4>Need more advice?</h4>
-						<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
-					</div>
 
-					<% if logged_in? %>
-						<div class="admin-tools center small-copy push-top faded">
-							<p class="no-margin">Last updated: <%= time_ago_in_words @question.updated_at %> ago 
-							| <%= link_to "Edit", edit_question_path(@question) %> 
-							| <%= link_to "Delete", question_path(@question), method: :delete %></p>
-						</div>
-					<% end %>
+<%= content_for :dark, 'alt' %>
+
+<div class="padded">
+	<div class="wrapper push-top">
+		<div class="row">
+			<div class="c8 med-c12">
+				<h2><strong><%= @question.question %></strong></h2>
+				<p class="overrides"><%= @question.answer.html_safe %></p>
+
+				<div class="more-help small-copy">
+					<h4>Need more advice?</h4>
+					<p class="no-margin">Feel free to get in touch at any point. Either on 023 9234 0775, or via <a href="mailto:hello@marshallhavard.co.uk">email</a>.</p>
 				</div>
+
+
+				<% if logged_in? %>
+					<div class="admin-tools center small-copy push-top faded">
+						<p class="no-margin">Last updated: <%= time_ago_in_words @question.updated_at %> ago 
+						| <%= link_to "Edit", edit_question_path(@question) %> 
+						| <%= link_to "Delete", question_path(@question), method: :delete %></p>
+					</div>
+				<% end %>
 			</div>
-		
+
+			<div class="c3 s1 med-c12 med-s0">
+				<ul class="sub-nav">
+					<% @guides.each do |guide|%>
+						<li><%= link_to_active_class "#{guide.title}", "selected", guide_path(guide) %></li>
+					<% end %>
+					<% @questions.each do |question|%>
+						<li><%= link_to_active_class "#{question.question}", "selected", question_path(question) %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+

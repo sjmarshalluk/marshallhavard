@@ -1,45 +1,58 @@
-<div class="summary">
+<%= content_for :dark, 'alt' %>
 
 	<div class="wrapper">
-		<div class="row content">
+		<div class="row push-top small" style="line-height: 2;">
 
-			<div class="c4">
+			<div class="c3">
 				<div class="panel">
-					<h3>Help sheets (<%= @guide.count %>)</h3>
+					<h4>Clients (<%= @client.count %>)</h4>
 
 					<ul>
-					<% @guides.each do |guide| %>
-						<li><%= guide.title %> <%= link_to "Edit", edit_guide_path(guide) %></li>
+					<% @clients.each do |client| %>
+						<li><%= link_to "#{client.title}", client_path(client) %></li>
 					<% end %>
 					</ul>
 
-					<%= link_to "Add a help sheet", new_guide_path, class: "button" %>
+					<p class="push-top-quart"><%= link_to "Add a client type", new_client_path, class: "button" %></p>
 				</div>
 			</div>
 
-			<div class="c4">
+			<div class="c3">
 				<div class="panel">
-					<h3>Common questions (<%= @question.count %>)</h3>
+					<h4>Help sheets (<%= @guide.count %>)</h4>
 
+					<ul>
+					<% @guides.each do |guide| %>
+						<li><%= link_to "#{guide.title}", guide_path(guide) %></li>
+					<% end %>
+					</ul>
+
+					<p class="push-top-quart"><%= link_to "Add a help sheet", new_guide_path, class: "button" %></p>
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="panel">
+					<h4>Questions (<%= @question.count %>)</h4>
+					<ul>
 					<% @questions.each do |question| %>
-						<h4><%= link_to "#{question.question}", question_url(question) %></h4>
+						<li><%= link_to "#{question.question}", question_url(question) %></li>
 					<% end %>
-
-					<%= link_to "Add a question", new_question_path, class: "button" %>
+					</ul>
+					<p class="push-top-quart"><%= link_to "Add a question", new_question_path, class: "button" %></p>
 				</div>
 			</div>
 
-			<div class="c4">
+			<div class="c3">
 				<div class="panel">
-					<h3>Services (<%= @service.count %>)</h3>
-
+					<h4>Services (<%= @service.count %>)</h4>
+					<ul>
 					<% @services.each do |service| %>
-						<h4><%= link_to "#{service.name}", service_url(service) %></h4>
+						<li><%= link_to "#{service.name}", service_url(service) %></li>
 					<% end %>
-
-					<%= link_to "Add a service", new_service_path, class: "button" %>
+					</ul>
+					<p class="push-top-quart"><%= link_to "Add a service", new_service_path, class: "button" %></p>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>

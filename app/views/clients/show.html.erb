@@ -3,11 +3,11 @@
 <div class="padded">
 	<div class="wrapper push-top">
 		<div class="row">
-			<div class="c8">
+			<div class="c8 med-c12">
 				<h2>
-					<strong><%= @client.title %></strong><br/>
-					<em><%= @client.headline %></em>
+					<strong><%= @client.title %></strong>
 				</h2>
+				<p class="intro faded"><em><%= @client.headline %></em></p>
 				<p class="intro"><%= @client.intro %></p>
 
 
@@ -26,7 +26,7 @@
 
 				<div class="push-top-half">
 				<% @client.services.each do |service|%>
-					<div class="c6 service-box">
+					<div class="c6 sml-c12 service-box">
 						
 						<h5><%= service.name %></h5>
 						<p class="faded"><%= simple_format truncate(service.description, :length => 80) %></p>
@@ -47,7 +47,7 @@
 					<ul id="sheets">
 						<% @client.guides.each do |guide| %>
 
-							<li class="c4">
+							<li class="c4 med-c6 sml-c12">
 								<%= link_to client_guide_path(@client, guide) do %>
 									<div class="panel">
 										<h4><%= guide.title %></h4>
@@ -73,33 +73,34 @@
 			</div>
 
 			<div class="c3 s1">
-				<p class="small">Feel free to contact us on this number if you have any questions</p>
+				<p class="small">Feel free to contact us on 023 9234 0775 or <a href="mailto:hello@marshallhavard.co.uk">via email</a> if you have any questions</p>
 			</div>
 			
 
 		<% end %>
+		</div>
+
+
+		<div class="row">
+			<div class="c12">
+
+			<% if logged_in? %>
+					<p class="small faded push-top-half">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
+							| <%= link_to "Edit", edit_client_path(@client) %> 
+							| <%= link_to "Delete", client_path(@client), method: :delete %></p>
+			<% end %>
+			</div>
+		</div>
 	</div>
 </div>
 
 
-
-<% if logged_in? %>
-	<div class="t-center">
-	<div class="admin-tools center small-copy push-top faded">
-		<p class="no-margin">Last updated: <%= time_ago_in_words @client.updated_at %> ago 
-				| <%= link_to "Edit", edit_client_path(@client) %> 
-				| <%= link_to "Delete", client_path(@client), method: :delete %></p>
-	</div>
-<% end %>
-
-
-
-	<div id="contact-us" class="center">
-		<h3>Talk to one of our experts today. Call us on 01234 567 890</h3>
+	<div id="contact-us" class="t-center">
+		<h3>Talk to one of our experts today. Call us on 023 9234 0775</h3>
 	</div>
 
 
-</div>
+
 
 
 

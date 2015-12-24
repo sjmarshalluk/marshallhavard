@@ -6,14 +6,14 @@
 <div class="padded">
 	<div class="wrapper push-top">
 		<div class="row">
-			<div class="c8">
+			<div class="c8 med-c12">
 				<h2><strong><%= @guide.title %></strong></h2>
 				<p class="intro faded"><em><%= @guide.summary %></em></p>
 				<p class="overrides"><%= @guide.body.html_safe %></p>
 
 				<div class="more-help small-copy">
 					<h4>Need more advice?</h4>
-					<p class="no-margin">Feel free to get in touch at any point. Either on 01234 567 890, or via <a href="mailto:hello@marshallhavard.com">email</a>.</p>
+					<p class="no-margin">Feel free to get in touch at any point. Either on 023 9234 0775, or via <a href="mailto:hello@marshallhavard.co.uk">email</a>.</p>
 				</div>
 
 
@@ -26,10 +26,13 @@
 				<% end %>
 			</div>
 
-			<div class="c3 s1">
-				<ul>
+			<div class="c3 s1 med-c12 med-s0">
+				<ul class="sub-nav">
 					<% @guides.each do |guide|%>
 						<li><%= link_to_active_class "#{guide.title}", "selected", guide_path(guide) %></li>
+					<% end %>
+					<% @questions.each do |question|%>
+						<li><%= link_to_active_class "#{question.question}", "selected", question_path(question) %></li>
 					<% end %>
 				</ul>
 			</div>

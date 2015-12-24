@@ -35,6 +35,8 @@ def summary
 	@questions = Question.all
 	@service = Service.all
 	@services = Service.all
+	@client = Client.all
+	@clients = Client.all
 
 end
 

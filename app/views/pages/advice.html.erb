@@ -3,7 +3,7 @@
 <section id="hero" class="dark half-padded">
 	<div class="wrapper push-top-half">
 		<div class="row">
-			<div class="c6">
+			<div class="c6 med-c12">
 				<h2>Advice &amp; information</h2>
 				<p>We know that finding the information you need can be hard – so we’ve prepared a selection of guides to help you. To browse the help sheets that are relevant to you, click on the category that best describes your situation.</p>
 			</div>
@@ -21,7 +21,7 @@
 			<div class="row">
 				<ul id="sheets">
 					<% @guides.each do |guide|%>
-						<li class="c3">
+						<li class="c3 med-c6 sml-c12">
 							<%= link_to guide_path(guide) do %>
 								<div class="panel">
 									<h6>Help Sheet</h6>
@@ -32,7 +32,7 @@
 						</li>
 					<% end %>
 					<% @questions.each do |question|%>
-						<li class="c3">
+						<li class="c3 med-c6 sml-c12">
 							<%= link_to question_path(question) do %>
 								<div class="panel">
 									<h6>Common question</h6>
@@ -44,12 +44,23 @@
 
 				</ul>
 			</div>
+
+			<div class="row">
+				<div class="c12">
+					<% if logged_in? %>
+						<p class="small"><%= link_to "Add a help sheet", new_guide_path %></p>
+						<p class="small"><%= link_to "Add a common question", new_question_path %></p>
+					<% end %>
+				</div>
+			</div>
 		
 		</div>
 	</section>
 
 
-
+	<div id="contact-us" class="t-center">
+		<h3>Talk to one of our experts today. Call us on 023 9234 0775</h3>
+	</div>
 
  
 <script>

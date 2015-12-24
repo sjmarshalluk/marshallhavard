@@ -1,12 +1,17 @@
 
 
-			<div class="panel">
-				<div class="c10 s1 padded">
-					<div id="helpsheet">
-						<h5>Service</h5>
-						<h1><%= @service.name %></h1>
+<%= content_for :dark, 'alt' %>
+
+<div class="padded">
+	<div class="wrapper push-top">
+		<div class="row">
+			<div class="c8">
+
+						<h2><%= @service.name %></h2>
 						<p><%= @service.description.html_safe %></p>
 					</div>
+				</div>
+				<div class="row">
 
 					<div class="more-help small-copy">
 						<h4>Need more advice?</h4>

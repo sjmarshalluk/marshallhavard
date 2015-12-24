@@ -1,5 +1,5 @@
 
-<% if logged_in? %>
+
 
 
 
@@ -8,19 +8,19 @@
 	<section class="dark padded" style="height:100vh;">
 		<div class="wrapper push-top">
 		<div class="row">
-			<div class="c6">
+			<div class="c6 med-c12">
 				<h2 style="text-align: left"><span>Hello. We are <br/><strong>Marshall Havard</strong>.</span></h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="c6">
+			<div class="c6 med-c12">
 				<p class="intro">For 30 years we have been helping clients of all types. Not only can we help you stay inside the laws, but we might also be able to save you money.</p>
 				<p class="intro"><%= link_to "Find out how we can help you", clients_path %></p>
 			</div>
-			<div class="c3 s3 small">
+			<div class="c3 s3 small med-c12 med-s0">
 				<p style="text-align:right;">
 					<strong>Prefer to talk to someone?</strong><br/>
-					Call us on 01234 567 890<br/>
+					Call us on 023 9234 0775<br/>
 					Or visit us at <%= link_to "one of our shops", '/contact' %>
 				</p>
 		</div>
@@ -28,11 +28,7 @@
 	
 	</section>
 
-	<% if logged_in? %>
-		<div class="admin-tools center small-copy push-top faded">
-			<%= link_to "Add a client type", new_client_path %>
-		</div>
-	<% end %>
+
 
 
 
@@ -42,7 +38,7 @@
 
 
 
-<% else %>
+<!--
 
 <div id="landing">
 	<div id="wrap">
@@ -55,11 +51,11 @@
 		</div>
 	</div>
 	<div id="footer">
-		<%= link_to "Log in", new_session_path %>
+		<%# link_to "Log in", new_session_path %>
 	</div>
 </div>
 
-<% end %>
+-->
 
 <script type="text/javascript">
 $('.expander').simpleexpand();

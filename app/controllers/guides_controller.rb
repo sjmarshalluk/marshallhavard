@@ -1,5 +1,5 @@
 class GuidesController < ApplicationController
-before_action :require_user
+before_action :require_user, only: [:new, :create, :edit]
 
 
 def index
@@ -15,7 +15,7 @@ def create
 	@guide = Guide.new(guide_params)
 	if @guide.save
 		flash[:success] = "That saved"
-		redirect_to root_path
+		redirect_to guide_path
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -24,7 +24,8 @@ end
 
 def show
   @guides = Guide.all
-  @guide = Guide.find(params[:id])
+  @guide = Guide.find(params[:id]) 
+  @questions = Question.all
 end
 
 def edit
@@ -35,7 +36,7 @@ def update
   @guide = Guide.find(params[:id])
   if @guide.update(guide_params)
   	flash[:success] = "Changes saved"
-    redirect_to root_path
+    redirect_to guide_path
   else
     flash[:error] = "Nope"
     render :new

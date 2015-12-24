@@ -1,17 +1,13 @@
-
+<%= content_for :dark, 'alt' %>
 <div class="wrapper">
 
 	<div class="row push-top">
 
-		<div class="c4 s4">
-			<h1>Users</h1>
+		
+		<div class="c6">
 
-			<% @users.each do |user| %>
-				<%= user.email %>
-			<% end %>
 
-			<div class="border-top">
-				<h3>Add another user</h3>
+				<h4>Add another user</h4>
 
 				<%= simple_form_for @user do |f| %>
 
@@ -22,8 +18,17 @@
 					<%= f.button :submit, "Create user" %>
 
 				<% end %>
-			</div>
 
+
+		</div>
+
+		<div class="c3 s3">
+			<h4>Users</h4>
+			<ul class="small">
+			<% @users.each do |user| %>
+				<li><%= user.email %></li>
+			<% end %>
+			</ul>
 		</div>
 
 	</div>

@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
 
-before_action :require_user
+before_action :require_user, only: [:new, :create, :edit]
 respond_to :html, :js
 
  
@@ -25,7 +25,6 @@ end
 
 def show
   @service = Service.find(params[:id])
-	render :layout => 'plain.html.erb'
 	#@client = Client.find(params[:client_id])
  
 end

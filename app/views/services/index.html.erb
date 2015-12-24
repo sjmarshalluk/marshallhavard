@@ -3,7 +3,7 @@
 <section id="hero" class="dark half-padded">
 	<div class="wrapper push-top-half">
 		<div class="row">
-			<div class="c6">
+			<div class="c6 med-c12">
 				<h2>Our services</h2>
 				<p>There are many ways we can help...</p>
 			</div>
@@ -17,11 +17,12 @@
 		<div class="row">
 			<div class="c12">
 			<% @services.each do |service| %>
-				<div class="service-box c4">
-					<%= link_to service_path(service) do %>
-					<h4><%= service.name %></h4>
-					<p class="faded"><%= truncate(service.description, :length => 100) %></p>
-					<% end %>
+				<div class="service-box c4 med-c6 sml-c12">
+						<h4><%= service.name %></h4>
+						<p class="faded"><%= truncate(service.description, :length => 100) %></p>
+						<% if logged_in? %>
+							<p class="small"><%= link_to "Edit", edit_service_path(service) %></p>
+						<% end %>
 				</div>
 			<% end %>
 			</div>
@@ -34,7 +35,9 @@
 		<% end %>
 	</div>
 </section>
-
+	<div id="contact-us" class="t-center">
+		<h3>Talk to one of our experts today. Call us on 023 9234 0775</h3>
+	</div>
 
 
 

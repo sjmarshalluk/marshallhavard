@@ -67,6 +67,7 @@ header {
   padding: 25px 20px;
   width: 100%;
   font-size: 14px;
+
 }
 
 header.alt {
@@ -193,17 +194,14 @@ footer .clients a:hover {
 }
 
 #newsletter {
-	background-color: lighten($dark, 5);
-	color: $white;
 	width: 100%;
-	padding: 30px;
 	font-size: 16px;
 	overflow: hidden;
   border-radius: 3px;
 }
 
 #newsletter .mc-field-group input {
-	width: 70%;
+	width: 60%;
 	float: left;
 }
 
@@ -320,6 +318,15 @@ a.danger:hover {
 	background-color: $light;
 }
 
+
+.sub-nav li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.sub-nav li a.selected {
+  border-bottom: none;
+}
 
 
 a.selected {
@@ -542,12 +549,13 @@ nav.nav-collapse {
 }
 
 nav.nav-collapse ul {
-  margin: 0;
+  margin: 25px 0 0;
   padding: 20px 0;
   width: 100%;
   display: block;
   list-style: none;
   overflow: hidden;
+  background-color: $white;
 }
 
 nav.nav-collapse ul li {
@@ -561,6 +569,7 @@ nav.nav-collapse ul li a {
   width: 100%;
   display: block;
   padding:30px;
+  color: $dark;
 }
 
 

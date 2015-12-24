@@ -7,14 +7,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+
   <script src="https://use.typekit.net/mkd2fyg.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	
+
 </head>
 <body>
 
 
-<% if logged_in? %>
+
 
 <% flash.each do |key, value| %>
 	<div class="<%= key %>">
@@ -38,6 +40,13 @@
 						<li><%= link_to_active_class "Advice", "selected", advice_path %></li>
 						<li><%= link_to_active_class "About Us", "selected", '/about-us' %></li>
 						<li><%= link_to_active_class "Contact", "selected", '/contact' %></li>
+						<% if logged_in? %>
+							<li><%= link_to "Users", new_user_path %></li>
+							<li><%= link_to "Summary", '/summary' %></li>
+							<li><%= link_to "Log out", session_path, method: :delete %></li>
+							<% else %>
+							<li><%= link_to "Log in", new_session_path %></li>
+						<% end %>
 					</ul>
 				</nav>
 				<script>
@@ -111,11 +120,7 @@
 		</div>
 	</footer>
 
-<% else %>
 
-<%= yield %>
-
-<% end %>
 
 
 </body>

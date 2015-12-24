@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-before_action :require_user
+before_action :require_user, only: [:new, :create, :edit]
 
 def index
 	@questions = Question.all
@@ -14,7 +14,7 @@ def create
 	@question = Question.new(question_params)
 	if @question.save
 		flash[:success] = "That saved"
-		redirect_to questions_path
+		redirect_to question_path
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -22,8 +22,9 @@ def create
 end
 
 def show
+  @questions = Question.all
+  @guides = Guide.all
   @question = Question.find(params[:id])
-	render :layout => 'plain.html.erb'
 end
 
 def edit
@@ -34,7 +35,7 @@ def update
   @question = Question.find(params[:id])
   if @question.update(question_params)
     flash[:success] = "Changes saved"
-    redirect_to questions_path
+    redirect_to question_path
   else
     flash[:error] = "Nope"
     render :new
