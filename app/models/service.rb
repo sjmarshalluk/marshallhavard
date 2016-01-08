@@ -21,5 +21,7 @@ class Service < ActiveRecord::Base
 	def self.get_next_service(current_service)
         Service.where("services.id > ? ", current_service.id).order('created_at asc').first
     end
+
+
 	
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123100424) do
+ActiveRecord::Schema.define(version: 20160108010911) do
 
   create_table "client_services", force: true do |t|
     t.integer  "client_id"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150123100424) do
     t.datetime "updated_at"
     t.integer  "client_id"
     t.string   "summary"
+    t.boolean  "draft"
   end
 
   create_table "helpsheets", force: true do |t|
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 20150123100424) do
     t.boolean  "employed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "draft"
   end
 
   create_table "services", force: true do |t|
@@ -114,6 +116,7 @@ ActiveRecord::Schema.define(version: 20150123100424) do
     t.boolean  "employed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "draft"
   end
 
   create_table "users", force: true do |t|

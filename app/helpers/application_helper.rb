@@ -5,6 +5,4 @@ module ApplicationHelper
 	  link_to name, options, html_options, &block
 	end
 
-
-
 end

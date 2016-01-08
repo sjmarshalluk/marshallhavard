@@ -5,7 +5,11 @@ respond_to :html, :js
 
  
 def index
-	@services = Service.all
+	if logged_in?
+		@services = Service.all
+	else
+		@services = Service.where(draft: false)
+	end
 end
 
 def new
@@ -69,6 +73,7 @@ def service_params
 		:overseas,
 		:particular_tax_advice,
 		:employed,
+		:draft,
 		:client_ids => []
 	)
 end
