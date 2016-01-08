@@ -13,12 +13,13 @@
 				  <%= check_box_tag "service[client_ids][]", client.id, @service.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
 				  <%= label_tag dom_id(client), client.title %><br>
 				<% end %>
-
+				<hr/>
 				<%= f.input :draft, label: "Draft",  class: 'boolean'  %>
 				<%= f.button :submit %>
 			<% end %>
 		</div>
 	</div>
+	<%= link_to "Delete", service_path(@service), method: :delete %>
 </div>
 
 <%= tinymce %>
