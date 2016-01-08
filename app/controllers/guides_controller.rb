@@ -1,10 +1,10 @@
 class GuidesController < ApplicationController
 before_action :require_user, only: [:new, :create, :edit]
 
-
+ 
 def index
 	@guides = Guide.all
-  	@client = Client.find(params[:client_id])
+  @client = Client.find(params[:client_id])
 end
 
 def new
