@@ -5,7 +5,7 @@
 body {
   color: $text;
   font-family: $sans-serif-stack;
-  font-size: $base-font-size;
+  font-size: $base-font-size; 
   line-height: 1.5;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +41,7 @@ strong {
   color: $white;
 }
 p.intro {
-  font-size: $type-sz-4;
+  font-size: $type-sz-5;
   font-weight: 300;
 }
 p.alt {
@@ -129,7 +129,7 @@ h3 {
   font-size: $type-sz-3;
 }
 h4 {
-  font-size: $type-sz-4;
+  font-size: $type-sz-5;
   font-weight: 700;
 }
 h5 {

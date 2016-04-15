@@ -1,57 +1,81 @@
-<%= content_for :dark, 'alt' %>
 
-<div class="padded">
-	<div class="wrapper push-top">
+
+
+<section id="hero" class="dark half-padded">
+	<div class="wrapper push-top-half">
 		<div class="row">
-			<div class="c8 med-c12">
+			<div class="c12">
 				<h2>
 					<strong><%= @client.title %></strong>
+					<p class="intro black"><em><%= @client.headline %></em></p>
 				</h2>
-				<p class="intro faded"><em><%= @client.headline %></em></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="c8 med-c12">
 				<p class="intro"><%= @client.intro %></p>
+			</div>
+			<!--
+			<div class="c3 s1">
+				<p class="small">Feel free to <%= link_to "contact us", '/contact' %> if you have any questions to speak to one of our experts</p>
+			</div>
+		-->
+		</div>
+	</div>
+</section>
 
-
-
-
-
+<div class="padded">
+	<div class="wrapper">
 
 
 		<% if @client.services.present? %>
+		<div class="row">
+			<div class="c12">
 
-
-
-				<h4 class="push-top-half border">How we can help</h4>
+				<h4>How we can help</h4>
 				<p><%= @client.help_intro %></p>
 
-
-				<div class="push-top-half">
-				<% @client.services.each do |service|%>
-					<div class="c6 sml-c12 service-box">
-						
+			</div>
+		</div>
+		<div class="row push-top-half">
+			<% @client.services.each do |service|%>
+				<div class="c3 med-c6 sml-c12">
+					
 						<h5><%= service.name %></h5>
-						<p class="faded"><%= simple_format truncate(service.description, :length => 80) %></p>
+						<p><%= truncate(service.description, :length => 100) %></p>
 
-					</div>
-				<% end %>
 				</div>
 
+
+			<% end %>
+			
+			<div class="c3 med-c6 sml-c12 faded">
+					
+				<h5>More services</h5>
+				<p>See what else we are able to offer our clients. <%= link_to 'View all services', services_path %>.</p>
+			</div>
+		</div>
 		<% end %>
 
 
 		<% if @client.guides.present? or @client.questions.present? %>
-				<div class="push-top-half border clear">
+		<div class="row push-top-half border-top">
+			<div class="c12 push-top-half">
 					<h4>Expert advice &amp; information</h4>
 					<p><%= @client.advice_intro %></p>
+			</div>
+		</div>
 
+		<div class="row">
 
 					<ul id="sheets">
 						<% @client.guides.each do |guide| %>
 
-							<li class="c4 med-c6 sml-c12">
+							<li class="c3 med-c6 sml-c12">
 								<%= link_to client_guide_path(@client, guide) do %>
 									<div class="panel">
 										<h4><%= guide.title %></h4>
-										<p class="faded small-copy"><%= guide.summary %></p>
+										<p class="faded"><%= guide.summary %></p>
 									</div>
 								<% end %>
 								
@@ -59,7 +83,7 @@
 						<% end %>
 
 						<% @client.questions.each do |question|%>
-							<li class="c4">
+							<li class="c3">
 								<%= link_to client_question_path(@client, question) do %>
 									<div class="panel">
 										<h4>Common question</h4>
@@ -72,9 +96,7 @@
 				</div>
 			</div>
 
-			<div class="c3 s1">
-				<p class="small">Feel free to contact us on 023 9234 0775 or <a href="mailto:hello@marshallhavard.co.uk">via email</a> if you have any questions</p>
-			</div>
+			
 			
 
 		<% end %>
@@ -96,7 +118,7 @@
 
 
 	<div id="contact-us" class="t-center">
-		<h3>Talk to one of our experts today. Call us on 023 9234 0775</h3>
+		<h3><%= link_to "Talk to one of our experts today", '/contact' %></h3>
 	</div>
 
 
