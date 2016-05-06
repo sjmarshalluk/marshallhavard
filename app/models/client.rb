@@ -26,7 +26,6 @@ class Client < ActiveRecord::Base
 	validates :intro, presence: true
 	validates :help_intro, presence: true
 	validates :advice_intro, presence: true
-	validates :summary, presence: true, length: {maximum: 60}
 
 
 end

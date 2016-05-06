@@ -15,7 +15,7 @@
 
 
 
-
+ 
 		<% if @client.services.present? %>
 
 
@@ -29,7 +29,7 @@
 					<div class="c6 sml-c12 service-box">
 						
 						<h5><%= service.name %></h5>
-						<p class="faded"><%= simple_format truncate(service.description, :length => 80) %></p>
+						<p class="faded"><%= simple_format truncate(service.description) %></p>
 
 					</div>
 				<% end %>

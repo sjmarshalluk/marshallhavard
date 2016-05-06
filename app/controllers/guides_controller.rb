@@ -14,7 +14,7 @@ def create
 	@guide = Guide.new(guide_params)
 	if @guide.save
 		flash[:success] = "That saved"
-		redirect_to guide_path
+    redirect_to '/advice'
 	else
 		flash[:error] = "Something went wrong"
 		render :new
@@ -52,10 +52,6 @@ end
 
 
 
-
-
-
-
 private
 
 def guide_params
@@ -73,7 +69,8 @@ def guide_params
 		:overseas,
 		:particular_tax_advice,
 		:employed,
-		:client_ids => []
+		:client_ids => [],
+    :service_ids => []
 	)
 end
 

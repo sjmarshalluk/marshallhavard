@@ -1,4 +1,6 @@
 class ClientsController < ApplicationController
+before_action :require_user, only: [:new, :create, :edit]
+
 
 def index
 	@clients = Client.all
@@ -14,7 +16,7 @@ def create
 		flash[:success] = "That saved"
 		redirect_to clients_path
 	else
-		flash[:error] = "Something went wrong"
+		flash[:error] = "Something went very wrong"
 		render :new
 	end
 end

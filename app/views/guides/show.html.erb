@@ -16,6 +16,15 @@
 					<p class="no-margin">Feel free to get in touch at any point. Either on 023 9234 0775, or via <a href="mailto:hello@marshallhavard.co.uk">email</a>.</p>
 				</div>
 
+				<div>
+					<h4>Related services</h4>
+					<% @guide.services.each do |service|%>
+												
+						<%= link_to "#{service.name}", service_path(service) %>
+
+					<% end %>
+				</div>
+
 
 				<% if logged_in? %>
 					<div class="admin-tools center small-copy push-top faded">
