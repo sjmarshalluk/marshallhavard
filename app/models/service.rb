@@ -11,6 +11,9 @@ class Service < ActiveRecord::Base
 	has_many :client_service
 	has_many :clients, :through => :client_service
 
+  has_many :service_guide
+  has_many :guides, :through => :service_guide
+
   validates :description, length: {maximum: 100}
 
 
@@ -23,5 +26,5 @@ class Service < ActiveRecord::Base
     end
 
 
-	
+	 
 end

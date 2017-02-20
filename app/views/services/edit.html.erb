@@ -3,23 +3,42 @@
 <div class="wrapper">
 
 	<div class="row push-top">
+		<div class="c12 t-center">
+			<h1>Edit '<%= @service.name %>'</h1>
+		</div>
+	</div>
+	<div class="row push-top-quart">
 		<div class="c8">
-			<h1>Edit <em><%= @service.name %></em></h1>
 
 			<%= simple_form_for(@service) do |f| %>
 				<%= f.input :name %>
 				<%= f.input :description %>
+		</div>
+		<div class="c4 small">
+
+				<p class="push-top-quart"><strong>Which client(s) is this service relevant to?</strong></p>
 				<% Client.all.each do |client| %>
 				  <%= check_box_tag "service[client_ids][]", client.id, @service.client_ids.include?(client.id), id: dom_id(client), class: "boolean" %>
 				  <%= label_tag dom_id(client), client.title %><br>
 				<% end %>
-				<hr/>
+				<hr class="push-top-quart"/>
+				<p class="push-top-quart"><strong>Which guide(s) is related to this service?</strong></p>
+					<% Guide.all.each do |guide| %>
+					<%= check_box_tag "service[guide_ids][]", guide.id, @service.guide_ids.include?(guide.id), id: dom_id(guide), class: "boolean" %>
+					<%= label_tag dom_id(guide), guide.title %><br>
+				<% end %>
+				<hr class="push-top-quart"/>
+				<p class="push-top-quart"><strong>Untick this to show on live site</strong></p>
 				<%= f.input :draft, label: "Draft",  class: 'boolean'  %>
-				<%= f.button :submit %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="c12 t-center push-top push-bottom">
+				<%= f.button :submit %> <br/>
+				<%= link_to "Delete", service_path(@service), method: :delete %>
 			<% end %>
 		</div>
 	</div>
-	<%= link_to "Delete", service_path(@service), method: :delete %>
 </div>
 
 <%= tinymce %>

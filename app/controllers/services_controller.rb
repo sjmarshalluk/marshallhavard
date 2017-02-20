@@ -74,7 +74,8 @@ def service_params
 		:particular_tax_advice,
 		:employed,
 		:draft,
-		:client_ids => []
+		:client_ids => [],
+    :guide_ids => []
 	)
 end
 

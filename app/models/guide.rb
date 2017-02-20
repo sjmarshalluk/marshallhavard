@@ -13,6 +13,9 @@ class Guide < ActiveRecord::Base
 	has_many :helpsheet
 	has_many :clients, :through => :helpsheet
 
+  has_many :service_guide
+  has_many :services, :through => :service_guide
+
 	validates :summary, length: {maximum: 60}
 
 scope :next, lambda {|id| where("id > ?",id).order("id ASC") } # this is the default ordering for AR
@@ -27,3 +30,4 @@ scope :next, lambda {|id| where("id > ?",id).order("id ASC") } # this is the def
     end
 
 end
+ 

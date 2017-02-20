@@ -16,6 +16,15 @@
 					<p class="no-margin">Feel free to <%= link_to "get in touch", '/contact' %> at any point to speak to one of our experts.</p>
 				</div>
 
+				<div>
+					<h4>Related services</h4>
+					<% @guide.services.each do |service|%>
+												
+						<%= link_to "#{service.name}", service_path(service) %>
+
+					<% end %>
+				</div>
+
 
 				<% if logged_in? %>
 					<div class="admin-tools center small-copy push-top faded">

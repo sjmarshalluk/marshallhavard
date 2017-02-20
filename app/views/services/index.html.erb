@@ -20,11 +20,24 @@
 				<div class="service-box c4 med-c6 sml-c12">
 						<h4><%= service.name %></h4>
 						<p class="faded"><%= truncate(service.description, :length => 100) %></p>
+
+						<% service.guides.each do |guide|%>
+												
+								<%= link_to "#{guide.title}", guide_path(guide) %>
+
+						<% end %>
+						
 						<% if logged_in? %>
 							<p class="small">
 								Draft: <%= service.draft %> | <%= link_to "Edit", edit_service_path(service) %>
 							</p>
 						<% end %>
+
+
+										
+
+			
+
 				</div>
 			<% end %>
 			</div>
